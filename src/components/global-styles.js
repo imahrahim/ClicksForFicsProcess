@@ -82,7 +82,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(55, 41, 44, .4);
+  background-color: rgba(255, 0, 55, 0.754);
 }
 
 body::-webkit-scrollbar-track {
@@ -111,14 +111,19 @@ body {
 }
 
 body.light-mode {
-  color: #37292C;
-  background-color: white;
-  background-image: linear-gradient(315deg, #ccfbf1 0%, #ffe4e6 50%);
+  color: #000000;
+  background-color: #ff93ec;
+  background-image: linear-gradient(315deg, #bdff9f 0%, #fef9b5 50%);
+  
 }
 
 body.dark-mode {
-  color: #e9e9e9;
-  background-color: #252526;
+  color: #ffffff;
+  background-color: #ff93ec;
+  background-image: url('/media/wallpapperr10.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 body.dark-mode ::selection{

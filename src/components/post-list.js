@@ -38,7 +38,11 @@ const PostListItem = ({
 }) => {
   return (
     <StyledPostListItem>
-      <Tags tags={tags} />
+    <PostListMeta>
+        <span>{date}</span>
+
+        <span>{timeToRead} mins</span>
+      </PostListMeta>
 
       <PostListTitle>
         <Link to={slug}>{title}</Link>
@@ -48,33 +52,42 @@ const PostListItem = ({
           __html: description || excerpt,
         }}
       />
-      <PostListMeta>
-        <span>{date}</span>
 
-        <span>{timeToRead} mins</span>
-      </PostListMeta>
+      <Tags tags={tags} />
     </StyledPostListItem>
   );
 };
 
+
 const StyledPostList = styled.ul`
-  padding: 0;
+  padding-left: 10rem;
+  padding-right: 10rem;
   list-style: none;
-  display: grid;
+  display: block;
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
 
+  @media screen and (max-width: 800px) {
+    & {
+      display: block;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
   @media screen and (max-width: 500px) {
     & {
       display: block;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
   }
 `;
 
 const StyledPostListItem = styled.li`
   display: flex;
-  padding: 1.5rem;
+  padding: 2rem;
+  margin-top: 2rem;
   border-radius: 8px;
   position: relative;
   flex-direction: column;
@@ -82,17 +95,18 @@ const StyledPostListItem = styled.li`
 
   body.light-mode & {
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.3);
+    border: 4px solid #000000;
+    background-color: #ff93eb5f;
   }
 
   body.light-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.184);
   }
 
   body.dark-mode & {
-    background-color: #3b3b3c;
-    border: 1px solid #515151;
+    background-color: #ff93eb51;
+    backdrop-filter: blur(20px);
+    border: 4px solid #000000;
   }
 
   @media screen and (max-width: 500px) {
@@ -127,11 +141,12 @@ const PostListTitle = styled.h2`
 
 const PostListExcerpt = styled.p`
   margin-top: auto;
+  margin-bottom: 2rem;
   font-size: var(--size-400);
 `;
 
 const PostListMeta = styled.div`
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   font-size: var(--size-300);
   display: flex;

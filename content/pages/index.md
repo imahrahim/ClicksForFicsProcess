@@ -3,6 +3,7 @@ template: "index-template"
 title: "Gatsby Starter Glass"
 ---
 
-# Hello World
+# Clicks for Fics
 
-A minimal & beautiful gatsby personal blog starter with nice glassmorphism UI.
+Fascination Archive of Our Own; an analysis of the most popular works.
+

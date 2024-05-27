@@ -27,8 +27,11 @@ const Tags = ({ tags }) => {
 export default Tags;
 
 const Tag = styled.span`
+  display: inline-block;
+  // margin-top: 1rem;
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
+  margin-left: 0;
   text-transform: uppercase;
   font-size: var(--size-300);
 
