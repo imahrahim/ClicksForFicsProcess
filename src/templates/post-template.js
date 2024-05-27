@@ -128,6 +128,13 @@ const PostContent = styled.section`
     white-space: pre-wrap;
     max-width: 100%;
   }
+
+  img {
+    display: block;
+    flex: 1;
+    width: 100%;
+  }
+
 `;
 
 const PostPagination = styled.nav`

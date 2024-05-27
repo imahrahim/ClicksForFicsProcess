@@ -1,54 +1,74 @@
 ---
 title: Character Cleaning
-date: 2024-05-04
-tags: [Data, Excel, ChatGPT, Mental Breakdown]
+date: 2024-04-20
+tags: [Data, Excel, ChatGPT, Google, Mental Breakdown]
 social_image: '/media/wallpapperr10.png'
 description: 
 ---
 
-Friends don't lie. Um, I'm happy you're home. We never would've upset you if we knew you had superpowers. Um, I'm happy you're home. Let’s burn that lab to the ground. Don’t take it so personally, okay? I don’t like most people. He’s in the vast majority.Nancy, seriously, you're gonna be so cool now, it's ridiculous. So, Jonathan, how was the pull-out? Um, I'm happy you're home. You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. It's just, sometimes... people don't really say what they're really thinking.
+By the end of the project, cleaning the data remained my primary task. During the analysis, it quickly became apparent that accurately analyzing the data would be challenging. Since the metadata came from AO3, where all users could individually input and write their data, there were numerous inaccuracies and deviations that couldn't be easily resolved by machine. For instance, within a single dataset, over 800 different characters were mentioned, many of which were recorded multiple times in various forms.
+- Tom Riddle
+- Tom Marvolo Riddle
+- Voldemort
+- Lord Voldemort
+- Tom Riddle | Voldemort
+- etc.
+Initially, I attempted to manually address these issues in Excel by searching for characters and aliases that were familiar to me. However, I soon realized this approach was unsustainable.
 
-But when you capture the right moment, it says more.If we’re both going crazy, then we’ll go crazy together, right? If we’re both going crazy, then we’ll go crazy together, right? I need my paddles! You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. Friends don't lie. He’s a sensitive kid. Lonnie used to say he was queer. Called him a fag. Is he? He’s missing, is what he is!You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. Do you know anything about sensory deprivation tanks?
+![Excel](/media/Characters/characters6.png)
 
-Specifically how to build one? Yeah, I want a date with Bo Derek. We all want things. No... no El, you're not the monster. You saved me. Do you understand? You saved me.If anyone asks where I am, I've left the country. Friends don't lie. You are such a nerd. No wonder you only hang out with boys. Mouth-breather. Let’s burn that lab to the ground. Why’s he gotta kick the door? You’re right. You are a freak…. Who would you rather be friends with: Bowie or Kenny Rogers?
+I then subscribed to ChatGPT Premium, hoping AI could assist in solving my problem. Unfortunately, even for AI, it was too large a task to clean the data thoroughly and quickly. Therefore, I began to go through the data line by line.
+
+Characters were not the only dimension with this issue; relationships and fandoms also had similar problems. As I was already going through each row individually, I decided to add fandom and gender information to each character, which would help me categorize the relationships and identify the fandoms of the characters involved.
+
+![Excel](/media/Characters/characters1.png)
+
+![Excel](/media/Characters/characters4.png)
+
+With the help of ChatGPT and manual searches for characters on Google, it took me two days to clean a single dataset. These two days ended up being somewhat wasted, as I had to repeat the process at least two more times.
+
+My first mistake was starting with the wrong dataset. Due to my lack of knowledge, I began with the dataset I was most familiar with (Harry Potter). However, I later realized I should have started with the Overall Top 1000 dataset. This would have saved me from duplicating a lot of work in the other three datasets.
+
+The second mistake was focusing on the character list instead of the characters mentioned in the relationships and their respective spellings. This was crucial for implementing my idea effectively.
+
+Here are the steps I eventually followed:
+
+1. Extract all characters from the relationships in the Overall dataset.
+2. Clean these characters and add information about their gender and fandom.
+
+![Excel](/media/Characters/characters8.png)
+
+3. Replace the relationship dataset with the cleaned names.
+
+![Excel](/media/Characters/characters3.png)
+
+4. Combine information about characters, ships, gender, and fandom.
+5. Cross-check all entries with the other datasets to avoid redundant work.
+6. Repeat steps 1-4 for the remaining datasets.
+
+![Excel](/media/Characters/characters7.png)
+
+![Excel](/media/Characters/characters5.png)
+
+Even though these steps sound simple, this task was one of the most tedious I have ever undertaken. Excel struggled with even basic tasks like =VLOOKUP if there was a space where there should'nt have been one.
+
+
+<video controls width="100%">
+  <source src="/media/Characters/characters2.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+On my third attempt, I finally managed to get ChatGPT to fill in 20 characters at a time. I then had to merge these with individual CSV files and still clean them manually. Many of the mistakes I made during this process only became apparent later during the visualization phase. This made it even more difficult to trace back to the original error and fix it.
+
+To this day, I'm not sure if I missed anything in the 2400 lines.
 
 ## Image
 
-![Rocket launch](/media/wallpapperr10.png)
 
-## Header
 
-Solebat cetera infelix duorum gravidi possit, et nec, est inpia mentique, consistere quae. Amplexus uror, pars pars aevo curas Cinyreius
-pennis sacrum inpulsaque o cunctos Oleniden peragit, se Athamas inmaduit
-transierant. Relicta significat rubenti potest.
 
-Illa tibi cruentum adpulit pallent. Una dolorem quaque. Pars parvi, mihi quae
-Lyciaeque legit. Hic vitae felix illi laudatis? Et caelum, precatur nec pectora,
-Phoebi volucris moveo.
 
-## Unordered Lists
 
-- Item 1
-- Item 2
-- Item 3
 
-## Ordered Lists
 
-1. Item 1
-2. Item 2
-3. Item 3
-
-## Code Block
-
-```javascript
-// finds a given word in a string and replace with another one
-const findAndReplace = (string, wordToFind, wordToReplace) => {
-  return string.split(wordToFind).join(wordToReplace);
-};
-
-let result = findAndReplace('I like banana', 'banana', 'apple'); // I like apple
-```
-
-## Quoted Text
-
-> Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
+> If you have found any errors, please contact me via the contact form

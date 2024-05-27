@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import Tags from "./tags";
+import ImageGroup from '../components/ImageGroup';
 
 const PostList = ({ posts }) => {
   const PostList = posts.map(({ frontmatter, fields, excerpt, timeToRead }) => {
