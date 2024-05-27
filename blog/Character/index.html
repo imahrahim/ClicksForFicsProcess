@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.24.3"/><meta name="theme-color" content="#663399"/><meta data-react-helmet="true" name="description" content="By the end of the project, cleaning the data remained my primary task. During the analysis, it quickly became apparent that accurately analyzing the data would…"/><meta data-react-helmet="true" property="og:title" content="Character Cleaning"/><meta data-react-helmet="true" property="og:description" content="By the end of the project, cleaning the data remained my primary task. During the analysis, it quickly became apparent that accurately analyzing the data would…"/><meta data-react-helmet="true" property="og:image" content="/Users/imah/gatsby-starter-glass/static/media/wallpapperr10.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="yinkakun"/><meta data-react-helmet="true" name="twitter:title" content="Character Cleaning"/><meta data-react-helmet="true" name="twitter:description" content="By the end of the project, cleaning the data remained my primary task. During the analysis, it quickly became apparent that accurately analyzing the data would…"/><meta data-react-helmet="true" name="twitter:image" content="/Users/imah/gatsby-starter-glass/static/media/wallpapperr10.png"/><style data-href="/styles.67a7276ebe7f0ff9e6ca.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#e3eaf2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#3c526d}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#111b27}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em .3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8da1b9}.token.punctuation{color:#e3eaf2}.token.delimiter.important,.token.selector .parent,.token.tag,.token.tag .token.punctuation{color:#6cc}.token.attr-name,.token.boolean,.token.boolean.important,.token.constant,.token.number,.token.selector .token.attribute{color:#e6d37a}.token.class-name,.token.key,.token.parameter,.token.property,.token.property-access,.token.variable{color:#6cb8e6}.token.attr-value,.token.color,.token.inserted,.token.selector .token.value,.token.string,.token.string .token.url-link{color:#91d076}.token.builtin,.token.keyword-array,.token.package,.token.regex{color:#f4adf4}.token.function,.token.selector .token.class,.token.selector .token.id{color:#c699e3}.token.atrule .token.rule,.token.combinator,.token.keyword,.token.operator,.token.pseudo-class,.token.pseudo-element,.token.selector,.token.unit{color:#e9ae7e}.token.deleted,.token.important{color:#cd6660}.token.keyword-this,.token.this{color:#6cb8e6}.token.bold,.token.important,.token.keyword-this,.token.this{font-weight:700}.token.delimiter.important{font-weight:inherit}.token.italic{font-style:italic}.token.entity{cursor:help}.language-markdown .token.title,.language-markdown .token.title .token.punctuation{color:#6cb8e6;font-weight:700}.language-markdown .token.blockquote.punctuation{color:#f4adf4}.language-markdown .token.code{color:#6cc}.language-markdown .token.hr.punctuation{color:#6cb8e6}.language-markdown .token.url .token.content{color:#91d076}.language-markdown .token.url-link{color:#e6d37a}.language-markdown .token.list.punctuation{color:#f4adf4}.language-json .token.operator,.language-markdown .token.table-header{color:#e3eaf2}.language-scss .token.variable{color:#6cc}.token.cr:before,.token.lf:before,.token.space:before,.token.tab:not(:empty):before{color:#8da1b9}div.code-toolbar>.toolbar a,div.code-toolbar>.toolbar button{background:#6cb8e6;color:#111b27}div.code-toolbar>.toolbar a:focus,div.code-toolbar>.toolbar a:hover,div.code-toolbar>.toolbar button:focus,div.code-toolbar>.toolbar button:hover{background:#6cb8e6da;color:#111b27;text-decoration:none}div.code-toolbar>.toolbar span,div.code-toolbar>.toolbar span:focus,div.code-toolbar>.toolbar span:hover{background:#8da1b9;color:#111b27}.line-highlight{background:#3c526d5f;background:linear-gradient(90deg,#3c526d5f 70%,#3c526d55)}.line-highlight:before,.line-highlight[data-end]:after{background-color:#8da1b9;box-shadow:0 1px #3c526d;color:#111b27}pre[id].linkable-line-numbers span.line-numbers-rows>span:hover:before{background-color:#8da1b918}.line-numbers .line-numbers-rows{background:#0b121b7a;border-right:1px solid #0b121b}.line-numbers-rows>span:before{color:#8da1b9da}.rainbow-braces .token.punctuation.brace-level-1,.rainbow-braces .token.punctuation.brace-level-5,.rainbow-braces .token.punctuation.brace-level-9{color:#e6d37a}.rainbow-braces .token.punctuation.brace-level-10,.rainbow-braces .token.punctuation.brace-level-2,.rainbow-braces .token.punctuation.brace-level-6{color:#f4adf4}.rainbow-braces .token.punctuation.brace-level-11,.rainbow-braces .token.punctuation.brace-level-3,.rainbow-braces .token.punctuation.brace-level-7{color:#6cb8e6}.rainbow-braces .token.punctuation.brace-level-12,.rainbow-braces .token.punctuation.brace-level-4,.rainbow-braces .token.punctuation.brace-level-8{color:#c699e3}pre.diff-highlight>code .token.deleted:not(.prefix),pre>code.diff-highlight .token.deleted:not(.prefix){background-color:#cd66601f}pre.diff-highlight>code .token.inserted:not(.prefix),pre>code.diff-highlight .token.inserted:not(.prefix){background-color:#91d0761f}.command-line-prompt{border-right:1px solid #0b121b}.command-line-prompt>span:before{color:#8da1b9da}</style><style data-styled="" data-styled-version="5.3.6">.inkCen{margin-left:auto;margin-right:auto;max-width:1300px;padding-left:var(--size-700);padding-right:var(--size-700);height:100%;}/*!sc*/
+@media screen and (max-width:1000px){.inkCen{padding-left:var(--size-400);padding-right:var(--size-400);}}/*!sc*/
+data-styled.g1[id="container__Container-sc-g6pcgm-0"]{content:"inkCen,"}/*!sc*/
+.dbKPbi{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g2[id="theme-switch__StyledThemeSwitch-sc-1laae5k-0"]{content:"dbKPbi,"}/*!sc*/
+.hwRcSk{padding-top:var(--size-300);}/*!sc*/
+data-styled.g3[id="header__StyledHeader-sc-1344zpp-0"]{content:"hwRcSk,"}/*!sc*/
+.qOpbw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+data-styled.g4[id="header__HeaderWrapper-sc-1344zpp-1"]{content:"qOpbw,"}/*!sc*/
+.hfeZxo a{text-transform:uppercase;-webkit-text-decoration:none;text-decoration:none;font-size:var(--size-400);color:inherit;}/*!sc*/
+data-styled.g5[id="header__HeaderTitle-sc-1344zpp-2"]{content:"hfeZxo,"}/*!sc*/
+.qktXK{position:static;padding:0;background:transparent;-webkit-backdrop-filter:unset;backdrop-filter:unset;}/*!sc*/
+data-styled.g6[id="header__StyledNav-sc-1344zpp-3"]{content:"qktXK,"}/*!sc*/
+.egscvl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;padding:0;list-style-type:none;}/*!sc*/
+data-styled.g7[id="header__StyledNavList-sc-1344zpp-4"]{content:"egscvl,"}/*!sc*/
+.hbTrcT:not(:last-of-type){margin-right:2rem;}/*!sc*/
+@media screen and (max-width:700px){.hbTrcT:not(:last-of-type){margin-right:1rem;}}/*!sc*/
+.hbTrcT a{color:inherit;text-transform:uppercase;font-size:var(--size-300);-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.1rem;-moz-letter-spacing:0.1rem;-ms-letter-spacing:0.1rem;letter-spacing:0.1rem;}/*!sc*/
+@media screen and (max-width:700px){.hbTrcT a{font-size:0.7rem;}}/*!sc*/
+data-styled.g8[id="header__StyledNavListItem-sc-1344zpp-5"]{content:"hbTrcT,"}/*!sc*/
+.bbCZHV{padding:0;list-style:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g9[id="social-links__SocialLinkList-sc-r9vd8i-0"]{content:"bbCZHV,"}/*!sc*/
+.kAhSCw{margin-right:var(--size-400);text-transform:uppercase;}/*!sc*/
+.kAhSCw a{color:inherit;font-size:var(--size-300);}/*!sc*/
+data-styled.g10[id="social-links__SocialLinkItem-sc-r9vd8i-1"]{content:"kAhSCw,"}/*!sc*/
+.bMsOzy{padding-top:var(--size-300);padding-bottom:var(--size-300);}/*!sc*/
+data-styled.g11[id="footer__StyledFooter-sc-1d6x338-0"]{content:"bMsOzy,"}/*!sc*/
+.cbMRqg{font-size:var(--size-300);}/*!sc*/
+.cbMRqg a{color:inherit;}/*!sc*/
+data-styled.g12[id="footer__FooterAttribution-sc-1d6x338-1"]{content:"cbMRqg,"}/*!sc*/
+.hkHEGz{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g13[id="footer__FooterWrapper-sc-1d6x338-2"]{content:"hkHEGz,"}/*!sc*/
+*,*::before,*::after{box-sizing:border-box;}/*!sc*/
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0;}/*!sc*/
+ul[role='list'],ol[role='list']{list-style:none;}/*!sc*/
+html:focus-within{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}/*!sc*/
+html{height:-webkit-fill-available;}/*!sc*/
+body{min-height:100vh;min-height:-webkit-fill-available;text-rendering:optimizeSpeed;line-height:1.5;}/*!sc*/
+a:not([class]){-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}/*!sc*/
+img,picture{max-width:100%;display:block;}/*!sc*/
+input,button,textarea,select{font:inherit;}/*!sc*/
+@media (prefers-reduced-motion:reduce){html:focus-within{-webkit-scroll-behavior:auto;-moz-scroll-behavior:auto;-ms-scroll-behavior:auto;scroll-behavior:auto;}*,*::before,*::after{-webkit-animation-duration:0.01ms !important;animation-duration:0.01ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important;-webkit-transition-duration:0.01ms !important;transition-duration:0.01ms !important;-webkit-scroll-behavior:auto !important;-moz-scroll-behavior:auto !important;-ms-scroll-behavior:auto !important;scroll-behavior:auto !important;}}/*!sc*/
+html{width:100vw;overflow-x:hidden;}/*!sc*/
+body::-webkit-scrollbar{width:10px;}/*!sc*/
+body::-webkit-scrollbar-thumb{background-color:rgba(255,0,55,0.754);}/*!sc*/
+body::-webkit-scrollbar-track{background:transparent;}/*!sc*/
+:root{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;--size-300:0.75rem;--size-400:1rem;--size-500:1.33rem;--size-600:1.77rem;--size-700:2.36rem;--size-800:3.15rem;--size-900:4.2rem;}/*!sc*/
+body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;-webkit-transition-property:background-color,color,background;transition-property:background-color,color,background;-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;background-attachment:fixed;font-smoothing:antialiased;}/*!sc*/
+body.light-mode{color:#000000;background-color:#ff93ec;background-image:linear-gradient(315deg,#bdff9f 0%,#fef9b5 50%);}/*!sc*/
+body.dark-mode{color:#ffffff;background-color:#ff93ec;background-image:url('/media/wallpapperr10.png');background-size:cover;background-position:center;background-repeat:no-repeat;}/*!sc*/
+body.dark-mode ::selection{background:#e9e9e9;color:#252526;}/*!sc*/
+body.light-mode ::selection{background:#37292C;color:white;}/*!sc*/
+h1,h2,h3,h4{line-height:1.125;}/*!sc*/
+h1,h2,h3{font-weight:700;}/*!sc*/
+h1{font-size:var(--size-800);}/*!sc*/
+h2{font-size:var(--size-700);}/*!sc*/
+h3{font-size:var(--size-600);}/*!sc*/
+p{font-size:var(--size-400);}/*!sc*/
+p,li{max-width:none;}/*!sc*/
+.gatsby-resp-image-wrapper{margin-left:0 !important;}/*!sc*/
+data-styled.g14[id="sc-global-kAWkYV1"]{content:"sc-global-kAWkYV1,"}/*!sc*/
+.kqGLlG{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+.kqGLlG main{margin-top:auto;margin-bottom:auto;}/*!sc*/
+.kqGLlG footer{margin-top:auto;}/*!sc*/
+data-styled.g15[id="layout__LayoutWrapper-sc-qrswv8-0"]{content:"kqGLlG,"}/*!sc*/
+.PrHZm{display:inline-block;margin-right:0.6rem;margin-bottom:0.6rem;margin-left:0;text-transform:uppercase;font-size:var(--size-300);}/*!sc*/
+.PrHZm a{position:relative;z-index:2;-webkit-text-decoration:none;text-decoration:none;color:inherit;padding:0.2rem 0.6rem;border:1px solid rgba(255,255,255,1);border-radius:4px;}/*!sc*/
+.PrHZm a:hover{background-color:rgba(255,255,255,0.9);}/*!sc*/
+body.light-mode .tags__Tag-sc-16itk8x-0 a{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.5);background-color:rgba(255,255,255,0.7);}/*!sc*/
+body.light-mode .tags__Tag-sc-16itk8x-0 a:hover{background-color:rgba(255,255,255,1);}/*!sc*/
+body.dark-mode .tags__Tag-sc-16itk8x-0 a{background-color:#212122;border:1px solid #1a1a1b;opacity:0.8;}/*!sc*/
+data-styled.g16[id="tags__Tag-sc-16itk8x-0"]{content:"PrHZm,"}/*!sc*/
+.doSPtH{padding:var(--size-900);padding-bottom:var(--size-900);margin-left:auto;margin-right:auto;max-width:90ch;word-wrap:break-word;background-color:rgba(8,8,8,0.214);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);}/*!sc*/
+data-styled.g29[id="post-template__PostWrapper-sc-afk1br-0"]{content:"doSPtH,"}/*!sc*/
+.GehMa{font-size:var(--size-700);}/*!sc*/
+data-styled.g30[id="post-template__PostTitle-sc-afk1br-1"]{content:"GehMa,"}/*!sc*/
+.dxthST{font-size:var(--size-400);display:block;margin-top:0.5rem;text-transform:uppercase;}/*!sc*/
+data-styled.g31[id="post-template__PostDate-sc-afk1br-2"]{content:"dxthST,"}/*!sc*/
+.lcGYWs{padding:var(--size-800);}/*!sc*/
+.lcGYWs > * + *{margin-top:var(--size-300);}/*!sc*/
+.lcGYWs > p + p{margin-top:var(--size-700);}/*!sc*/
+.lcGYWs * + h1,.lcGYWs * + h2,.lcGYWs * + h3{margin-top:var(--size-900);}/*!sc*/
+.lcGYWs h1{font-size:var(--size-700);}/*!sc*/
+.lcGYWs h2{font-size:var(--size-600);}/*!sc*/
+.lcGYWs h3{font-size:var(--size-500);}/*!sc*/
+.lcGYWs b,.lcGYWs strong{font-weight:600;}/*!sc*/
+.lcGYWs a{color:inherit;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration-thickness:0.125rem;text-decoration-thickness:0.125rem;}/*!sc*/
+.lcGYWs blockquote{padding-left:var(--size-400);border-left:5px solid;font-style:italic;}/*!sc*/
+.lcGYWs code{font-family:"Source Sans Pro",monospace;overflow-x:auto;white-space:pre-wrap;}/*!sc*/
+.lcGYWs pre{overflow-x:auto;white-space:pre-wrap;max-width:100%;}/*!sc*/
+.lcGYWs img{display:block;-webkit-flex:1;-ms-flex:1;flex:1;width:100%;}/*!sc*/
+data-styled.g32[id="post-template__PostContent-sc-afk1br-3"]{content:"lcGYWs,"}/*!sc*/
+.izeNgs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:1rem;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-top:var(--size-900);}/*!sc*/
+.izeNgs > *{position:relative;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:1rem;padding-top:0.5rem;padding-bottom:0.5rem;border-radius:8px;border:1px solid rgba(255,255,255,0.5);background-color:rgba(255,255,255,0.214);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);margin-bottom:1rem;}/*!sc*/
+.izeNgs > *:hover{background-color:rgba(255,255,255,0.5);}/*!sc*/
+.izeNgs span{text-transform:uppercase;opacity:0.6;font-size:var(--size-400);padding-bottom:var(--size-500);}/*!sc*/
+.izeNgs a{color:inherit;-webkit-text-decoration:none;text-decoration:none;font-size:var(--size-400);text-transform:capitalize;}/*!sc*/
+.izeNgs a::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;}/*!sc*/
+data-styled.g33[id="post-template__PostPagination-sc-afk1br-4"]{content:"izeNgs,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="Gatsby Glass RSS Feed" href="/rss.xml"/><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Poppins:400,400i,700&amp;display=swap" rel="stylesheet"/><link rel="icon" href="/favicon-32x32.png?v=159e0719d0cdbde15ad0cca727d0588f" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=159e0719d0cdbde15ad0cca727d0588f"/><title data-react-helmet="true">Character Cleaning - Process for Projects</title></head><body><script>!function(e,a,o){function d(e){document.body.classList.add(e?"dark-mode":"light-mode"),document.body.classList.remove(e?"light-mode":"dark-mode")}var t=window.matchMedia("(prefers-color-scheme: dark)"),r="(prefers-color-scheme: dark)"===t.media,s=null;try{s=localStorage.getItem("darkMode")}catch(e){}var c=null!==s;if(c&&(s=JSON.parse(s)),c)d(s);else if(r)d(t.matches),localStorage.setItem("darkMode",t.matches);else{var l=document.body.classList.contains("dark-mode");localStorage.setItem("darkMode",JSON.stringify(l))}}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__LayoutWrapper-sc-qrswv8-0 kqGLlG"><header class="header__StyledHeader-sc-1344zpp-0 hwRcSk"><div class="container__Container-sc-g6pcgm-0 header__HeaderWrapper-sc-1344zpp-1 inkCen qOpbw"><div class="header__HeaderTitle-sc-1344zpp-2 hfeZxo"><a href="/">Process for Projects</a></div><nav class="header__StyledNav-sc-1344zpp-3 qktXK"><ul class="header__StyledNavList-sc-1344zpp-4 egscvl"><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><a href="/blog">Blog</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><a href="/about">About</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><a href="/contact">Contact</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><div class="theme-switch__StyledThemeSwitch-sc-1laae5k-0 dbKPbi"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="black" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="cursor:pointer;transform:rotate(90deg)"><mask id="circle-mask-0"><rect x="0" y="0" width="100%" height="100%" fill="white"></rect><circle style="cx:100%;cy:0%" r="9" fill="black"></circle></mask><circle cx="12" cy="12" fill="black" style="r:5px" mask="url(#circle-mask-0)"></circle><g stroke="currentColor" style="opacity:1"><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></g></svg></div></li></ul></nav></div></header><main><div class="container__Container-sc-g6pcgm-0 inkCen"><div class="post-template__PostWrapper-sc-afk1br-0 doSPtH"><article><h1 class="post-template__PostTitle-sc-afk1br-1 GehMa">Character Cleaning</h1><span class="post-template__PostDate-sc-afk1br-2 dxthST">April 20, 2024</span><section class="post-template__PostContent-sc-afk1br-3 lcGYWs"><p>By the end of the project, cleaning the data remained my primary task. During the analysis, it quickly became apparent that accurately analyzing the data would be challenging. Since the metadata came from AO3, where all users could individually input and write their data, there were numerous inaccuracies and deviations that couldn’t be easily resolved by machine. For instance, within a single dataset, over 800 different characters were mentioned, many of which were recorded multiple times in various forms.</p>
+<ul>
+<li>Tom Riddle</li>
+<li>Tom Marvolo Riddle</li>
+<li>Voldemort</li>
+<li>Lord Voldemort</li>
+<li>Tom Riddle | Voldemort</li>
+<li>etc.</li>
+</ul>
+<p>Initially, I attempted to manually address these issues in Excel by searching for characters and aliases that were familiar to me. However, I soon realized this approach was unsustainable.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b8821827e606228c9dec75e64b08194c/8deec/characters6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.82278481012659%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADA0lEQVR42mWT609TWRTF+7eYIOXRB61Ui1DAGjTgA8Hh1Vo1JJiJcQwqJj4CmBmLgqIZMjMfJ5lk/oQhDDryYQhQiCkCgYQP0BaQPqHKo/SVn+cchA96k5Wz7177rHv3PutoGhoaqK+vx+l00traSltbm4odDgeSa2pqUrHMtbS00NzcrNDY2KjeZf6gXkKztrbG4uIiCwsLhEIhEokEu7u7pFIpfD4fq6urfPuEw2ECgQChYPA7ThOLxVheXsbv9zM7O8vY2BiTk5NMTU0xPDys4PF4FCYmJhQ3NDTE4OAgIyMjqk5C8pLTyK8tLS0xMzODy+VCp9NRWlqqUG6zYbFYMJvNGAwGTKYitUrIfEVFBSUlJYrPyckhNzd3X1D+4fSHD1yqrSVXq8VoLKK42EJRkUlsNlJYUIg2L08ImsnLL0Cbr0OvN4g6o4gL0AnedsKK6UQZmkgkotr1er382u+m5+f7PPvlgUJvz2P6n3fy8ulDngk8dz/iZW+XQLdAJ69edNPf161yfwz0MPDajUYehBy+7P+nWzf58eYNbrffouP+XbqfdHKv4w53O9rV2n7nNtevXcHpaOaqyylG5MDlbDmMr19z7bfs8/vwTHh42uNm0vuejc9xovENwhsxImKNbMbY2PrEcsDPFTHnquoaLlyqo/r8Bc5drOXN2/+Ix+Nsbsb3BVdWVhgfH1eC03MzhGMRPm1/ZieZYHtvl63EDslMisDHVexnq7GdslMmUFl1RhyMnXfvRpRlstnMfstyhqOjo7jdbubm5tjZ3iGbyR4ik86oDdFolKqaGkxWKza7HYtwwklr2aFgMplEExTmlDM8EJQGT+ztkU6nyWQyCikRyycYCnK5roG6iz9w/vQ5yk9Wcqr8NP+LvYeCW9tbRIW5vdPT9PX1MT8/jzT7nhA9EEx/FZSOKCuvRGcwYTp2HKOpGL3RzNC/w4qXt0sz8Ptv/Pn3X/S+ekFXV5dqeX19Xcwj+52gbNkqzH5Em0e+8OfRQh1avZ5/xK2RNRJfADYF50mMbEQqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/b8821827e606228c9dec75e64b08194c/f058b/characters6.png"
+        srcset="/static/b8821827e606228c9dec75e64b08194c/c26ae/characters6.png 158w,
+/static/b8821827e606228c9dec75e64b08194c/6bdcf/characters6.png 315w,
+/static/b8821827e606228c9dec75e64b08194c/f058b/characters6.png 630w,
+/static/b8821827e606228c9dec75e64b08194c/40601/characters6.png 945w,
+/static/b8821827e606228c9dec75e64b08194c/78612/characters6.png 1260w,
+/static/b8821827e606228c9dec75e64b08194c/8deec/characters6.png 2136w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>I then subscribed to ChatGPT Premium, hoping AI could assist in solving my problem. Unfortunately, even for AI, it was too large a task to clean the data thoroughly and quickly. Therefore, I began to go through the data line by line.</p>
+<p>Characters were not the only dimension with this issue; relationships and fandoms also had similar problems. As I was already going through each row individually, I decided to add fandom and gender information to each character, which would help me categorize the relationships and identify the fandoms of the characters involved.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b2cdb513fd4c8097fed37063f75bcbe3/fc99f/characters1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 83.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAEJUlEQVR42oWSa0xbZRjHjwyNcXFmX9DExA3CtVwGLUOyC8axuSUzJroPfjcmflirZjsmzg+LZl5G1DiNYcREiWNjHxxjMhi3UcpaKCttuY4BtrTQyyk9LadYSi/nPe/ft0VI5vU5+eU553nP88/zP8/h9jybU6qq2HOurFZ99oXSYv65gr18aa2GL9pfxT9fUsCXHKzhc8vL+JzcXD63oowv0qj53KpyXlNdxb988jh/6NUTfF61+mxOYcGH+fvKy7jjR+rff/2V4zhR8SKOqjSoL67CsXQuqsSRwn04WqJGXUkJDhYV4FBhAQ6zXJevwsmKA3itshb1mmNQ15yCpvYNaNT1Z7jR1rbTc5euw/jBpYT16yvy/Qs/yOZPmuSR840ZzB83yYNvtsjd9c1y5+FGuaOmSTa+c1k2n/tGHj7zlWxijJ6/nDB99B0aiuq13LDVqn3QcRcO6xQJRFapXwwyVjLZsxKg0UScuropdd6iVDSCetpBYwHQaCRAxYU56jWbaGjZQRwDenxRsF/H9fUbtLafb8A9bCH+IBPz+CB4VxgCvMserIphRKR1JJU4ACWDnEgivOjEkt2K2aFB6jT3k+lfrqFB9ZKOM/QZtJPNN+C12EkgFKLeJQ8T8mPZ7YFr0QXBJ0AKrGcgcQoSA1IxGaLjIaYH+2Fqv0EfmPrJ/J0uXCw+oON6jSatrfUmfPftJLi6SsWgiGQq8SdJPBJ0k1QiDoepE65xC1wzE1RYdBD3oIlZrtVx/fdMWvu1m/BbxklkI0aDfhGG20bofx3CwK00BvS16TF0ZxjxWDyjm2KWRcccHJZ7WLQO0ZjoI7MdHfhSVafj7ppGtPbr7QhYJknEF6ZhfxCmXjOMPSO41z0MU48ZQ10jGOm3MMHEtuDvXg+sfd3ovtZMXVNjZL6rc9OywWLRTrV1IjA6QZaMUzTi9OE/g1IobDdRwYlo2IUHjkUaCItEGBvHp3lqZtk4nJlwhU3oNTtpzC+le0BSBERWtlEYVGEHjHRKroewvjAO2SuwTRGyMv0Qn+WmBYfS3zBteYL9S3Ya9Yqbg7CuLbaWsXVPZAKZIfUOwt/0I123TxAhLbi3UsfpDWbteAubcGyS/NZro8EZ17bgltA/Ca5F1hCNxxFNJukGK7lHbfg8v1rHWWdnT8/f7oNwf0J2G2aV0OyyQonCYO3/cskpWVmTIkpkVVIioVVlPR6X3aPWTcHxhYV3nd16hGwzCNoWEJ5wAgmC/4uNjXiGWGwDKfbstU3iYp7mPa6rb+At40+tqekefXikVS9Z2w1SUBQlwS9IASHwKKy2IoYkz9ikNPf9FWmu8SqjRVpovBq2X/g22VBR9zbHYtdjHKfKzs5W7Xxyt+qpnc+osrKyVDt27Pg76foTj6vS73N/IZvx9O7du/4AkZj4FNPn5Y4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/b2cdb513fd4c8097fed37063f75bcbe3/f058b/characters1.png"
+        srcset="/static/b2cdb513fd4c8097fed37063f75bcbe3/c26ae/characters1.png 158w,
+/static/b2cdb513fd4c8097fed37063f75bcbe3/6bdcf/characters1.png 315w,
+/static/b2cdb513fd4c8097fed37063f75bcbe3/f058b/characters1.png 630w,
+/static/b2cdb513fd4c8097fed37063f75bcbe3/40601/characters1.png 945w,
+/static/b2cdb513fd4c8097fed37063f75bcbe3/78612/characters1.png 1260w,
+/static/b2cdb513fd4c8097fed37063f75bcbe3/fc99f/characters1.png 2702w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cc81b1a583824a1f9ba4992fd197cd52/9451d/characters4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB2UlEQVR42m2Sy47aQBBF/SHgFzbmafwkEgv+JDOKJoJMhEmUz2GDxDKs+CAk2IAQiMeO903fZjoTJbF0VdUt9+lbVa2VSiU4joNCoSDF3HVdFItFmVuWDdOyYFsmnMYH5PI68vk8crrxiLmcjHEcI0kSaIZhwDRNNJtNtNtttFotRFEEv15HGEaoVCoCasp/TD2Pkisud4oouJ640IVtF6ALhm3bUprF20VCSF1ACEjTFJ7noVqtvgEtCbRFBXEcImjUkcQRmmmCIPBRr1XREHtB0IDGH1kqYcbbTbVaTZbLNcvnHv9j+S+fPuJ79hmvnSf8+NYV+Qt6X57x2n3C1+7zO9D3femEIMLpkCCuFZDqdDoYj8cYDAYYjUYyDodDsfcTk8nkAeQBQhScZb67sqD6rOs6sqyP/X6P9XqN8/mMxWKBzWaDw+EAfpo6xB6yd6mYFCPXYRj+jnTMaWZZhtVqhdlshu12i/l8juVyiel0it1up4A2vFJZHuIzUiqXy9Kt6ikd9no93G43nE4n6fB4POJyueB6vUrJKauyVGkq55SDIJDiu3yUnOF+v0uIAqmckg45STqhlDPljpF95aUE9vv9f4B/SlNvjG5Ur9QjVVJV/A/4t34BZaK6L+1beVMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/cc81b1a583824a1f9ba4992fd197cd52/f058b/characters4.png"
+        srcset="/static/cc81b1a583824a1f9ba4992fd197cd52/c26ae/characters4.png 158w,
+/static/cc81b1a583824a1f9ba4992fd197cd52/6bdcf/characters4.png 315w,
+/static/cc81b1a583824a1f9ba4992fd197cd52/f058b/characters4.png 630w,
+/static/cc81b1a583824a1f9ba4992fd197cd52/40601/characters4.png 945w,
+/static/cc81b1a583824a1f9ba4992fd197cd52/78612/characters4.png 1260w,
+/static/cc81b1a583824a1f9ba4992fd197cd52/9451d/characters4.png 2782w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>With the help of ChatGPT and manual searches for characters on Google, it took me two days to clean a single dataset. These two days ended up being somewhat wasted, as I had to repeat the process at least two more times.</p>
+<p>My first mistake was starting with the wrong dataset. Due to my lack of knowledge, I began with the dataset I was most familiar with (Harry Potter). However, I later realized I should have started with the Overall Top 1000 dataset. This would have saved me from duplicating a lot of work in the other three datasets.</p>
+<p>The second mistake was focusing on the character list instead of the characters mentioned in the relationships and their respective spellings. This was crucial for implementing my idea effectively.</p>
+<p>Here are the steps I eventually followed:</p>
+<ol>
+<li>Extract all characters from the relationships in the Overall dataset.</li>
+<li>Clean these characters and add information about their gender and fandom.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e5e8d334b2af21bbe0c40d9d7224782b/d5b59/characters8.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 25.316455696202528%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA50lEQVR42lVQiWqFQAz0//9MvLAqiPp8Kla8FZ634rQTsNCF2c3mmEmimKYJXdehqipo27aNKIqQJAnathXEcSx4v98IggB1XcNxvqBpmuQN4wA/CpB+Z1DCMARRliX2fcd1XXjOfd84zxNd1+E4DsE4jpKXZRler5eIjMOAvusxfT5QDMOA67qSwG76vheSByyuqkpIGaP4NE3wfR+WZf126mCeZ6RpKq/ieZ44GSyKAtu2YVmWf4RMpM0OKUxCroV1HJl+8pBU4cX9MEBwjKZpZPSHcF3Xvz9XQ8E8z6WOAhRkLXf7A83Dc4kzDzh8AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/e5e8d334b2af21bbe0c40d9d7224782b/f058b/characters8.png"
+        srcset="/static/e5e8d334b2af21bbe0c40d9d7224782b/c26ae/characters8.png 158w,
+/static/e5e8d334b2af21bbe0c40d9d7224782b/6bdcf/characters8.png 315w,
+/static/e5e8d334b2af21bbe0c40d9d7224782b/f058b/characters8.png 630w,
+/static/e5e8d334b2af21bbe0c40d9d7224782b/40601/characters8.png 945w,
+/static/e5e8d334b2af21bbe0c40d9d7224782b/78612/characters8.png 1260w,
+/static/e5e8d334b2af21bbe0c40d9d7224782b/d5b59/characters8.png 1370w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ol start="3">
+<li>Replace the relationship dataset with the cleaned names.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/10a613909a2989f94ec761fab59088fe/b0096/characters3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACZElEQVR42m2SW08TURSF50cYIahQKG0p5dIALQQDbUlqeJNgRIEiF4mECAFFRIwQboKQ+GvUN3nDyBNPYEiTEiitLZReoLS03D7PGVODhJ2srFl79qxZe+YoVqsFk8mEqaRUcClGowmz2UxXRwsdrhZ6e1z0drfT5fqrO9pbaGt9TE9nK21PH9HtekJ/fx+dXc943u1CKSouwWAwoNPr0esNaAt1gvUMDvQxNvqK8bERZmcmWPg4zcz0ByYnx5mbn2JuYYqFxVk+Lc0JzLIosPR5HkWjyScvT0N+QYHKOTl3yMrO5su3rySTJ+zvhziKx0ml0ipCkTDBcIhQLEIsESd+kuQwmRA45kiw4myow2Gv44HTQYNgh+0+1dZKlpeXkXVwcEA4LBFWEYlEiEaiApF/vVg0ymHskINQCOXN65eMjgzw7u2QWG+Yifcj9L3o4mFTE4PDQzQ2NuJ0OnE4HNTX12O327HZbNjsNrUnr6ssFsrKymhubkb5LpL4fwfwenfx7voE+/D5/GxsbPBjZYWdnR3R87K+vs7q6k/cbjfb29t4PB4x52NtbQ2doYhbt7Ow1tSgeDxubqrLy0uiYpVMJRIJAoEAZ2dn/83JlS3WavK1heiLjCibm7/UG6enp+qwxPn5uWqwt7fHxcWFquW329ra4vj4WNWpVEp9Tr6kosrC3dw8zBWVKH6/T72RMcognU6rphmdTCbVxNJIahlAVjAYpLS8nFxxWgzGYhQZWa533VAiky4DOSd7cjZjKBNWWarR6vRoCrQoIfGrb0p4df3r+qqhTFhTW4uhuJh74hz/AXyNl+xUgmpaAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/10a613909a2989f94ec761fab59088fe/f058b/characters3.png"
+        srcset="/static/10a613909a2989f94ec761fab59088fe/c26ae/characters3.png 158w,
+/static/10a613909a2989f94ec761fab59088fe/6bdcf/characters3.png 315w,
+/static/10a613909a2989f94ec761fab59088fe/f058b/characters3.png 630w,
+/static/10a613909a2989f94ec761fab59088fe/40601/characters3.png 945w,
+/static/10a613909a2989f94ec761fab59088fe/78612/characters3.png 1260w,
+/static/10a613909a2989f94ec761fab59088fe/b0096/characters3.png 2928w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<ol start="4">
+<li>Combine information about characters, ships, gender, and fandom.</li>
+<li>Cross-check all entries with the other datasets to avoid redundant work.</li>
+<li>Repeat steps 1-4 for the remaining datasets.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9266f1d38b8a62790ed77791f69f522a/01744/characters7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.35443037974683%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyUlEQVR42oWT2UsbURTG50/oSxYTjYmJNSYajaVCKX0o7b/QFvrg7kwy2RetIrR9LdLSh0pbi6WJvtk3FxCxJgoSl0YKggsoAUlcEDVaqokmX++9IRLo4sDH+e6dM78593AuV1FRgZtENOrKy6HVaqHRaKApK4Ner4fRaISBiHqdTge1WgOVSgVVaSlKSkrIWo3b9fWoNZtx5+49cEqlAlKpFMXFxVAocj4viUQCuVx25YvkcsjkRZDKZJDLiCeRfkN/oNZooVAqwTU2NMAmivB4vfAS2e12WK1WdD7rgs/fAZvDBafLBbfbBY/HA5/PS+RjuXTt9+d8Z0cHRMLhFhYWQJ9MJoPLy0vmf0S/o629Bc28DbzNjXZBhMUiQBAEuCicgLq6u9HT00OAfjicTrLvBs/z4GZnZxmIKp1OMeDX4WFUGSthNtfiVl0tTKZqVFUZWT+p6LqaqKbGxHIqK/WsxwaDAdz8/DwuLi6YUqkcMBz6BqH1KUShAW4nD69LgN3aBNHSyGSjkbwTLU2wi83EN8IhtsBhbQE3NzfHQLkK0ww4MjKCly+e4+OH9+jre4dP/f0k9uHzwAAGg0EEAwGmwWAAgcAXBEnMiwuFQqy6QuDo6CgitHKyF4vFcHr6EwcHB0iTvOsedmRaIYXmgWNjY5iYmGCQaDSK7e1trK6u4vDwkOWen5//U1wkEmGmEDg+Po7p6WkkT06wtraGvb09bGxsMCA9Sb7nfxMXDoeRIsBsNns1NpOTk6CtSCaTDLS7u4utrS3s7OxcD5yZCSODLH6dnZFenSIRT2BoaAhTU1M4OjrC8vIy4vE4VlZWWAvovBYC8iOXF3f/wUOITjt6377Gqze9aOXb8OjJYyySgT8+Psb6+jqrLJFIXLXmvxXekBZBQu6kll5+kwlaMqTmujosLS4xIO0hBW5ubmJ/f/+PIxeuqf8N9yky3XshXocAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/9266f1d38b8a62790ed77791f69f522a/f058b/characters7.png"
+        srcset="/static/9266f1d38b8a62790ed77791f69f522a/c26ae/characters7.png 158w,
+/static/9266f1d38b8a62790ed77791f69f522a/6bdcf/characters7.png 315w,
+/static/9266f1d38b8a62790ed77791f69f522a/f058b/characters7.png 630w,
+/static/9266f1d38b8a62790ed77791f69f522a/40601/characters7.png 945w,
+/static/9266f1d38b8a62790ed77791f69f522a/78612/characters7.png 1260w,
+/static/9266f1d38b8a62790ed77791f69f522a/01744/characters7.png 2830w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ca66b4571f4ccde9244b9d3985157459/88745/characters5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.56962025316456%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABcUlEQVR42lVRa2+CQBDk71UTE19p+aCE/2uiUdEqPlAo1YgvUCKITpltjijJ5tib2bnZXa1U+kC5XJbQdR2GYcA0zfxso9VqoVqtol6vo9lsylmr1fCpf6FtGqhUKnLfaDQKXAvDELZtYzKZYDweY7PZIAgCCd/30e12sd/vkaYpbkmCNInh/jqw7G8MrSEOh8M/drtJaFmWYb1eY7lcYrvdgjkJPK/XKxzHQZILPZ9PZI8H8h8cwwO8Hw+e74mIYDmfoZHMotlshul0it1uJwBJFByNRjgej1LI+0cueopO8DxPOlPY/X6XEEG6U4IkqMLL5SJj4EkeC/hQsA8wn89lTFEUFZgIsr3VaiUEijJXhXRIwTiOJS8E8/n2+30xQjEaeHO4WCzEvmVZOJ/PRct8neNQjpUgl8RRuK4r92+CdMSl0B0JCiBROeSy1AyVQ7bLeMUKQTokSId09bqUXq8ni1Kt8WPe6XQwGAzeMAr+Afsih0LkwjzZAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Excel"
+        title="Excel"
+        src="/static/ca66b4571f4ccde9244b9d3985157459/f058b/characters5.png"
+        srcset="/static/ca66b4571f4ccde9244b9d3985157459/c26ae/characters5.png 158w,
+/static/ca66b4571f4ccde9244b9d3985157459/6bdcf/characters5.png 315w,
+/static/ca66b4571f4ccde9244b9d3985157459/f058b/characters5.png 630w,
+/static/ca66b4571f4ccde9244b9d3985157459/40601/characters5.png 945w,
+/static/ca66b4571f4ccde9244b9d3985157459/78612/characters5.png 1260w,
+/static/ca66b4571f4ccde9244b9d3985157459/88745/characters5.png 2148w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Even though these steps sound simple, this task was one of the most tedious I have ever undertaken. Excel struggled with even basic tasks like =VLOOKUP if there was a space where there should’nt have been one.</p>
+<video controls width="100%">
+  <source src="/media/Characters/characters2.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<p>On my third attempt, I finally managed to get ChatGPT to fill in 20 characters at a time. I then had to merge these with individual CSV files and still clean them manually. Many of the mistakes I made during this process only became apparent later during the visualization phase. This made it even more difficult to trace back to the original error and fix it.</p>
+<p>To this day, I’m not sure if I missed anything in the 2400 lines.</p>
+<h2>Image</h2>
+<blockquote>
+<p>If you have found any errors, please contact me via the contact form</p>
+</blockquote></section></article><nav class="post-template__PostPagination-sc-afk1br-4 izeNgs"><div><span>previous</span><a href="/blog/Template/"> <!-- -->Template</a></div><div><span>next</span><a href="/blog/DataAnalysis/"> <!-- -->Diving into the Data</a></div></nav><div><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/data">Data</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/excel">Excel</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/chat-gpt">ChatGPT</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/google">Google</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/mental-breakdown">Mental Breakdown</a></span></div></div></div></main><footer class="footer__StyledFooter-sc-1d6x338-0 bMsOzy"><div class="container__Container-sc-g6pcgm-0 footer__FooterWrapper-sc-1d6x338-2 inkCen hkHEGz"><ul class="social-links__SocialLinkList-sc-r9vd8i-0 bbCZHV"><li class="social-links__SocialLinkItem-sc-r9vd8i-1 kAhSCw"><a href="https://imahrahim.github.io/Clicks-for-Fics/">Clicks for Fics</a></li><li class="social-links__SocialLinkItem-sc-r9vd8i-1 kAhSCw"><a href="https://github.com/imahrahim/Clicks-for-Fics">Github</a></li><li class="social-links__SocialLinkItem-sc-r9vd8i-1 kAhSCw"><a href="https://www.instagram.com/imahleaf/">instagram</a></li></ul><p class="footer__FooterAttribution-sc-1d6x338-1 cbMRqg">Hand-crafted with love by<!-- --> <a href="https://twitter.com/yinkakun">Yinka Adedire</a></p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/Character/";window.___webpackCompilationHash="df092759795ed12c598c";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e45786579564da591b9b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-d5f88e5acda0e4ecafc3.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-562bfcc0216d76d85668.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-f9a69d6fea632b1ab9c7.js"],"component---src-templates-about-template-js":["/component---src-templates-about-template-js-f60c22346c666df1014c.js"],"component---src-templates-contact-template-js":["/component---src-templates-contact-template-js-db0099c5f9cbb9b47e90.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-05a1b20ee3bd5534e74d.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-cae0f1a902b850276e0f.js"],"component---src-templates-tags-template-js":["/component---src-templates-tags-template-js-18f4946fc2785f81edbe.js"]};/*]]>*/</script><script src="/app-e45786579564da591b9b.js" async=""></script><script src="/532a2f07-62c5730a2078e15b44e6.js" async=""></script><script src="/framework-c9b763abf21a9bf513c7.js" async=""></script><script src="/webpack-runtime-a4de37f54fda779039c4.js" async=""></script></body></html>

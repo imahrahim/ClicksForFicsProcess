@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.24.3"/><meta name="theme-color" content="#663399"/><meta data-react-helmet="true" name="description" content="Archive Of Our Own (AO3) does not offer a public API. Therefore, my first step was to find a way to retrieve data from AO3. There are a few unofficial APIs…"/><meta data-react-helmet="true" property="og:title" content="AO3 Scraper"/><meta data-react-helmet="true" property="og:description" content="Archive Of Our Own (AO3) does not offer a public API. Therefore, my first step was to find a way to retrieve data from AO3. There are a few unofficial APIs…"/><meta data-react-helmet="true" property="og:image" content="/Users/imah/gatsby-starter-glass/static/media/wallpapperr10.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="yinkakun"/><meta data-react-helmet="true" name="twitter:title" content="AO3 Scraper"/><meta data-react-helmet="true" name="twitter:description" content="Archive Of Our Own (AO3) does not offer a public API. Therefore, my first step was to find a way to retrieve data from AO3. There are a few unofficial APIs…"/><meta data-react-helmet="true" name="twitter:image" content="/Users/imah/gatsby-starter-glass/static/media/wallpapperr10.png"/><style data-href="/styles.67a7276ebe7f0ff9e6ca.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#e3eaf2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#3c526d}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#111b27}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em .3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8da1b9}.token.punctuation{color:#e3eaf2}.token.delimiter.important,.token.selector .parent,.token.tag,.token.tag .token.punctuation{color:#6cc}.token.attr-name,.token.boolean,.token.boolean.important,.token.constant,.token.number,.token.selector .token.attribute{color:#e6d37a}.token.class-name,.token.key,.token.parameter,.token.property,.token.property-access,.token.variable{color:#6cb8e6}.token.attr-value,.token.color,.token.inserted,.token.selector .token.value,.token.string,.token.string .token.url-link{color:#91d076}.token.builtin,.token.keyword-array,.token.package,.token.regex{color:#f4adf4}.token.function,.token.selector .token.class,.token.selector .token.id{color:#c699e3}.token.atrule .token.rule,.token.combinator,.token.keyword,.token.operator,.token.pseudo-class,.token.pseudo-element,.token.selector,.token.unit{color:#e9ae7e}.token.deleted,.token.important{color:#cd6660}.token.keyword-this,.token.this{color:#6cb8e6}.token.bold,.token.important,.token.keyword-this,.token.this{font-weight:700}.token.delimiter.important{font-weight:inherit}.token.italic{font-style:italic}.token.entity{cursor:help}.language-markdown .token.title,.language-markdown .token.title .token.punctuation{color:#6cb8e6;font-weight:700}.language-markdown .token.blockquote.punctuation{color:#f4adf4}.language-markdown .token.code{color:#6cc}.language-markdown .token.hr.punctuation{color:#6cb8e6}.language-markdown .token.url .token.content{color:#91d076}.language-markdown .token.url-link{color:#e6d37a}.language-markdown .token.list.punctuation{color:#f4adf4}.language-json .token.operator,.language-markdown .token.table-header{color:#e3eaf2}.language-scss .token.variable{color:#6cc}.token.cr:before,.token.lf:before,.token.space:before,.token.tab:not(:empty):before{color:#8da1b9}div.code-toolbar>.toolbar a,div.code-toolbar>.toolbar button{background:#6cb8e6;color:#111b27}div.code-toolbar>.toolbar a:focus,div.code-toolbar>.toolbar a:hover,div.code-toolbar>.toolbar button:focus,div.code-toolbar>.toolbar button:hover{background:#6cb8e6da;color:#111b27;text-decoration:none}div.code-toolbar>.toolbar span,div.code-toolbar>.toolbar span:focus,div.code-toolbar>.toolbar span:hover{background:#8da1b9;color:#111b27}.line-highlight{background:#3c526d5f;background:linear-gradient(90deg,#3c526d5f 70%,#3c526d55)}.line-highlight:before,.line-highlight[data-end]:after{background-color:#8da1b9;box-shadow:0 1px #3c526d;color:#111b27}pre[id].linkable-line-numbers span.line-numbers-rows>span:hover:before{background-color:#8da1b918}.line-numbers .line-numbers-rows{background:#0b121b7a;border-right:1px solid #0b121b}.line-numbers-rows>span:before{color:#8da1b9da}.rainbow-braces .token.punctuation.brace-level-1,.rainbow-braces .token.punctuation.brace-level-5,.rainbow-braces .token.punctuation.brace-level-9{color:#e6d37a}.rainbow-braces .token.punctuation.brace-level-10,.rainbow-braces .token.punctuation.brace-level-2,.rainbow-braces .token.punctuation.brace-level-6{color:#f4adf4}.rainbow-braces .token.punctuation.brace-level-11,.rainbow-braces .token.punctuation.brace-level-3,.rainbow-braces .token.punctuation.brace-level-7{color:#6cb8e6}.rainbow-braces .token.punctuation.brace-level-12,.rainbow-braces .token.punctuation.brace-level-4,.rainbow-braces .token.punctuation.brace-level-8{color:#c699e3}pre.diff-highlight>code .token.deleted:not(.prefix),pre>code.diff-highlight .token.deleted:not(.prefix){background-color:#cd66601f}pre.diff-highlight>code .token.inserted:not(.prefix),pre>code.diff-highlight .token.inserted:not(.prefix){background-color:#91d0761f}.command-line-prompt{border-right:1px solid #0b121b}.command-line-prompt>span:before{color:#8da1b9da}</style><style data-styled="" data-styled-version="5.3.6">.inkCen{margin-left:auto;margin-right:auto;max-width:1300px;padding-left:var(--size-700);padding-right:var(--size-700);height:100%;}/*!sc*/
+@media screen and (max-width:1000px){.inkCen{padding-left:var(--size-400);padding-right:var(--size-400);}}/*!sc*/
+data-styled.g1[id="container__Container-sc-g6pcgm-0"]{content:"inkCen,"}/*!sc*/
+.dbKPbi{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g2[id="theme-switch__StyledThemeSwitch-sc-1laae5k-0"]{content:"dbKPbi,"}/*!sc*/
+.hwRcSk{padding-top:var(--size-300);}/*!sc*/
+data-styled.g3[id="header__StyledHeader-sc-1344zpp-0"]{content:"hwRcSk,"}/*!sc*/
+.qOpbw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+data-styled.g4[id="header__HeaderWrapper-sc-1344zpp-1"]{content:"qOpbw,"}/*!sc*/
+.hfeZxo a{text-transform:uppercase;-webkit-text-decoration:none;text-decoration:none;font-size:var(--size-400);color:inherit;}/*!sc*/
+data-styled.g5[id="header__HeaderTitle-sc-1344zpp-2"]{content:"hfeZxo,"}/*!sc*/
+.qktXK{position:static;padding:0;background:transparent;-webkit-backdrop-filter:unset;backdrop-filter:unset;}/*!sc*/
+data-styled.g6[id="header__StyledNav-sc-1344zpp-3"]{content:"qktXK,"}/*!sc*/
+.egscvl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;padding:0;list-style-type:none;}/*!sc*/
+data-styled.g7[id="header__StyledNavList-sc-1344zpp-4"]{content:"egscvl,"}/*!sc*/
+.hbTrcT:not(:last-of-type){margin-right:2rem;}/*!sc*/
+@media screen and (max-width:700px){.hbTrcT:not(:last-of-type){margin-right:1rem;}}/*!sc*/
+.hbTrcT a{color:inherit;text-transform:uppercase;font-size:var(--size-300);-webkit-text-decoration:none;text-decoration:none;-webkit-letter-spacing:0.1rem;-moz-letter-spacing:0.1rem;-ms-letter-spacing:0.1rem;letter-spacing:0.1rem;}/*!sc*/
+@media screen and (max-width:700px){.hbTrcT a{font-size:0.7rem;}}/*!sc*/
+data-styled.g8[id="header__StyledNavListItem-sc-1344zpp-5"]{content:"hbTrcT,"}/*!sc*/
+.bbCZHV{padding:0;list-style:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+data-styled.g9[id="social-links__SocialLinkList-sc-r9vd8i-0"]{content:"bbCZHV,"}/*!sc*/
+.kAhSCw{margin-right:var(--size-400);text-transform:uppercase;}/*!sc*/
+.kAhSCw a{color:inherit;font-size:var(--size-300);}/*!sc*/
+data-styled.g10[id="social-links__SocialLinkItem-sc-r9vd8i-1"]{content:"kAhSCw,"}/*!sc*/
+.bMsOzy{padding-top:var(--size-300);padding-bottom:var(--size-300);}/*!sc*/
+data-styled.g11[id="footer__StyledFooter-sc-1d6x338-0"]{content:"bMsOzy,"}/*!sc*/
+.cbMRqg{font-size:var(--size-300);}/*!sc*/
+.cbMRqg a{color:inherit;}/*!sc*/
+data-styled.g12[id="footer__FooterAttribution-sc-1d6x338-1"]{content:"cbMRqg,"}/*!sc*/
+.hkHEGz{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g13[id="footer__FooterWrapper-sc-1d6x338-2"]{content:"hkHEGz,"}/*!sc*/
+*,*::before,*::after{box-sizing:border-box;}/*!sc*/
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0;}/*!sc*/
+ul[role='list'],ol[role='list']{list-style:none;}/*!sc*/
+html:focus-within{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}/*!sc*/
+html{height:-webkit-fill-available;}/*!sc*/
+body{min-height:100vh;min-height:-webkit-fill-available;text-rendering:optimizeSpeed;line-height:1.5;}/*!sc*/
+a:not([class]){-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}/*!sc*/
+img,picture{max-width:100%;display:block;}/*!sc*/
+input,button,textarea,select{font:inherit;}/*!sc*/
+@media (prefers-reduced-motion:reduce){html:focus-within{-webkit-scroll-behavior:auto;-moz-scroll-behavior:auto;-ms-scroll-behavior:auto;scroll-behavior:auto;}*,*::before,*::after{-webkit-animation-duration:0.01ms !important;animation-duration:0.01ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important;-webkit-transition-duration:0.01ms !important;transition-duration:0.01ms !important;-webkit-scroll-behavior:auto !important;-moz-scroll-behavior:auto !important;-ms-scroll-behavior:auto !important;scroll-behavior:auto !important;}}/*!sc*/
+html{width:100vw;overflow-x:hidden;}/*!sc*/
+body::-webkit-scrollbar{width:10px;}/*!sc*/
+body::-webkit-scrollbar-thumb{background-color:rgba(255,0,55,0.754);}/*!sc*/
+body::-webkit-scrollbar-track{background:transparent;}/*!sc*/
+:root{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;--size-300:0.75rem;--size-400:1rem;--size-500:1.33rem;--size-600:1.77rem;--size-700:2.36rem;--size-800:3.15rem;--size-900:4.2rem;}/*!sc*/
+body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;-webkit-transition-property:background-color,color,background;transition-property:background-color,color,background;-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;background-attachment:fixed;font-smoothing:antialiased;}/*!sc*/
+body.light-mode{color:#000000;background-color:#ff93ec;background-image:linear-gradient(315deg,#bdff9f 0%,#fef9b5 50%);}/*!sc*/
+body.dark-mode{color:#ffffff;background-color:#ff93ec;background-image:url('/media/wallpapperr10.png');background-size:cover;background-position:center;background-repeat:no-repeat;}/*!sc*/
+body.dark-mode ::selection{background:#e9e9e9;color:#252526;}/*!sc*/
+body.light-mode ::selection{background:#37292C;color:white;}/*!sc*/
+h1,h2,h3,h4{line-height:1.125;}/*!sc*/
+h1,h2,h3{font-weight:700;}/*!sc*/
+h1{font-size:var(--size-800);}/*!sc*/
+h2{font-size:var(--size-700);}/*!sc*/
+h3{font-size:var(--size-600);}/*!sc*/
+p{font-size:var(--size-400);}/*!sc*/
+p,li{max-width:none;}/*!sc*/
+.gatsby-resp-image-wrapper{margin-left:0 !important;}/*!sc*/
+data-styled.g14[id="sc-global-kAWkYV1"]{content:"sc-global-kAWkYV1,"}/*!sc*/
+.kqGLlG{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+.kqGLlG main{margin-top:auto;margin-bottom:auto;}/*!sc*/
+.kqGLlG footer{margin-top:auto;}/*!sc*/
+data-styled.g15[id="layout__LayoutWrapper-sc-qrswv8-0"]{content:"kqGLlG,"}/*!sc*/
+.PrHZm{display:inline-block;margin-right:0.6rem;margin-bottom:0.6rem;margin-left:0;text-transform:uppercase;font-size:var(--size-300);}/*!sc*/
+.PrHZm a{position:relative;z-index:2;-webkit-text-decoration:none;text-decoration:none;color:inherit;padding:0.2rem 0.6rem;border:1px solid rgba(255,255,255,1);border-radius:4px;}/*!sc*/
+.PrHZm a:hover{background-color:rgba(255,255,255,0.9);}/*!sc*/
+body.light-mode .tags__Tag-sc-16itk8x-0 a{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.5);background-color:rgba(255,255,255,0.7);}/*!sc*/
+body.light-mode .tags__Tag-sc-16itk8x-0 a:hover{background-color:rgba(255,255,255,1);}/*!sc*/
+body.dark-mode .tags__Tag-sc-16itk8x-0 a{background-color:#212122;border:1px solid #1a1a1b;opacity:0.8;}/*!sc*/
+data-styled.g16[id="tags__Tag-sc-16itk8x-0"]{content:"PrHZm,"}/*!sc*/
+.doSPtH{padding:var(--size-900);padding-bottom:var(--size-900);margin-left:auto;margin-right:auto;max-width:90ch;word-wrap:break-word;background-color:rgba(8,8,8,0.214);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);}/*!sc*/
+data-styled.g29[id="post-template__PostWrapper-sc-afk1br-0"]{content:"doSPtH,"}/*!sc*/
+.GehMa{font-size:var(--size-700);}/*!sc*/
+data-styled.g30[id="post-template__PostTitle-sc-afk1br-1"]{content:"GehMa,"}/*!sc*/
+.dxthST{font-size:var(--size-400);display:block;margin-top:0.5rem;text-transform:uppercase;}/*!sc*/
+data-styled.g31[id="post-template__PostDate-sc-afk1br-2"]{content:"dxthST,"}/*!sc*/
+.lcGYWs{padding:var(--size-800);}/*!sc*/
+.lcGYWs > * + *{margin-top:var(--size-300);}/*!sc*/
+.lcGYWs > p + p{margin-top:var(--size-700);}/*!sc*/
+.lcGYWs * + h1,.lcGYWs * + h2,.lcGYWs * + h3{margin-top:var(--size-900);}/*!sc*/
+.lcGYWs h1{font-size:var(--size-700);}/*!sc*/
+.lcGYWs h2{font-size:var(--size-600);}/*!sc*/
+.lcGYWs h3{font-size:var(--size-500);}/*!sc*/
+.lcGYWs b,.lcGYWs strong{font-weight:600;}/*!sc*/
+.lcGYWs a{color:inherit;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration-thickness:0.125rem;text-decoration-thickness:0.125rem;}/*!sc*/
+.lcGYWs blockquote{padding-left:var(--size-400);border-left:5px solid;font-style:italic;}/*!sc*/
+.lcGYWs code{font-family:"Source Sans Pro",monospace;overflow-x:auto;white-space:pre-wrap;}/*!sc*/
+.lcGYWs pre{overflow-x:auto;white-space:pre-wrap;max-width:100%;}/*!sc*/
+.lcGYWs img{display:block;-webkit-flex:1;-ms-flex:1;flex:1;width:100%;}/*!sc*/
+data-styled.g32[id="post-template__PostContent-sc-afk1br-3"]{content:"lcGYWs,"}/*!sc*/
+.izeNgs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;gap:1rem;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-top:var(--size-900);}/*!sc*/
+.izeNgs > *{position:relative;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:1rem;padding-top:0.5rem;padding-bottom:0.5rem;border-radius:8px;border:1px solid rgba(255,255,255,0.5);background-color:rgba(255,255,255,0.214);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);margin-bottom:1rem;}/*!sc*/
+.izeNgs > *:hover{background-color:rgba(255,255,255,0.5);}/*!sc*/
+.izeNgs span{text-transform:uppercase;opacity:0.6;font-size:var(--size-400);padding-bottom:var(--size-500);}/*!sc*/
+.izeNgs a{color:inherit;-webkit-text-decoration:none;text-decoration:none;font-size:var(--size-400);text-transform:capitalize;}/*!sc*/
+.izeNgs a::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;}/*!sc*/
+data-styled.g33[id="post-template__PostPagination-sc-afk1br-4"]{content:"izeNgs,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="alternate" type="application/rss+xml" title="Gatsby Glass RSS Feed" href="/rss.xml"/><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Poppins:400,400i,700&amp;display=swap" rel="stylesheet"/><link rel="icon" href="/favicon-32x32.png?v=159e0719d0cdbde15ad0cca727d0588f" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=159e0719d0cdbde15ad0cca727d0588f"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=159e0719d0cdbde15ad0cca727d0588f"/><title data-react-helmet="true">AO3 Scraper - Process for Projects</title></head><body><script>!function(e,a,o){function d(e){document.body.classList.add(e?"dark-mode":"light-mode"),document.body.classList.remove(e?"light-mode":"dark-mode")}var t=window.matchMedia("(prefers-color-scheme: dark)"),r="(prefers-color-scheme: dark)"===t.media,s=null;try{s=localStorage.getItem("darkMode")}catch(e){}var c=null!==s;if(c&&(s=JSON.parse(s)),c)d(s);else if(r)d(t.matches),localStorage.setItem("darkMode",t.matches);else{var l=document.body.classList.contains("dark-mode");localStorage.setItem("darkMode",JSON.stringify(l))}}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__LayoutWrapper-sc-qrswv8-0 kqGLlG"><header class="header__StyledHeader-sc-1344zpp-0 hwRcSk"><div class="container__Container-sc-g6pcgm-0 header__HeaderWrapper-sc-1344zpp-1 inkCen qOpbw"><div class="header__HeaderTitle-sc-1344zpp-2 hfeZxo"><a href="/">Process for Projects</a></div><nav class="header__StyledNav-sc-1344zpp-3 qktXK"><ul class="header__StyledNavList-sc-1344zpp-4 egscvl"><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><a href="/blog">Blog</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><a href="/about">About</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><a href="/contact">Contact</a></li><li class="header__StyledNavListItem-sc-1344zpp-5 hbTrcT"><div class="theme-switch__StyledThemeSwitch-sc-1laae5k-0 dbKPbi"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" color="black" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="cursor:pointer;transform:rotate(90deg)"><mask id="circle-mask-0"><rect x="0" y="0" width="100%" height="100%" fill="white"></rect><circle style="cx:100%;cy:0%" r="9" fill="black"></circle></mask><circle cx="12" cy="12" fill="black" style="r:5px" mask="url(#circle-mask-0)"></circle><g stroke="currentColor" style="opacity:1"><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></g></svg></div></li></ul></nav></div></header><main><div class="container__Container-sc-g6pcgm-0 inkCen"><div class="post-template__PostWrapper-sc-afk1br-0 doSPtH"><article><h1 class="post-template__PostTitle-sc-afk1br-1 GehMa">AO3 Scraper</h1><span class="post-template__PostDate-sc-afk1br-2 dxthST">April 11, 2024</span><section class="post-template__PostContent-sc-afk1br-3 lcGYWs"><p>Archive Of Our Own (AO3) does not offer a public API. Therefore, my first step was to find a way to retrieve data from AO3. There are a few unofficial APIs provided by the community. The first one I tried was this <a href="https://fandomstats.org/ao3-tag-stats/">one</a>.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/397767b5ce5ed5bad6630357cc0287da/f7171/fandomstats.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADGUlEQVR42o2SXWyTZRTH3wujgkLKhoA4jTLXAaPteNuu7m3X9WPtBmwLOEXjx269NjFeauKVF36P6Yi4TCZKq3eGxGhMNi+5MgERZWyM0m+2ar/Wvv34efrWRK+MJ/nn/J8nz/N/zvmfR1FHT2Ie0DA7PZgdbnol99g1utU2Dtjd9Li8HNZGUH2j2AITWPwTaKOnUMNTeE9NM/3qG0y98hr9k9Mor7/1NgufzjHz3ruCd5j54H0+FP7J7Axzs2eM/PGZj5g/d47Fhc84+/kF3pxd5ODwBPf3utlhDdLhOI7paJidthGUpZ+v04p6sQRbW/yfqFXKPDX5MtsPDrLHEWJnf5iO/hGe0I6hfP39Mo2azq3bMdbW14nFYuRyOQOFQoFqtUqlWmnnSgW9ViOeSDIw/hK7rEM86vSzWyrbezTAY64QypeXfjBevXlzlZWVFVKplHHxvyKVSuOaeBGTxUOXM0CnCO5TA+yzB1EufPudcSgeTxC/c4dkMkluM0epVKJcLlOv12k2m9JFDb1YpKHrxqP2Y6fptHrY7whKpSPst/tEUDw8H4kagiXxr95sUGvU0es1qmJDVS7XZd2KYjLBtbNzZC9fJr2xgTr2rCH4iCMggiGp0EfXQFgEL16ERpPUmniXyJCLp9v5b+TTG2xt5illc+TjGSoyvKRUqI6dNjzsEg87RXCPePiwPYCyGI2g54pc/+pHbkSX+T26JHmpzSNt3s7L3PjmJ/5IZEmm00bLu21DRsudtrC07GevKh6ej0rLep27V9fY+GVdcItNQe6a8Kttvin7LeR+vc1WoV2h/fhz7DriNqZrsgQlD/OQcOWLSMTwKJ/NUMr/if4vD1u8Wtf/gey1BpTNZrGEnkF53MG2Xo17ewblT2p02Hwo8wvzlOS//XblCrHVVTLpDGlpqYUWN9byTVrIZO5SKJZZj8U5HHoepVvjvj4/9xzyse2Inw5Vptz75AE0h4rT0oer34rbP4wnGMDtHcIzPol36gXcJ07iHn+awfAJXMExVG8Ik0x4e5/Gg4dcPGB2ssNsx9Rt5S82NNm+TZO2XwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ao3-tag-stats"
+        title="ao3-tag-stats"
+        src="/static/397767b5ce5ed5bad6630357cc0287da/f058b/fandomstats.png"
+        srcset="/static/397767b5ce5ed5bad6630357cc0287da/c26ae/fandomstats.png 158w,
+/static/397767b5ce5ed5bad6630357cc0287da/6bdcf/fandomstats.png 315w,
+/static/397767b5ce5ed5bad6630357cc0287da/f058b/fandomstats.png 630w,
+/static/397767b5ce5ed5bad6630357cc0287da/40601/fandomstats.png 945w,
+/static/397767b5ce5ed5bad6630357cc0287da/78612/fandomstats.png 1260w,
+/static/397767b5ce5ed5bad6630357cc0287da/f7171/fandomstats.png 3456w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Unfortunately, the data didn’t quite meet my requirements.</p>
+<p>After some research, I came across this <a href="https://github.com/radiolarian/AO3Scraper">Github page</a>.</p>
+<p>This API allowed me to scrape the metadata of a number of fanfiction works from a search link. (Only public fanfiction works)</p>
+<p>After the first 2-3 test runs with 100 fanfiction works each, I decided to fetch the first 1000 works, sorted by Kudos, and analyse them in more detail.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/f7171/ao3scraper.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC7klEQVR42j2SaXPaVhiF1WZis5lNgACDDQK0IhaxSDaIzTYOaWKncSdpJ667fOrHzvQ39Hc/fVEz+XDmXG3PPfe8UuaPX1i+fyJ6+IlIfPvjZ9ay3n78xN3Hz9w9/czhl1+5f3pm+/giz1548/gb7x6f2cl6/+EPtm+/EL17IfjzH5T2KMT3BliWg9Ezv0nXu7Quder1Bs3GBdr5gGL7mlIzpFwKqGQDaq+mVJUJFWVII7HE+vQ3Ssma4nkTHAGb3jRWs+Nw0XW50G1UrUmuqFGsj9EuN2iVBZq6oJq5onYSUn8l+i7gPLFg9te/KKoxpmu49MchXXuI4cq1NcBwRgIwKTYN8ucdiq0JNTXiXAm+qa4cYWHsje/nDB5+R0lJAkNAu/sHguWO0WzB9GrDJIgoD9ac+QfUyZ6KvkAtTCmd+LEqpz7lo39VOTmjPNmgJNUq7a7DJFzjC2Q8X+JJWnc4o2BfUxjd0N0eaIU7yuMV1eE1GXPOa33KSWcWe6IXkHeXlKMPklD60XsuszCiLd5sm7S6Fq2OSdYMyPR3XC4P6OsDtfmdbLDjTJKn3P+VdVfkvTXFkfS7fIuSKZTpeBGTm2d004uhjuth2jZ5KyDprNFmdzQ2P1C62pMabkkLIOFEJF2Rs5RNV2TknhbcouQrdeltxWC2pm300UVjf8pw7FN0Qk7tNfXJjsZyT1E6Snsrkv2IhCgp64RA08M16cEG//Y9Sq5SiydquqN4wlbfpz8YYrt9CtY8Bpbk5W64Jz+IyNhLToxrXve+qntF0pKUUoUzXwmw2oyBnh8KbELH7AtwgO045KX8hBw5JR/U5vcC3JKRI2YlXa5/7G4Vr49eCu5JV5rHhHWZ8vEntqg2dGpNXXo0ZCg9csYsBuacFW3pMS1DSErCtEBT9oJTcxGnTcm9s/ENF/b4CNTIVjXOSiUyhby4SlYV6TVSTiCSAVgL2osDlfktqhy/IhMtSW85SZeVDvPiVUmYrV7yHwDzgzP7Cel4AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Ao3 Scraper"
+        title="Ao3 Scraper"
+        src="/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/f058b/ao3scraper.png"
+        srcset="/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/c26ae/ao3scraper.png 158w,
+/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/6bdcf/ao3scraper.png 315w,
+/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/f058b/ao3scraper.png 630w,
+/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/40601/ao3scraper.png 945w,
+/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/78612/ao3scraper.png 1260w,
+/static/36b6421bb0ee2eb0ddfc464d8daa5ddf/f7171/ao3scraper.png 3456w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Data dimensions
+The data I was able to retrieve with this API was very promising and provided a good basis for further analyses.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f767ebde3a2f489f7b880cbbf77b6dfc/ccdf3/datendimensionen.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 44.93670886075949%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABb0lEQVR42k2SV47CUAxF2b9Go1kCVUBIhPhiF/TeexNd8IOAO3OMXjSRrCS2c3yvXyJfP9/KBb5isZg8z1MQBIrH4/YejUaVTCYtUqmUEomEMplMGF42q3Q6bXnf91UsFhXJ5/OazWbqdruaz+e63W4aDofq9XoWy+VSq9VK4/FYk8lEh8NB9/td+/1e1+tV2+3Was/nU1yRXC6nfr+ver2uRqOh6XRq91qtpkqlYtDBYKBWq2XPDGWAuwOjdjwe9Xg8FMn+yaYRAIX1eh0CS6WSKUcxNQKV/4Gudrlc9Hq9PpadQqZhodlsWhM51JEH3Ol0DLjb7WwVDMcR+fP5/AEWCgVLVKtVgywWCwMCI4d6pwIoqjabTbhbBlAD+H6/P0BnmQ9QiGUHRD1AhhLUORiUoRTr9ISW+U0ckGk0ugMiRzPBsHa7rdFopNPpZE44aYDUQsvskAQQlGCDDwGWy2UbBgRbKGSfbocEIv7v8BeoD3kpwTmasAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="CSV Data Dimensions"
+        title="CSV Data Dimensions"
+        src="/static/f767ebde3a2f489f7b880cbbf77b6dfc/f058b/datendimensionen.png"
+        srcset="/static/f767ebde3a2f489f7b880cbbf77b6dfc/c26ae/datendimensionen.png 158w,
+/static/f767ebde3a2f489f7b880cbbf77b6dfc/6bdcf/datendimensionen.png 315w,
+/static/f767ebde3a2f489f7b880cbbf77b6dfc/f058b/datendimensionen.png 630w,
+/static/f767ebde3a2f489f7b880cbbf77b6dfc/40601/datendimensionen.png 945w,
+/static/f767ebde3a2f489f7b880cbbf77b6dfc/78612/datendimensionen.png 1260w,
+/static/f767ebde3a2f489f7b880cbbf77b6dfc/ccdf3/datendimensionen.png 2926w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Sample data sets
+Here is some of the data I collected:</p>
+<h2>Data Dimensions</h2>
+<p>The data dimensions accessible through this API were very promising and provided a good basis for further analysis.</p>
+<ul>
+<li><strong>work_id</strong>: 10057010</li>
+<li><strong>title</strong>: All the Young Dudes</li>
+<li><strong>author</strong>: [‘MsKingBean89’]</li>
+<li><strong>rating</strong>: Mature</li>
+<li><strong>category</strong>: M/M</li>
+<li><strong>fandom</strong>: Harry Potter - J. K. Rowling</li>
+<li><strong>relationship</strong>: Sirius Black/Remus Lupin, Sirius Black &#x26; Remus Lupin, James Potter/Lily Evans Potter</li>
+<li><strong>character</strong>: Remus Lupin, Sirius Black, James Potter, Lily Evans Potter, Peter Pettigrew, Severus Snape, Minerva McGonagall, Bellatrix Black Lestrange, Narcissa Black Malfoy, Albus Dumbledore, Mulciber Sr. (Harry Potter), Horace Slughorn, Mary Macdonald, Marlene McKinnon, Poppy Pomfrey, Walburga Black, Regulus Black, Fenrir Greyback</li>
+<li><strong>additional tags</strong>: Marauders’ Era, Marauders, Marauders Friendship, wolfstar, Get Together, Slow Burn, so slow, it’s slow, seriously, Complete, Canon Compliant, Angst, Fluff, Fluff and Angst, Requited Love, Canonical Character Death, First War with Voldemort, First Kiss, Period Typical Attitudes</li>
+<li><strong>language</strong>: English</li>
+<li><strong>published</strong>: 02.03.2017</li>
+<li><strong>status</strong>: Completed</li>
+<li><strong>status date</strong>: 12.11.2018</li>
+<li><strong>words</strong>: 526,969</li>
+<li><strong>chapters</strong>: 188/188</li>
+<li><strong>comments</strong>: 36,178</li>
+<li><strong>kudos</strong>: 206,611</li>
+<li><strong>bookmarks</strong>: 38,792</li>
+<li><strong>hits</strong>: 13,867,134</li>
+<li><strong>all_kudos</strong>: [‘Wysterie’, ‘Sxull’, ‘larrys_rat’, ‘MMWPAPAPTPTMM’, ‘obsessed_withgaywizards’, ‘Komas’, ‘love_dani_m’, ‘Nelcina’, ‘lavenderlunarclouds’, ‘ourdistantnorthstar’, ‘TheCoolest_Astrophile’, ‘fang1rl_f0rever’, ‘AllRosesHaveTheirThorns’, ‘grace_di_angelo13’, ‘froggy_porridge’, ‘Kar_LexAlexandra_M’, ‘clockwork_worm’, ‘CynicalCephalalgy’, ‘Barbs0295’, ‘pestoest’, ‘th3osnight’, ‘awaemanon’, ‘FlagMaster7’, ‘oleandered’, ‘Chaotic_Salad’, ‘Rubberfish’, ‘manicpixiegirldream’, ‘Isy_Hawk’, ‘Gozdziki_2902’, ‘lea_bcmn0208’, ‘boredbooklover’, ‘ebonycwillows’, ‘Beautifullikeblood’, ‘Pen_lane’, ‘tanmaqflo’, ‘dearluvmaradeurs’, ‘tiffanycourt513’, ‘Sabrieltrash11’, ‘Fallingfromtheclouds’, ‘MCaroba’, ‘Theo_dziamdziam’, ‘awaken_crystal’, ‘yoongisuniverse’, ‘kitch_n_s_nk’, ‘NickyAAA’, ‘AngelRos3’, ‘Silverwitchuzb’, ‘Laughinglouee’, ‘hjkhbhnn’, ‘Foreverosa’, …] (and many more)</li>
+</ul>
+<p>Analyses and findings
+After analysing this data, I found that I was particularly interested in what content, themes and characters were most popular on AO3. I was fascinated by the many additional tags and wanted to analyse these in more detail. At the same time, I also wanted to find out the differences between the individual fandoms.</p>
+<p>Therefore, I decided to analyse the three most present fandoms:</p>
+<ul>
+<li>Harry Potter - J. K. Rowling</li>
+<li>Marvel</li>
+<li>Boku No Hero</li>
+</ul>
+<p>to analyse and compare the first 1000 works with the most Kudos according to the same principle.</p>
+<p>I therefore had four CSV files, each with 1000 lines and several thousand entries.</p></section></article><nav class="post-template__PostPagination-sc-afk1br-4 izeNgs"><div><span>previous</span><a href="/blog/DataAnalysis/"> <!-- -->Diving into the Data</a></div></nav><div><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/data">Data</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/api">API</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/excel">Excel</a></span><span class="tags__Tag-sc-16itk8x-0 PrHZm"><a href="/tags/archive-of-our-own">Archive Of Our Own</a></span></div></div></div></main><footer class="footer__StyledFooter-sc-1d6x338-0 bMsOzy"><div class="container__Container-sc-g6pcgm-0 footer__FooterWrapper-sc-1d6x338-2 inkCen hkHEGz"><ul class="social-links__SocialLinkList-sc-r9vd8i-0 bbCZHV"><li class="social-links__SocialLinkItem-sc-r9vd8i-1 kAhSCw"><a href="https://imahrahim.github.io/Clicks-for-Fics/">Clicks for Fics</a></li><li class="social-links__SocialLinkItem-sc-r9vd8i-1 kAhSCw"><a href="https://github.com/imahrahim/Clicks-for-Fics">Github</a></li><li class="social-links__SocialLinkItem-sc-r9vd8i-1 kAhSCw"><a href="https://www.instagram.com/imahleaf/">instagram</a></li></ul><p class="footer__FooterAttribution-sc-1d6x338-1 cbMRqg">Hand-crafted with love by<!-- --> <a href="https://twitter.com/yinkakun">Yinka Adedire</a></p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/Scraping/";window.___webpackCompilationHash="df092759795ed12c598c";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-e45786579564da591b9b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-d5f88e5acda0e4ecafc3.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-562bfcc0216d76d85668.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-f9a69d6fea632b1ab9c7.js"],"component---src-templates-about-template-js":["/component---src-templates-about-template-js-f60c22346c666df1014c.js"],"component---src-templates-contact-template-js":["/component---src-templates-contact-template-js-db0099c5f9cbb9b47e90.js"],"component---src-templates-index-template-js":["/component---src-templates-index-template-js-05a1b20ee3bd5534e74d.js"],"component---src-templates-post-template-js":["/component---src-templates-post-template-js-cae0f1a902b850276e0f.js"],"component---src-templates-tags-template-js":["/component---src-templates-tags-template-js-18f4946fc2785f81edbe.js"]};/*]]>*/</script><script src="/app-e45786579564da591b9b.js" async=""></script><script src="/532a2f07-62c5730a2078e15b44e6.js" async=""></script><script src="/framework-c9b763abf21a9bf513c7.js" async=""></script><script src="/webpack-runtime-a4de37f54fda779039c4.js" async=""></script></body></html>
