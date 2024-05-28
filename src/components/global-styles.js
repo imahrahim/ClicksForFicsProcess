@@ -173,6 +173,16 @@ p, li {
     margin-left: 0 !important;
 }
 
+/* Custom styles for side-by-side images */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.image-container img {
+  width: 48%;
+}
 
 `;
 

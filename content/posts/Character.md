@@ -1,6 +1,6 @@
 ---
 title: Character Cleaning
-date: 2024-04-20
+date: 2024-04-17
 tags: [Data, Excel, ChatGPT, Google, Mental Breakdown]
 social_image: '/media/wallpapperr10.png'
 description: 

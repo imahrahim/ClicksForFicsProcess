@@ -1,29 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import Tags from "./tags";
-import ImageGroup from '../components/ImageGroup';
 
 const PostList = ({ posts }) => {
-  const PostList = posts.map(({ frontmatter, fields, excerpt, timeToRead }) => {
-    const { title, tags, date, description } = frontmatter;
-    const { slug } = fields;
+  const [sortOrder, setSortOrder] = useState("newest");
 
-    return (
-      <PostListItem
-        key={slug}
-        tags={tags}
-        title={title}
-        date={date}
-        slug={slug}
-        timeToRead={timeToRead}
-        description={description}
-        excerpt={excerpt}
-      />
-    );
+  const handleSortToggle = () => {
+    setSortOrder((prevOrder) => (prevOrder === "newest" ? "oldest" : "newest"));
+  };
+
+  const sortedPosts = posts.sort((a, b) => {
+    if (sortOrder === "newest") {
+      return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+    } else {
+      return new Date(a.frontmatter.date) - new Date(b.frontmatter.date);
+    }
   });
 
-  return <StyledPostList>{PostList}</StyledPostList>;
+  const PostListItems = sortedPosts.map(
+    ({ frontmatter, fields, excerpt, timeToRead }) => {
+      const { title, tags, date, description } = frontmatter;
+      const { slug } = fields;
+
+      return (
+        <PostListItem
+          key={slug}
+          tags={tags}
+          title={title}
+          date={date}
+          slug={slug}
+          timeToRead={timeToRead}
+          description={description}
+          excerpt={excerpt}
+        />
+      );
+    }
+  );
+
+  return (
+    <div>
+      <SortButton onClick={handleSortToggle}>
+        SORT: {sortOrder === "newest" ? "LAST POST" : "FIRST POST"}
+      </SortButton>
+      <StyledPostList>{PostListItems}</StyledPostList>
+    </div>
+  );
 };
 
 export default PostList;
@@ -39,9 +61,8 @@ const PostListItem = ({
 }) => {
   return (
     <StyledPostListItem>
-    <PostListMeta>
+      <PostListMeta>
         <span>{date}</span>
-
         <span>{timeToRead} mins</span>
       </PostListMeta>
 
@@ -59,6 +80,29 @@ const PostListItem = ({
   );
 };
 
+const SortButton = styled.button`
+  display: block;
+  margin-top: var(--size-800);
+  margin-bottom: var(--size-800);
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.214);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  cursor: pointer;
+  color: inherit;
+  body.light-mode &:hover {
+    background-color: rgba(255, 255, 255, 0.214);
+    backdrop-filter: blur(5px);
+  }
+  body.dark-mode &:hover {
+    background-color: rgba(0, 0, 0, 0.214);
+    backdrop-filter: blur(5px);
+  }
+`;
 
 const StyledPostList = styled.ul`
   padding-left: 10rem;
@@ -108,6 +152,10 @@ const StyledPostListItem = styled.li`
     background-color: #ff93eb51;
     backdrop-filter: blur(20px);
     border: 4px solid #000000;
+  }
+
+  body.dark-mode &:hover {
+    background-color: rgba(0, 0, 0, 0.214);
   }
 
   @media screen and (max-width: 500px) {

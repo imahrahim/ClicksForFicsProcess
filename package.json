@@ -38,9 +38,10 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "prettier": "2.7.1"
   },
-  "homepage": "https://github.com/yinkakun/gatsby-starter-glass#readme",
+  "homepage": "https://imahrahim.github.io/ClicksForFicsProcess",
   "keywords": [
     "gatsby",
     "netlify cms"
@@ -48,15 +49,18 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yinkakun/gatsby-starter-glass.git"
+    "url": "git+https://github.com/imahrahim/Clicks-for-Fics.git"
   },
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run dev",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "scripts": {
+      "build": "gatsby build",
+      "dev": "gatsby develop",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+      "start": "npm run dev",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean",
+      "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+      "deploy": "gatsby build && gh-pages -d public"
+    }
   }
-}
+  
+

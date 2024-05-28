@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import Tags from "../components/tags";
+import ImageGroup from "../components/ImageGroup";
+
 
 const PostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;

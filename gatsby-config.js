@@ -1,16 +1,17 @@
 module.exports = {
+  pathPrefix: "/ClicksForFicsProcess",
   siteMetadata: {
     title: `Process for Projects`,
     author: {
       name: `Imah Leaf Rahim`,
-      summary: `Process doumentation of Clicks for Fics.`,
+      summary: `Process documentation of Clicks for Fics.`,
     },
     openGraphImage: `open-graph-image.png`,
-    description: `A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.`,
-    siteUrl: `https://gatsbyglass.netlify.app`,
-    social: {
-      twitter: `yinkakun`,
-    },
+    description: `Process documentation of Clicks for Fics.`,
+    siteUrl: `https://imahrahim.github.io/ClicksForFicsProcess`,
+    // social: {
+    //   twitter: `yinkakun`,
+    // },
     socialLinks: [
       {
         name: "Clicks for Fics",
@@ -66,7 +67,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 750,
+              disableBgImageOnAlpha: false,
             },
           },
           {

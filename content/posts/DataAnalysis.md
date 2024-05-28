@@ -1,7 +1,7 @@
 ---
 title: Diving into the Data
 date: 2024-04-15
-tags: [Data, Excel, ChatGPT, Tableu]
+tags: [Data, Excel, ChatGPT]
 social_image: '/media/DataAnalysis/excel_data_overview7.png'
 description: This is a custom description for SEO and Open Graph purposes. If it's not provided, it defaults to auto-generated excerpts of the page content.
 ---
