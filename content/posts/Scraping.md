@@ -1,10 +1,11 @@
 ---
-title: AO3 Scraper
-date: 2024-04-11
-tags: [Data, API, Excel, Archive Of Our Own]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
 
 Archive Of Our Own (AO3) does not offer a public API. Therefore, my first step was to find a way to retrieve data from AO3. There are a few unofficial APIs provided by the community. The first one I tried was this [one](https://fandomstats.org/ao3-tag-stats/).
 

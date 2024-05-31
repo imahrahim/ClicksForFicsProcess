@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const HEADER_NAV_ITEM = [
   {
-    label: "Blog",
+    label: "Documentation",
     url: "/blog",
     isExternal: false,
   },
@@ -85,7 +85,7 @@ const HeaderNavListItem = ({ children }) => {
 };
 
 const StyledHeader = styled.header`
-  padding-top: var(--size-300);
+
 `;
 
 const HeaderWrapper = styled(Container)`

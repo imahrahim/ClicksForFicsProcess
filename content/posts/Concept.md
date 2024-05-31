@@ -1,10 +1,12 @@
 ---
-title: Wireframes and Shit
-date: 2024-04-25
-tags: [Concept, Drawing, Wireframes]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
+
 
 Auch wenn vieles meiner Konzeption wärend meines Prozesses parallel stattgefunden hat und ich mich wärend dem Bereinigen der Daten damit auseiander gesetzt hatte. Musste ich zur abwechslung auch mal etwas analog machen.
 

@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
 import styled from "styled-components";
+import allTags from '../data/tags';
 
 const toKebabCase = (str) => {
   return str
@@ -13,15 +14,24 @@ const toKebabCase = (str) => {
 const Tags = ({ data }) => {
   const tags = data.allMarkdownRemark.group;
 
+  // Map fieldValue to full tag objects
+  const fullTags = tags.map(tag => {
+    const fullTag = allTags.find(t => t.id === toKebabCase(tag.fieldValue));
+    return {
+      ...fullTag,
+      totalCount: tag.totalCount,
+    };
+  }).filter(Boolean);
+
   return (
     <Layout title="All Tags">
       <h1>All Tags</h1>
 
       <TagList>
-        {tags.map((tag) => (
-          <TagItem key={tag.fieldValue}>
-            <Link to={`/tags/${toKebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+        {fullTags.map((tag) => (
+          <TagItem key={tag.id} color={tag.color}>
+            <Link to={`/tags/${tag.id}/`}>
+              {tag.name} ({tag.totalCount})
             </Link>
           </TagItem>
         ))}
@@ -56,38 +66,22 @@ const TagItem = styled.li`
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
   text-transform: uppercase;
-  font-size: var(--size-200);
+  font-size: var(--size-600);
+  font-family: 'Brr';
 
   & a {
     text-decoration: none;
-    color: inherit;
     padding: 0.2rem 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 4px;
-  }
-
-  body.light-mode & a {
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  body.light-mode & a:hover {
     background-color: rgba(255, 255, 255, 1);
+    border: 0.1rem solid ${({ color }) => color};
+    color: ${({ color }) => color};
+    border-radius: 5rem;
+  
+  }
+  & a:hover {
+    background-color: ${({ color }) => color};
+    color: rgba(255, 255, 255, 1);
+    border: 0.1rem solid rgba(255, 255, 255, 1);
   }
 
-  body.dark-mode & a {
-    background-color: #212122;
-    border: 1px solid #3b3b3c;
-    opacity: 0.8;
-  }
-
-  body.light-mode & a:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  body.dark-mode & a:hover {
-    background-color: #3b3b3c;
-    opacity: 1;
-  }
 `;

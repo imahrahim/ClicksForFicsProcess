@@ -3,13 +3,15 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import Tags from "../components/tags";
-import ImageGroup from "../components/ImageGroup";
-
+import allTags from '../data/tags'; // Importieren der zentralen Tags
 
 const PostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;
   const prev = data.prev;
   const next = data.next;
+
+  // Map tags to their full objects from allTags
+  const fullTags = frontmatter.tags.map(tagId => allTags.find(tag => tag.id === tagId)).filter(Boolean);
 
   return (
     <Layout
@@ -42,7 +44,7 @@ const PostTemplate = ({ data }) => {
             </div>
           )}
         </PostPagination>
-        <Tags tags={frontmatter.tags} />
+        <Tags tags={fullTags} />
       </PostWrapper>
     </Layout>
   );
@@ -57,8 +59,10 @@ const PostWrapper = styled.div`
   margin-right: auto;
   max-width: 90ch;
   word-wrap: break-word;
-  background-color: rgba(8, 8, 8, 0.214);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.559);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 0.1rem solid rgb(0, 0, 0);
 `;
 
 const PostTitle = styled.h1`
@@ -92,6 +96,7 @@ const PostContent = styled.section`
 
   h1 {
     font-size: var(--size-700);
+    
   }
 
   h2 {
@@ -120,7 +125,7 @@ const PostContent = styled.section`
   }
 
   code {
-    font-family: "Source Sans Pro", monospace;
+    font-family: 'array-mono';
     overflow-x: auto;
     white-space: pre-wrap;
   }

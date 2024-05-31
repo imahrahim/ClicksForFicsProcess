@@ -7,6 +7,15 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
+@import url('https://use.typekit.net/xxl4ngd.css');
+
+@font-face {
+  font-family: 'Brr';
+  src: url('/BRRR-Skrrt.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 h1,
 h2,
@@ -31,6 +40,8 @@ html:focus-within {
 
 html {
   height: -webkit-fill-available;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +49,13 @@ body {
   min-height: -webkit-fill-available;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: monospace;
+  transition-property: background-color, color, background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a:not([class]) {
@@ -54,7 +72,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: 'Brr';
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -70,11 +88,6 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-html {
-  width:100vw;
-  overflow-x:hidden;
 }
 
 body::-webkit-scrollbar {
@@ -100,25 +113,14 @@ body::-webkit-scrollbar-track {
   --size-900: 4.2rem;
 }
 
-body {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
-    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  transition-property: background-color, color, background;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  background-attachment: fixed;
-  font-smoothing: antialiased;
-}
-
 body.light-mode {
   color: #000000;
   background-color: #ff93ec;
   background-image: linear-gradient(315deg, #bdff9f 0%, #fef9b5 50%);
-  
 }
 
 body.dark-mode {
-  color: #ffffff;
+  color: #000000;
   background-color: #ff93ec;
   background-image: url('/media/wallpapperr10.png'); 
   background-size: cover; 
@@ -140,13 +142,15 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.125;
+  font-family: 'Brr';
+  text-transform: uppercase;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: 700;
+  font-family: 'Brr';
+  text-transform: uppercase;
 }
 
 h1 {
@@ -173,7 +177,6 @@ p, li {
     margin-left: 0 !important;
 }
 
-/* Custom styles for side-by-side images */
 .image-container {
   display: flex;
   justify-content: space-between;

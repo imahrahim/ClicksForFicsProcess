@@ -1,10 +1,11 @@
 ---
-title: Y2K Blog Page and More
-date: 2024-05-04
-tags: [Concept, Design, Website, Moodboard]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
 
 Since my work so far has been extremely dry and monotonous, and not very visually stimulating, I was all the more motivated to dive into the inspiration and visual concept. Given that the target audience of my work is the community itself, I wanted to establish a visual connection as well. However, I didn't want to design something unique for each fandom, but rather find a consensus for the entire community. Since many fanfictions are also seen on Tumblr and, in general, almost everything is found online on the web, I decided to draw inspiration from 90s/Y2K websites and blog posts. I aimed to incorporate this in the form of color, text, and layout of the website.
 

@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 const toKebabCase = (str) => {
+  if (!str) {
+    return '';
+  }
   return str
     .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
     .map((x) => x.toLowerCase())
@@ -11,27 +14,28 @@ const toKebabCase = (str) => {
 
 const Tags = ({ tags }) => {
   return (
-    <div>
-      {tags &&
-        tags.map((tag) => {
-          return (
-            <Tag key={tag}>
-              <Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link>
-            </Tag>
-          );
-        })}
-    </div>
+    <TagList>
+      {tags.map(tag => (
+        <Tag key={tag.id} color={tag.color}>
+          <Link to={`/tags/${toKebabCase(tag.name)}`}>{tag.name}</Link>
+        </Tag>
+      ))}
+    </TagList>
   );
 };
 
 export default Tags;
 
+const TagList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 2rem 0;
+`;
+
 const Tag = styled.span`
   display: inline-block;
-  // margin-top: 1rem;
-  margin-right: 0.6rem;
-  margin-bottom: 0.6rem;
-  margin-left: 0;
+  font-family: 'Brr';
   text-transform: uppercase;
   font-size: var(--size-300);
 
@@ -39,29 +43,16 @@ const Tag = styled.span`
     position: relative;
     z-index: 2;
     text-decoration: none;
-    color: inherit;
+    border-radius: 5rem;
     padding: 0.2rem 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0.1rem solid ${({ color }) => color};
+    color: ${({ color }) => color};
   }
 
   & a:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  body.light-mode & a {
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  body.light-mode & a:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-
-  body.dark-mode & a {
-    background-color: #212122;
-    border: 1px solid #1a1a1b;
-    opacity: 0.8;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    background-color: ${({ color }) => color};
   }
 `;

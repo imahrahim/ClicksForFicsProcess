@@ -7,6 +7,7 @@ const Container = styled.div`
   padding-left: var(--size-700);
   padding-right: var(--size-700);
   height: 100%;
+  widht: 100%;
 
   @media screen and (max-width: 1000px) {
     & {

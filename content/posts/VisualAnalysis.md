@@ -1,10 +1,11 @@
 ---
-title: Visual Analysis
-date: 2024-04-16
-tags: [Data, Excel, ChatGPT, Tableau]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
 
 Alongside cleaning and organizing the data, I also created some quick standard visualizations using Tableau, Excel, and ChatGPT. This helped me quickly understand what I was working with and identify interesting approaches for my project.
 

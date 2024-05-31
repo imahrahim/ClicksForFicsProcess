@@ -1,10 +1,11 @@
 ---
-title: Diving into the Data
-date: 2024-04-15
-tags: [Data, Excel, ChatGPT]
-social_image: '/media/DataAnalysis/excel_data_overview7.png'
-description: This is a custom description for SEO and Open Graph purposes. If it's not provided, it defaults to auto-generated excerpts of the page content.
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
 
 ![image](/media/DataAnalysis/excel_data_overview7.png)
 

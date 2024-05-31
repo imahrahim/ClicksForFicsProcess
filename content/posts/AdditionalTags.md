@@ -1,16 +1,14 @@
 ---
-title: Additional Tags
-date: 2024-05-15
-tags: [Data, Pinterest, Photoshop, ChatGPT, Google, Design, P5js]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
 
-Friends don't lie. Um, I'm happy you're home. We never would've upset you if we knew you had superpowers. Um, I'm happy you're home. Let’s burn that lab to the ground. Don’t take it so personally, okay? I don’t like most people. He’s in the vast majority.Nancy, seriously, you're gonna be so cool now, it's ridiculous. So, Jonathan, how was the pull-out? Um, I'm happy you're home. You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. It's just, sometimes... people don't really say what they're really thinking.
 
-But when you capture the right moment, it says more.If we’re both going crazy, then we’ll go crazy together, right? If we’re both going crazy, then we’ll go crazy together, right? I need my paddles! You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. Friends don't lie. He’s a sensitive kid. Lonnie used to say he was queer. Called him a fag. Is he? He’s missing, is what he is!You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. Do you know anything about sensory deprivation tanks?
+Durch meine Recherche von 90s/Y2K Webseiten, habe ich mich sehr inspirerit gefühlt von den Stickern und Bildern die in all diesen Webseiten verwedet werden
 
-Specifically how to build one? Yeah, I want a date with Bo Derek. We all want things. No... no El, you're not the monster. You saved me. Do you understand? You saved me.If anyone asks where I am, I've left the country. Friends don't lie. You are such a nerd. No wonder you only hang out with boys. Mouth-breather. Let’s burn that lab to the ground. Why’s he gotta kick the door? You’re right. You are a freak…. Who would you rather be friends with: Bowie or Kenny Rogers?
 
 ## Image
 

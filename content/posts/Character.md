@@ -1,10 +1,15 @@
 ---
-title: Character Cleaning
-date: 2024-04-17
-tags: [Data, Excel, ChatGPT, Google, Mental Breakdown]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
+
+
+
+
 
 By the end of the project, cleaning the data remained my primary task. During the analysis, it quickly became apparent that accurately analyzing the data would be challenging. Since the metadata came from AO3, where all users could individually input and write their data, there were numerous inaccuracies and deviations that couldn't be easily resolved by machine. For instance, within a single dataset, over 800 different characters were mentioned, many of which were recorded multiple times in various forms.
 - Tom Riddle

@@ -1,10 +1,12 @@
 ---
-title: Networks
-date: 2024-05-15
-tags: [Design, Concept, Pinterest, Moodboard, P5js, D3js, ChatGPT]
-social_image: '/media/wallpapperr10.png'
-description: 
+title: "Character Cleaning"
+date: "2024-04-17"
+tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed guide on character cleaning using various tools."
 ---
+
+
 
 I repeatedly asked myself the question:
 *Are there other solutions besides networks to visually represent relationships?*

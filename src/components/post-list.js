@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import Tags from "./tags";
+import allTags from '../data/tags'; // Importieren der zentralen Tags
 
 const PostList = ({ posts }) => {
   const [sortOrder, setSortOrder] = useState("newest");
@@ -23,10 +24,13 @@ const PostList = ({ posts }) => {
       const { title, tags, date, description } = frontmatter;
       const { slug } = fields;
 
+      // Map tags to their full objects from allTags
+      const fullTags = tags.map(tagId => allTags.find(tag => tag.id === tagId)).filter(Boolean);
+
       return (
         <PostListItem
           key={slug}
-          tags={tags}
+          tags={fullTags}
           title={title}
           date={date}
           slug={slug}
@@ -87,21 +91,22 @@ const SortButton = styled.button`
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.214);
-  backdrop-filter: blur(10px);
-  border-radius: 4px;
   cursor: pointer;
   color: inherit;
-  body.light-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.214);
-    backdrop-filter: blur(5px);
+  padding: 0.2rem 0.6rem;
+  border-radius: 5rem;
+  backdrop-filter: blur(10px);
+  
+    background-color: #ffffff;
+    color: #8056C4;
+    border: 0.1rem solid #8056C4;
+
+  &:hover {
+    background-color: #8056c4ff;
+    color: #ffffffff;
+    border: 0.1rem solid #ffffffff;
   }
-  body.dark-mode &:hover {
-    background-color: rgba(0, 0, 0, 0.214);
-    backdrop-filter: blur(5px);
-  }
+
 `;
 
 const StyledPostList = styled.ul`
@@ -140,22 +145,23 @@ const StyledPostListItem = styled.li`
 
   body.light-mode & {
     backdrop-filter: blur(10px);
-    border: 4px solid #000000;
-    background-color: #ff93eb5f;
+    border: 0.1rem solid #000000;
+    background-color: #ffffff5f;
   }
 
   body.light-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.184);
+    background-color: rgba(255, 255, 255, 0.331);
   }
 
   body.dark-mode & {
-    background-color: #ff93eb51;
-    backdrop-filter: blur(20px);
-    border: 4px solid #000000;
+    background-color: rgba(255, 255, 255, 0.232);
+    backdrop-filter: blur(10px);
+    border: 0.1rem solid #000000;
   }
 
   body.dark-mode &:hover {
-    background-color: rgba(0, 0, 0, 0.214);
+    background-color: rgba(255, 255, 255, 0.587);
+    backdrop-filter: blur(30px);
   }
 
   @media screen and (max-width: 500px) {
@@ -176,6 +182,8 @@ const PostListTitle = styled.h2`
   & a {
     text-decoration: none;
     color: inherit;
+    font-family: 'Brr';
+    text-transform: uppercase;
   }
 
   & a::after {
