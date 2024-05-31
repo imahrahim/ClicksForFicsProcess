@@ -14,13 +14,19 @@ const toKebabCase = (str) => {
 };
 
 const HomeTags = ({ tags }) => {
+  // Berechnen der Anzahl der Tags
+  const tagCounts = tags.reduce((acc, tag) => {
+    acc[tag] = (acc[tag] || 0) + 1;
+    return acc;
+  }, {});
+
   // Map tags to their full objects from allTags
-  const fullTags = tags.map(tagId => {
+  const fullTags = Object.keys(tagCounts).map(tagId => {
     const tag = allTags.find(tag => tag.id === toKebabCase(tagId));
     if (tag) {
-      return tag;
+      return { ...tag, totalCount: tagCounts[tagId] };
     } else {
-      return { id: tagId, name: tagId, color: '#cccccc' }; // Fallback für unbekannte Tags
+      return { id: tagId, name: tagId, color: '#cccccc', totalCount: tagCounts[tagId] }; // Fallback für unbekannte Tags
     }
   }).filter(Boolean);
 
@@ -29,7 +35,7 @@ const HomeTags = ({ tags }) => {
       {fullTags.map(tag => (
         <TagItem key={tag.id} color={tag.color}>
           <Link to={`/tags/${tag.id}/`}>
-            {tag.name}
+            {tag.name} ({tag.totalCount})
           </Link>
         </TagItem>
       ))}

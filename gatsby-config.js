@@ -4,7 +4,7 @@ module.exports = {
     title: `Process for Projects`,
     author: {
       name: `Imah Leaf Rahim`,
-      summary: `Process documentation of Clicks for Fics.`,
+      summary: `Documentation of Clicks for Fics.`,
     },
     openGraphImage: `open-graph-image.png`,
     description: `Process documentation of Clicks for Fics.`,

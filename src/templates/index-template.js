@@ -23,24 +23,26 @@ const HomePage = ({ data }) => {
   const title = data?.markdownRemark?.frontmatter?.title || 'Title';
 
   const tags = useMemo(() => {
-    const uniqueTags = [...new Set(posts.flatMap(node => node.frontmatter.tags || []))];
-    return uniqueTags.map(tagId => {
-      const tag = allTags.find(t => t.id === toKebabCase(tagId));
-      return tag ? tag.id : tagId;
-    }).filter(Boolean);
+    return posts.flatMap(node => node.frontmatter.tags || []);
   }, [posts]);
 
   return (
     <Layout title={title}>
-      <TagsContainer>
-        <HomeTags tags={tags} />
-      </TagsContainer>
-      <Intro
+      <div css={`
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      `}>
+           <Intro
         dangerouslySetInnerHTML={{
           __html: intro,
         }}
       />
-      <PostList posts={posts} />
+      <TagsContainer>
+        <HomeTags tags={tags} />
+      </TagsContainer>
+      </div>
+      {/* <PostList posts={posts} /> */}
       <StyledLink
         css={`
           display: block;
@@ -67,7 +69,7 @@ const HomePage = ({ data }) => {
         `}
         to="/blog"
       >
-        View All posts
+        Documentation
       </StyledLink>
     </Layout>
   );
@@ -76,7 +78,7 @@ const HomePage = ({ data }) => {
 export default HomePage;
 
 const TagsContainer = styled.div`
-  margin-bottom: var(--size-800);
+  margin: var(--size-800);
 `;
 
 const Intro = styled.div`
@@ -88,6 +90,7 @@ const Intro = styled.div`
   flex-direction: column;
   transition: all 0.3s ease-out;
   text-align: center;
+  max-width: 40%;
 
   body.light-mode & {
     backdrop-filter: blur(10px);
@@ -95,19 +98,10 @@ const Intro = styled.div`
     background-color: #ffffff5f;
   }
 
-  body.light-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.331);
-  }
-
   body.dark-mode & {
     background-color: rgba(255, 255, 255, 0.232);
     backdrop-filter: blur(10px);
     border: 0.1rem solid #000000;
-  }
-
-  body.dark-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.587);
-    backdrop-filter: blur(30px);
   }
 
   @media screen and (max-width: 500px) {
