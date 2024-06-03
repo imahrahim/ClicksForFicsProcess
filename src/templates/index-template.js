@@ -59,7 +59,7 @@ const HomePage = ({ data }) => {
                 border: 0.1rem solid #ffffffff;
               }
             `}
-            to="/documentation"
+            to="/blog"
           >
             Documentation
           </StyledLink>
