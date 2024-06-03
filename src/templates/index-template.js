@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
 import StyledLink from '../components/styled-link';
-import HomeTags from '../components/HomeTags'; 
+import HomeTags from '../components/HomeTags';
 import styled from 'styled-components';
-import allTags from '../data/tags'; // Importieren der zentralen Tags
+import allTags from '../data/tags'; // Importing the central tags
 
 const toKebabCase = (str) => {
   if (typeof str !== 'string' || !str) {
@@ -33,44 +33,41 @@ const HomePage = ({ data }) => {
       flex-direction: row;
       justify-content: center;
       `}>
-           <Intro
-        dangerouslySetInnerHTML={{
-          __html: intro,
-        }}
-      />
-      <TagsContainer>
-        <HomeTags tags={tags} />
-      </TagsContainer>
+        <Intro>
+          <div dangerouslySetInnerHTML={{ __html: intro }} />
+          <StyledLink
+            css={`
+              display: block;
+              margin-top: var(--size-800);
+              margin-bottom: var(--size-800);
+              margin-left: auto;
+              margin-right: auto;
+              width: fit-content;
+              cursor: pointer;
+              color: inherit;
+              font-family: 'Brr';
+              padding: 0.5rem 1rem;
+              border-radius: 5rem;
+              backdrop-filter: blur(10px);
+              background-color: #ffffff;
+              color: #8056C4;
+              border: 0.1rem solid #8056C4;
+            
+              &:hover {
+                background-color: #8056c4ff;
+                color: #ffffffff;
+                border: 0.1rem solid #ffffffff;
+              }
+            `}
+            to="/documentation"
+          >
+            Documentation
+          </StyledLink>
+        </Intro>
+        <TagsContainer>
+          <HomeTags tags={tags} />
+        </TagsContainer>
       </div>
-      {/* <PostList posts={posts} /> */}
-      <StyledLink
-        css={`
-          display: block;
-          margin-top: var(--size-800);
-          margin-bottom: var(--size-800);
-          margin-left: auto;
-          margin-right: auto;
-          width: fit-content;
-          cursor: pointer;
-          color: inherit;
-          font-family: 'Brr';
-          padding: 0.5rem 1rem;
-          border-radius: 5rem;
-          backdrop-filter: blur(10px);
-          background-color: #ffffff;
-          color: #8056C4;
-          border: 0.1rem solid #8056C4;
-        
-          &:hover {
-            background-color: #8056c4ff;
-            color: #ffffffff;
-            border: 0.1rem solid #ffffffff;
-          }
-        `}
-        to="/blog"
-      >
-        Documentation
-      </StyledLink>
     </Layout>
   );
 };
@@ -91,6 +88,7 @@ const Intro = styled.div`
   transition: all 0.3s ease-out;
   text-align: center;
   max-width: 40%;
+  height: 40%;
 
   body.light-mode & {
     backdrop-filter: blur(10px);

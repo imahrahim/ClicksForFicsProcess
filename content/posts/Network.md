@@ -1,9 +1,9 @@
 ---
-title: "Character Cleaning"
-date: "2024-04-17"
-tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+title: "Network"
+date: "2024-05-01"
+tags: ["design", "concept","excel","pinterest","moodboard"]
 social_image: "/media/wallpapperr10.png"
-description: "A detailed guide on character cleaning using various tools."
+description: "The design and concept of the network"
 ---
 
 

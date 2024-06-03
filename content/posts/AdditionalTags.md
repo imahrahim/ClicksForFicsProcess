@@ -1,9 +1,9 @@
 ---
-title: "Character Cleaning"
+title: "Additional Tags"
 date: "2024-04-17"
-tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+tags: ["data", "excel", "chatgpt","NLP", "mental-breakdown"]
 social_image: "/media/wallpapperr10.png"
-description: "A detailed guide on character cleaning using various tools."
+description: "A detailed documentation of cleaning and categorizing tags using various tools."
 ---
 
 

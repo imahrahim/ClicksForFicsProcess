@@ -1,5 +1,5 @@
 ---
-title: "Character Cleaning"
+title: "Website Design"
 date: "2024-04-17"
 tags: ["data", "excel", "chatgpt", "mental-breakdown"]
 social_image: "/media/wallpapperr10.png"

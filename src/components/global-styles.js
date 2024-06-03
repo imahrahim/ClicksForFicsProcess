@@ -49,7 +49,7 @@ body {
   min-height: -webkit-fill-available;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: monospace;
+  font-family: Calibri, sans-serif;
   transition-property: background-color, color, background;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;

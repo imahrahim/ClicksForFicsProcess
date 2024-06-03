@@ -12,7 +12,7 @@ const Blog = ({ data }) => {
       <HeaderWrapper>
         <h1>Documentation</h1>
 
-        <Link
+        {/* <Link
           css={`
             margin-top: var(--size-400);
             color: inherit;
@@ -21,7 +21,7 @@ const Blog = ({ data }) => {
           to="/tags"
         >
           view all tags
-        </Link>
+        </Link> */}
       </HeaderWrapper>
 
       <PostList posts={posts} />

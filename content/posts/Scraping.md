@@ -1,9 +1,9 @@
 ---
-title: "Character Cleaning"
-date: "2024-04-17"
-tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+title: "Data Scraping"
+date: "2024-04-10"
+tags: ["data", "excel", "chatgpt",api]
 social_image: "/media/wallpapperr10.png"
-description: "A detailed guide on character cleaning using various tools."
+description: "What kind of data?"
 ---
 
 

@@ -12,6 +12,11 @@ const HEADER_NAV_ITEM = [
     isExternal: false,
   },
   {
+    label: "Tags",
+    url: "/tags",
+    isExternal: false,
+  },
+  {
     label: "About",
     url: "/about",
     isExternal: false,

@@ -26,14 +26,14 @@ const HomeTags = ({ tags }) => {
     if (tag) {
       return { ...tag, totalCount: tagCounts[tagId] };
     } else {
-      return { id: tagId, name: tagId, color: '#cccccc', totalCount: tagCounts[tagId] }; // Fallback für unbekannte Tags
+      return { id: tagId, name: tagId, color: '#cccccc', totalCount: tagCounts[tagId], size: '1.2rem' }; // Fallback für unbekannte Tags
     }
   }).filter(Boolean);
 
   return (
     <TagList>
       {fullTags.map(tag => (
-        <TagItem key={tag.id} color={tag.color}>
+        <TagItem key={tag.id} color={tag.color} size={tag.size}>
           <Link to={`/tags/${tag.id}/`}>
             {tag.name} ({tag.totalCount})
           </Link>
@@ -58,7 +58,7 @@ const TagItem = styled.li`
   margin-right: 1rem;  /* Größerer Abstand für größere Tags */
   margin-bottom: 1rem; /* Größerer Abstand für größere Tags */
   text-transform: uppercase;
-  font-size: 1.5rem;  /* Größere Schriftgröße */
+  font-size: ${({ size }) => size};  /* Verwenden der dynamischen Größe */
   font-family: 'Brr';
 
   & a {
