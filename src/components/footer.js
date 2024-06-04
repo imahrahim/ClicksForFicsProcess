@@ -11,7 +11,7 @@ const Footer = () => {
 
         <FooterAttribution>
           Hand-crafted with love by{' '}
-          <a href="https://twitter.com/yinkakun">Yinka Adedire</a>
+          <a href="https://twitter.com/yinkakun">Imah Leaf Rahim</a>
         </FooterAttribution>
       </FooterWrapper>
     </StyledFooter>

@@ -59,7 +59,7 @@ const PostWrapper = styled.div`
   margin-right: auto;
   max-width: 90ch;
   word-wrap: break-word;
-  background-color: rgba(255, 255, 255, 0.559);
+  background-color: rgba(255, 255, 255, 0.623);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   border: 0.1rem solid rgb(0, 0, 0);
