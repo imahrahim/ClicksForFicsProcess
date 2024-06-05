@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: "/ClicksForFicsProcess",
   siteMetadata: {
-    title: `Process for Projects`,
+    title: `Behind the Clicks: The Making of Fandom Insights`,
     author: {
       name: `Imah Leaf Rahim`,
-      summary: `Documentation of Clicks for Fics.`,
+      summary: `A Deep Dive into Analyzing and Visualizing Fan Fiction`,
     },
     openGraphImage: `open-graph-image.png`,
     description: `Process documentation of Clicks for Fics.`,

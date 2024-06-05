@@ -1,0 +1,73 @@
+---
+title: "Additional Tags"
+date: "2024-04-28"
+tags: ["data", "excel", "chatgpt","NLP", "mental-breakdown"]
+social_image: "/media/wallpapperr10.png"
+description: "A detailed documentation of cleaning and categorizing tags using various tools."
+---
+
+
+Durch meine Recherche von 90s/Y2K Webseiten, habe ich mich sehr inspirerit gefühlt von den Stickern und Bildern die in all diesen Webseiten verwedet werden
+
+
+## Image
+
+![Rocket launch](/media/AdditionalTags/tags01.png)
+
+![Rocket launch](/media/AdditionalTags/tags02.png)
+
+
+
+![Rocket launch](/media/AdditionalTags/Tags03.png)
+
+![Rocket launch](/media/AdditionalTags/ipad.png)
+
+![Rocket launch](/media/AdditionalTags/tags04.png)
+
+
+![Rocket launch](/media/AdditionalTags/tags.png)
+
+![Rocket launch](/media/AdditionalTags/tag.png)
+
+![Rocket launch](/media/AdditionalTags/wallpaper01.png)
+
+![Rocket launch](/media/AdditionalTags/wallpaper02.png)
+
+![Rocket launch](/media/AdditionalTags/wallpaper03.png)
+
+## Header
+
+Solebat cetera infelix duorum gravidi possit, et nec, est inpia mentique, consistere quae. Amplexus uror, pars pars aevo curas Cinyreius
+pennis sacrum inpulsaque o cunctos Oleniden peragit, se Athamas inmaduit
+transierant. Relicta significat rubenti potest.
+
+Illa tibi cruentum adpulit pallent. Una dolorem quaque. Pars parvi, mihi quae
+Lyciaeque legit. Hic vitae felix illi laudatis? Et caelum, precatur nec pectora,
+Phoebi volucris moveo.
+
+## Unordered Lists
+
+- Item 1
+- Item 2
+- Item 3
+
+## Ordered Lists
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+## Code Block
+
+```javascript
+// finds a given word in a string and replace with another one
+const findAndReplace = (string, wordToFind, wordToReplace) => {
+  return string.split(wordToFind).join(wordToReplace);
+};
+
+let result = findAndReplace('I like banana', 'banana', 'apple'); // I like apple
+```
+
+## Quoted Text
+
+> Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.

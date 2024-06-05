@@ -1,18 +1,17 @@
-import React from 'react';
-import Container from './container';
-import styled from 'styled-components';
-import SocialLinks from './social-links';
+import React from "react";
+import Container from "./container";
+import styled from "styled-components";
+import SocialLinks from "./social-links";
 
 const Footer = () => {
   return (
     <StyledFooter>
       <FooterWrapper>
-        <SocialLinks />
-
         <FooterAttribution>
-          Hand-crafted with love by{' '}
-          <a href="https://twitter.com/yinkakun">Imah Leaf Rahim</a>
+          Imah Leaf Rahim || BA Data Design + Art, Hochschule Luzern – Design
+          Film Kunst © HSLU, 2024
         </FooterAttribution>
+        <SocialLinks />
       </FooterWrapper>
     </StyledFooter>
   );
@@ -35,7 +34,7 @@ const FooterAttribution = styled.p`
 
 const FooterWrapper = styled(Container)`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `;

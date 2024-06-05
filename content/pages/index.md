@@ -1,9 +1,10 @@
 ---
 template: "index-template"
-title: "Clicks for Fics - Documentation"
+title: "Behind the Clicks: The Making of Fandom Insights"
 ---
 
-### [Clicks for Fics](https://imahrahim.github.io/Clicks-for-Fics/)
+##### Behind the Clicks: The Making of Fandom Insights
+###### A Deep Dive into Analyzing and Visualizing Fan Fiction
 
 1. Titelblatt mit Titel und Untertitel
 2. kurzer Projektbeschrieb
