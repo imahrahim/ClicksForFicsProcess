@@ -25,7 +25,7 @@ const Tags = ({ data }) => {
 
   return (
     <Layout title="All Tags">
-      <h1>All Tags</h1>
+      <h1>Tags</h1>
 
       <TagList>
         {fullTags.map((tag) => (
@@ -67,7 +67,8 @@ const TagItem = styled.li`
   margin-bottom: 0.6rem;
   text-transform: uppercase;
   font-size: var(--size-600);
-  font-family: 'Brr';
+  font-family: 'Whyte Inktrap';
+  font-weight: 600;
 
   & a {
     text-decoration: none;

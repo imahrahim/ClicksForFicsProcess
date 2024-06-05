@@ -125,7 +125,8 @@ const PostContent = styled.section`
   }
 
   code {
-    font-family: 'array-mono';
+    font-family: 'Whyte';
+    font-size: 14px;
     overflow-x: auto;
     white-space: pre-wrap;
   }

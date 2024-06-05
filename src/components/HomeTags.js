@@ -59,7 +59,8 @@ const TagItem = styled.li`
   margin-bottom: 1rem; /* Größerer Abstand für größere Tags */
   text-transform: uppercase;
   font-size: ${({ size }) => size};  /* Verwenden der dynamischen Größe */
-  font-family: 'Brr';
+  font-family: 'Whyte Inktrap';
+  font-weight: 600;
 
   & a {
     text-decoration: none;

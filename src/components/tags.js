@@ -35,9 +35,10 @@ const TagList = styled.div`
 
 const Tag = styled.span`
   display: inline-block;
-  font-family: 'Brr';
+  font-family: 'Whyte Inktrap';
   text-transform: uppercase;
   font-size: var(--size-300);
+  font-weight: 600;
 
   & a {
     position: relative;

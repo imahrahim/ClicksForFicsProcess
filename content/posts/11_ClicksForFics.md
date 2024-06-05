@@ -3,53 +3,53 @@ title: "Clicks for Fics"
 date: "2024-05-29"
 tags: ["data", "excel", "chatgpt", "mental-breakdown"]
 social_image: "/media/wallpapperr10.png"
-description: "A detailed guide on character cleaning using various tools."
+description: "A comprehensive guide on combining various components into a cohesive website, addressing challenges in interface design, visual layers, and data dimensions."
 ---
+### Combining my components
+With all my components from the website interface, network visualization, and additional tags ready, I could finally start combining them into a cohesive code structure and give the whole project its final form.
+
+![Rocket launch](/media/CFC/webseite1.png)
+
+![Rocket launch](/media/CFC/webseite3.png)
+
+![Rocket launch](/media/CFC/webseite4.png)
+
+### New Interface
+After a while, it became clear that the interface was not very user-friendly and required some adjustments to make the site more understandable. Therefore, I revisited the conceptual design of the wireframes and reprogrammed the website, with the initial goal of simplifying navigation and page transitions.
+
+Next, I integrated my previously programmed network and additional tags logic into the website.
+
+![Rocket launch](/media/CFC/Website2.png)
+
+![Rocket launch](/media/CFC/Website3.png)
+
+![Rocket launch](/media/CFC/Website2.1.png)
+
+The entire process was one troubleshooting session after another. I could spend an entire day fixing one error, only to have another part of the website break as a result.
+
+I religiously saved everything on GitHub, allowing me to revert to an older version whenever something stopped working.
+
+Without ChatGPT, I could never have achieved this so quickly, and I am grateful that I subscribed to the Premium version for data cleaning at the project's start.
+
+![Rocket launch](/media/CFC/webseite2_13.png)
+
+Once most of the elements were in place, I focused on adjusting visual layers and developing a color scheme to visually differentiate the data dimensions.
 
 
-Friends don't lie. Um, I'm happy you're home. We never would've upset you if we knew you had superpowers. Um, I'm happy you're home. Let’s burn that lab to the ground. Don’t take it so personally, okay? I don’t like most people. He’s in the vast majority.Nancy, seriously, you're gonna be so cool now, it's ridiculous. So, Jonathan, how was the pull-out? Um, I'm happy you're home. You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. It's just, sometimes... people don't really say what they're really thinking.
+### Colors and Data Dimensions
 
-But when you capture the right moment, it says more.If we’re both going crazy, then we’ll go crazy together, right? If we’re both going crazy, then we’ll go crazy together, right? I need my paddles! You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. Friends don't lie. He’s a sensitive kid. Lonnie used to say he was queer. Called him a fag. Is he? He’s missing, is what he is!You're an idiot, Steve Harrington. You're beautiful, Nancy Wheeler. Do you know anything about sensory deprivation tanks?
+![Overview Visual Data Analysis](/media/Colors/colors01.png)
 
-Specifically how to build one? Yeah, I want a date with Bo Derek. We all want things. No... no El, you're not the monster. You saved me. Do you understand? You saved me.If anyone asks where I am, I've left the country. Friends don't lie. You are such a nerd. No wonder you only hang out with boys. Mouth-breather. Let’s burn that lab to the ground. Why’s he gotta kick the door? You’re right. You are a freak…. Who would you rather be friends with: Bowie or Kenny Rogers?
+I struggled for a long time to find a color scheme that was both readable and visually appealing. Since I had five colors for the ratings in the background and needed at least four colors for each of my datasets, finding a schema that worked for everything was a continuous challenge.
 
-## Image
+![Overview Visual Data Analysis](/media/Colors/colors02.png)
 
-![Rocket launch](/media/wallpapperr10.png)
+Through many discussions with different people, it became clearer what was needed and which information was somewhat redundant and hindered readability.
 
-## Header
+Therefore, I decided to assign a specific color to each fandom and visually distinguish gender. Additionally, I used a single color for links between individual characters, as the node distinctions allowed viewers to identify the relationship categories (m/m, f/m, and f/f) on their own.
 
-Solebat cetera infelix duorum gravidi possit, et nec, est inpia mentique, consistere quae. Amplexus uror, pars pars aevo curas Cinyreius
-pennis sacrum inpulsaque o cunctos Oleniden peragit, se Athamas inmaduit
-transierant. Relicta significat rubenti potest.
+### Legends and Text Data
+After integrating all these layers, I added textual information to explain what exactly was happening on the website and incorporated a form of legend and scale into my visualization. For the character scale, the x-axis along which characters are distributed by frequency, I decided to use a subtle shaded scale since I was already drawing enough lines in the visualization.
 
-Illa tibi cruentum adpulit pallent. Una dolorem quaque. Pars parvi, mihi quae
-Lyciaeque legit. Hic vitae felix illi laudatis? Et caelum, precatur nec pectora,
-Phoebi volucris moveo.
+For the legend, I chose not to display it constantly but to make it accessible as a popup window. This way, users could refer back to it as needed without cluttering the interface.
 
-## Unordered Lists
-
-- Item 1
-- Item 2
-- Item 3
-
-## Ordered Lists
-
-1. Item 1
-2. Item 2
-3. Item 3
-
-## Code Block
-
-```javascript
-// finds a given word in a string and replace with another one
-const findAndReplace = (string, wordToFind, wordToReplace) => {
-  return string.split(wordToFind).join(wordToReplace);
-};
-
-let result = findAndReplace('I like banana', 'banana', 'apple'); // I like apple
-```
-
-## Quoted Text
-
-> Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
