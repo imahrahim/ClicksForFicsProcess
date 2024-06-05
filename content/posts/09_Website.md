@@ -1,6 +1,6 @@
 ---
 title: "Website Interface"
-date: "2024-05-02"
+date: "2024-04-23"
 tags: ["design", "concept", "chatgpt", "pinterest", "moodboard"]
 social_image: "/media/Wireframes/WebMoodboard.png"
 description: "A comprehensive guide on designing a visually appealing and functional website interface, inspired by 90s/Y2K aesthetics and popular web platforms."

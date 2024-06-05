@@ -37,8 +37,9 @@ const Tag = styled.span`
   display: inline-block;
   font-family: 'Whyte Inktrap';
   text-transform: uppercase;
-  font-size: var(--size-300);
+  font-size: var(--size-400);
   font-weight: 600;
+  margin-bottom: 0.5rem;
 
   & a {
     position: relative;
