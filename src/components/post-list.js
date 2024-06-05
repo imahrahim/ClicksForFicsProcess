@@ -182,7 +182,7 @@ const PostListTitle = styled.h2`
   & a {
     text-decoration: none;
     color: inherit;
-    font-family: 'Brr';
+    font-family: 'Whyte Inktrap';
     text-transform: uppercase;
   }
 

@@ -17,36 +17,37 @@ const GlobalStyle = createGlobalStyle`
 }
 
 @font-face {
-  font-family: "Whyte Inktrap";
-  src: url("/ABCWhyteInktrapVariableEdu-Regular.woff2") format("woff2"),
-       url("/ABCWhyteInktrapVariableEdu-Regular.woff") format("woff");
+  font-family: 'Whyte Inktrap';
+  src: url('/ABCWhyteInktrapVariableEdu-Regular.woff2') format('woff2'),
+       url('/ABCWhyteInktrapVariableEdu-Regular.woff') format('woff');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Whyte Inktrap Italic";
-  src: url("/ABCWhyteInktrapVariableEdu-Italic.woff2") format("woff2"),
-       url("/ABCWhyteInktrapVariableEdu-Italic.woff") format("woff");
+  font-family: 'Whyte Inktrap Italic';
+  src: url('/ABCWhyteInktrapVariableEdu-Italic.woff2') format('woff2'),
+       url('/ABCWhyteInktrapVariableEdu-Italic.woff') format('woff');
   font-weight: 100 900;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Whyte";
-  src: url("/ABCWhytePlusVariableEdu-Regular.woff2") format("woff2"),
-       url("/ABCWhytePlusVariableEdu-Regular.woff") format("woff");
+  font-family: 'Whyte';
+  src: url('/ABCWhytePlusVariableEdu-Regular.woff2') format('woff2'),
+       url('/ABCWhytePlusVariableEdu-Regular.woff') format('woff');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Whyte Italic";
-  src: url("/ABCWhytePlusVariableEdu-Regular.woff2") format("woff2"),
-       url("/ABCWhytePlusVariableEdu-Regular.woff") format("woff");
+  font-family: 'Whyte Italic';
+  src: url('/ABCWhytePlusVariableEdu-Regular.woff2') format('woff2'),
+       url('/ABCWhytePlusVariableEdu-Regular.woff') format('woff');
   font-weight: 100 900;
   font-style: italic;
 }
+
 
 
 body,
@@ -82,7 +83,7 @@ body {
   min-height: -webkit-fill-available;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: 'Whyte Inktrap';
+  font-family: 'Whyte';
   transition-property: background-color, color, background;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
@@ -105,7 +106,7 @@ input,
 button,
 textarea,
 select {
-  font-family: 'Whyte';
+  font-family: 'Whyte Inktrap';
 }
 
 @media (prefers-reduced-motion: reduce) {
