@@ -1,5 +1,5 @@
 ---
-title: "Template"
+title: "WWWerkschau"
 date: "2024-06-17"
 tags: ["data", "excel", "chatgpt", "mental-breakdown"]
 social_image: "/media/wallpapperr10.png"

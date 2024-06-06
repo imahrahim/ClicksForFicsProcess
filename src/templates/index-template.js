@@ -64,6 +64,8 @@ const HomePage = ({ data }) => {
             Documentation
           </StyledLink>
         </Intro>
+
+  
         <TagsContainer>
           <HomeTags tags={tags} />
         </TagsContainer>

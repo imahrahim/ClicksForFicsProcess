@@ -53,7 +53,7 @@ const PostTemplate = ({ data }) => {
 export default PostTemplate;
 
 const PostWrapper = styled.div`
-  padding: var(--size-900);
+  padding: var(--size-800);
   padding-bottom: var(--size-900);
   margin-left: auto;
   margin-right: auto;
@@ -63,6 +63,26 @@ const PostWrapper = styled.div`
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   border: 0.1rem solid rgb(0, 0, 0);
+
+  @media (max-width: 1200px) {
+    padding: var(--size-700);
+    padding-bottom: var(--size-800);
+  }
+
+  @media (max-width: 992px) {
+    padding: var(--size-600);
+    padding-bottom: var(--size-700);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--size-500);
+    padding-bottom: var(--size-600);
+  }
+
+  @media (max-width: 576px) {
+    padding: var(--size-400);
+    padding-bottom: var(--size-500);
+  }
 `;
 
 const PostTitle = styled.h1`
@@ -77,7 +97,7 @@ const PostDate = styled.span`
 `;
 
 const PostContent = styled.section`
-  padding: var(--size-800);
+  padding: 0.2rem;
  
 
   & > * + * {

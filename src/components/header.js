@@ -17,8 +17,8 @@ const HEADER_NAV_ITEM = [
     isExternal: false,
   },
   {
-    label: "About",
-    url: "/about",
+    label: "Clicks For Fics",
+    url: "https://imahrahim.github.io/Clicks-for-Fics/",
     isExternal: false,
   },
   {
