@@ -31,7 +31,7 @@ body.tags-page {
   min-height: 100vh;
 }
 body.post-page {
-  background-image: linear-gradient(315deg, #2d1c48ac, #ffffffb9);
+  background-color: rgb(252, 203, 248);
   // background-size: cover;
   // background-repeat: no-repeat;
   // min-height: 100vh;

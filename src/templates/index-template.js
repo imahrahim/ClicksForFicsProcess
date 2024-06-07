@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import StyledLink from "../components/styled-link";
-import WormImage from '../../static/media/Worm1.png';
+import WormImage from '../../static/media/Worm11.png';
 
 
 const HomePage = ({ data }) => {
@@ -22,6 +22,14 @@ const HomePage = ({ data }) => {
           <h4>
           A Deep Dive into Analyzing and Visualizing Fan Fiction
           </h4>
+          <div css={`
+          margin: 2rem auto;
+              background-color: #2d1c48ab;
+              padding: 1rem;
+              border-radius: 0.5rem;
+              border: 0.1rem solid #000000ff;
+              max-width: 45%;
+          `}>
           <p>
             This is the documentation of Clicks for Fics. Check out my Tags to
             search for something specific or explore my documentation.
@@ -35,6 +43,7 @@ const HomePage = ({ data }) => {
               Tags
             </StyledButtonLink>
           </ButtonContainer>
+          </div>
         </Intro>
       </IntroWrapper>
     </Layout>
@@ -52,13 +61,15 @@ const IntroWrapper = styled.div`
 `;
 
 const WormOverlay = styled.img`
-  position: absolute;
-  top: -2rem;
-  left: 5rem;
-  width: 100vh;
-  height: auto;
-  pointer-events: none; /* Ermöglicht Klicks durch das Bild hindurch */
-  z-index: 1; /* Legt das Bild über den Titel */
+position:fixed;
+  transform: translateY(1rem);
+  width: 100%;
+  height: calc(100vh - 5rem);
+  pointer-events: none; 
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 `;
 
 const ButtonContainer = styled.div`
@@ -74,18 +85,18 @@ const StyledButtonLink = styled(StyledLink)`
   width: fit-content;
   cursor: pointer;
   color: inherit;
-  padding: 0.5rem 1.5rem;
+  padding: 0.2rem 01rem;
   border-radius: 5rem;
   backdrop-filter: blur(10px);
   text-shadow: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 900;
   background-color: #ffffff;
-  color: #8056c4;
-  border: 0.1rem solid #8056c4;
+  color: #000000;
+  border: 0.1rem solid #000000;
 
   &:hover {
-    background-color: #8056c4ff;
+    background-color: #000000ff;
     color: #ffffff;
     border: 0.1rem solid #ffffff;
   }
@@ -110,15 +121,14 @@ const Intro = styled.div`
   h4 {
     font-size: 3rem;
     font-weight: 900;
-    z-index: 1;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
-    margin-top: 5rem;
-    max-width: 50%;
     z-index: 1;
+    text-shadow: none;
+    padding-top: 2rem;
   }
 
   @media screen and (max-width: 500px) {
