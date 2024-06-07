@@ -13,7 +13,7 @@ const toKebabCase = (str) => {
     .join("-");
 };
 
-const HomeTags = ({ tags }) => {
+const HomeTags = ({ tags, showDocumentationLink }) => {
   // Erstellen eines Mapping-Objekts für die Tag-Anzahl
   const tagCounts = tags.reduce((acc, tag) => {
     acc[tag.fieldValue] = tag.totalCount;
@@ -32,8 +32,15 @@ const HomeTags = ({ tags }) => {
 
   return (
     <TagList>
+      {showDocumentationLink && (
+        <TagItem key="documentation" color="#8056C4" size="4rem" weight="900">
+          <Link to="/blog">
+            Documentation
+          </Link>
+        </TagItem>
+      )}
       {fullTags.map(tag => (
-        <TagItem key={tag.id} color={tag.color} size={tag.size}>
+        <TagItem key={tag.id} color={tag.color} size={tag.size} weight="600">
           <Link to={`/tags/${tag.id}/`}>
             {tag.name} ({tag.totalCount})
           </Link>
@@ -48,25 +55,26 @@ export default HomeTags;
 const TagList = styled.ul`
   list-style: none;
   display: flex;
-  gap: 3rem;  /* Größeres Gap für größere Tags */
+  justify-content: center;  /* Centers the items horizontally */
+  align-items: center;  /* Centers the items vertically */
+  gap: 2rem;  /* Larger gap for bigger tags */
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   padding: 0;
-  max-width: 60rem;
+  width: 100%;
+  height: 100%;
 `;
 
 const TagItem = styled.li`
-  margin-right: 1rem;  /* Größerer Abstand für größere Tags */
-  margin-bottom: 1rem; /* Größerer Abstand für größere Tags */
+  margin-right: 1rem;  /* Larger spacing for bigger tags */
+  margin-bottom: 1rem; /* Larger spacing for bigger tags */
   text-transform: uppercase;
-  font-size: ${({ size }) => size};  /* Verwenden der dynamischen Größe */
+  font-size: ${({ size }) => size};  /* Use dynamic size */
   font-family: 'Whyte Inktrap';
-  font-weight: 600;
+  font-weight: ${({ weight }) => weight};
 
   & a {
     text-decoration: none;
-    padding: 0.5rem 1rem;  /* Größeres Padding für größere Tags */
+    padding: 1rem 2rem;  /* Larger padding for bigger tags */
     background-color: rgba(255, 255, 255, 1);
     border: 0.1rem solid ${({ color }) => color};
     color: ${({ color }) => color};
@@ -77,5 +85,21 @@ const TagItem = styled.li`
     background-color: ${({ color }) => color};
     color: rgba(255, 255, 255, 1);
     border: 0.1rem solid rgba(255, 255, 255, 1);
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: ${({ size }) => `calc(${size} * 0.75)`};  /* Smaller size for medium screens */
+    
+    & a {
+      padding: 0.75rem 1.5rem;  /* Smaller padding for medium screens */
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: ${({ size }) => `calc(${size} * 0.5)`};  /* Smaller size for small screens */
+    
+    & a {
+      padding: 0.5rem 1rem;  /* Smaller padding for small screens */
+    }
   }
 `;

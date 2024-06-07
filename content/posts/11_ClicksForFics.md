@@ -1,7 +1,7 @@
 ---
 title: "Clicks for Fics"
 date: "2024-05-29"
-tags: ["data", "excel", "chatgpt", "mental-breakdown"]
+tags: ["data", "excel", "chatgpt","prototype", "mental-breakdown"]
 social_image: "/media/wallpapperr10.png"
 description: "A comprehensive guide on combining various components into a cohesive website, addressing challenges in interface design, visual layers, and data dimensions."
 ---
