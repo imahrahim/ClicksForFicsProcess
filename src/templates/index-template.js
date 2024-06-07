@@ -19,9 +19,6 @@ const HomePage = ({ data }) => {
         <Intro>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <WormOverlay src={WormImage} alt="Worm Overlay" />
-          <h4>
-          A Deep Dive into Analyzing and Visualizing Fan Fiction
-          </h4>
           <div css={`
           margin: 2rem auto;
               background-color: #2d1c48ab;
@@ -30,6 +27,9 @@ const HomePage = ({ data }) => {
               border: 0.1rem solid #000000ff;
               max-width: 45%;
           `}>
+                   <h4>
+          A Deep Dive into Analyzing and Visualizing Fan Fiction
+          </h4>
           <p>
             This is the documentation of Clicks for Fics. Check out my Tags to
             search for something specific or explore my documentation.
@@ -76,7 +76,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 2rem; /* Abstand zwischen den Buttons */
-  margin-top: 4.5rem;
+  margin-top: 3rem;
   // z-index: 1;
 `;
 
@@ -119,8 +119,9 @@ const Intro = styled.div`
   }
 
   h4 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 900;
+
   }
 
   p {
