@@ -21,11 +21,11 @@ const HEADER_NAV_ITEM = [
     url: "https://imahrahim.github.io/Clicks-for-Fics/",
     isExternal: false,
   },
-  {
-    label: "Contact",
-    url: "/contact",
-    isExternal: false,
-  },
+  // {
+  //   label: "Contact",
+  //   url: "/contact",
+  //   isExternal: false,
+  // },
 ];
 
 const Header = () => {
@@ -67,7 +67,7 @@ const Header = () => {
             );
           })}
           <HeaderNavListItem>
-            <ThemeSwitch />
+            {/* <ThemeSwitch /> */}
           </HeaderNavListItem>
         </HeaderNavList>
       </HeaderWrapper>

@@ -39,22 +39,22 @@ The second mistake was focusing on the character list instead of the characters 
 
 Here are the steps I eventually followed:
 
-**1. Extract all characters from the relationships in the Overall dataset.**
+#### 1. Extract all characters from the relationships in the Overall dataset.
 ![Excel](/media/Characters/chatgpt_cleanup_charactera.png)
 
-**2. Clean these characters and add information about their gender and fandom.**
+#### 2. Clean these characters and add information about their gender and fandom.
 ![Excel](/media/Characters/characters8.png)
 
-**3. Replace the relationship dataset with the cleaned names.**
+#### 3. Replace the relationship dataset with the cleaned names.
 ![Excel](/media/Characters/characters3.png)
 
-**4. Combine information about characters, ships, gender, and fandom.**
+#### 4. Combine information about characters, ships, gender, and fandom.
 ![Excel](/media/Characters/characters5.png)
 
-**5. Cross-check all entries with the other datasets to avoid redundant work.**
+#### 5. Cross-check all entries with the other datasets to avoid redundant work.
 ![Excel](/media/Characters/characters7.png)
 
-**6. Repeat steps 1-4 for the remaining datasets.**
+#### 6. Repeat steps 1-4 for the remaining datasets.
 ![Excel](/media/Characters/cleaning_character1.png)
 
 ### More Problems and Solutions

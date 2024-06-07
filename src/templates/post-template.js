@@ -3,13 +3,16 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import Tags from "../components/tags";
-import allTags from '../data/tags'; // Importieren der zentralen Tags
+import allTags from '../data/tags';
 
 const PostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;
   const prev = data.prev;
   const next = data.next;
 
+    React.useEffect(() => {
+      document.body.className = 'post-page';
+    }, []);
   // Map tags to their full objects from allTags
   const fullTags = frontmatter.tags.map(tagId => allTags.find(tag => tag.id === tagId)).filter(Boolean);
 
@@ -19,6 +22,7 @@ const PostTemplate = ({ data }) => {
       description={frontmatter.description || excerpt}
       socialImage={
         frontmatter.social_image ? frontmatter.social_image.absolutePath : ""
+        
       }
     >
       <PostWrapper>
@@ -59,10 +63,10 @@ const PostWrapper = styled.div`
   margin-right: auto;
   max-width: 90ch;
   word-wrap: break-word;
-  background-color: rgba(255, 255, 255, 0.623);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  border: 0.1rem solid rgb(0, 0, 0);
+  // background-color: rgba(255, 255, 255, 0.623);
+  // backdrop-filter: blur(10px);
+  // border-radius: 1rem;
+  // border: 0.1rem solid rgb(0, 0, 0);
 
   @media (max-width: 1200px) {
     padding: var(--size-700);
@@ -83,16 +87,21 @@ const PostWrapper = styled.div`
     padding: var(--size-400);
     padding-bottom: var(--size-500);
   }
+
+  .gatsby-resp-image-wrapper {
+    max-width: none !important;
+  }
 `;
 
 const PostTitle = styled.h1`
-  font-size: var(--size-700);
+  font-size: var(--size-800);
 `;
 
 const PostDate = styled.span`
-  font-size: var(--size-400);
+  font-size: var(--size-300);
   display: block;
   margin-top: 0.5rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
 `;
 
@@ -111,25 +120,32 @@ const PostContent = styled.section`
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: var(--size-900);
+    margin-top: 8rem;
+    margin-bottom: 2rem;
   }
 
-  h1 {
-    font-size: var(--size-700);
-    
+  * + h4,
+  * + h5,
+  * + h6 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
   }
 
-  h2 {
-    font-size: var(--size-600);
-  }
+  // h1 {
+  //   font-size: var(--size-900);
+  // }
 
-  h3 {
-    font-size: var(--size-500);
-  }
+  // h2 {
+  //   font-size: var(--size-700);
+  // }
+
+  // h3 {
+  //   font-size: var(--size-600);
+  // }
 
   b,
   strong {
-    font-weight: 600;
+    font-weight: 800;
   }
 
   a {

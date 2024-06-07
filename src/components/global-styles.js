@@ -1,10 +1,40 @@
 import { createGlobalStyle } from "styled-components";
 
+import indexBackground from '../../static/media/wallpapperr10.png'
+import blogBackground from '../../static/media/Overall.png'
+import tagsBackground from '../../static/media/Overall.png'
+import postBackground from'../../static/media/Overall.png'
+
 const GlobalStyle = createGlobalStyle`
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body.index-page {
+  background-image: url(${indexBackground});
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+body.blog-page {
+  background-image: url(${blogBackground});
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+body.tags-page {
+  background-image: url(${tagsBackground});
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+body.post-page {
+  background-image: linear-gradient(315deg, #9b9b9b, #ffffffff);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // min-height: 100vh;
 }
 
 @import url('https://use.typekit.net/xxl4ngd.css');
@@ -49,7 +79,6 @@ const GlobalStyle = createGlobalStyle`
 }
 
 
-
 body,
 h1,
 h2,
@@ -90,6 +119,7 @@ body {
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(136, 0, 255)
 }
 
 a:not([class]) {
@@ -125,7 +155,7 @@ select {
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 1rem;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -147,31 +177,6 @@ body::-webkit-scrollbar-track {
   --size-900: 4.2rem;
 }
 
-body.light-mode {
-  color: #000000;
-  background-color: #ff93ec;
-  background-image: linear-gradient(315deg, #bdff9f 0%, #fef9b5 50%);
-}
-
-body.dark-mode {
-  color: #000000;
-  background-color: #ff93ec;
-  background-image: url('/media/wallpapperr10.png'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-}
-
-body.dark-mode ::selection{
-  background: #e9e9e9;
-  color: #252526;
-}
-
-body.light-mode ::selection{
-  background: #37292C;
-  color: white;
-}
-
 h1,
 h2,
 h3,
@@ -188,19 +193,19 @@ h3 {
 }
 
 h1 {
-  font-size: var(--size-800);
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: var(--size-700);
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: var(--size-600);
+  font-size: 2rem;
 }
 
 p {
-  font-size: var(--size-400);
+  font-size: 1.5rem;
 }
 
 p, li {
@@ -218,7 +223,7 @@ p, li {
 }
 
 .image-container img {
-  width: 48%;
+  width: 60%;
 }
 
 `;

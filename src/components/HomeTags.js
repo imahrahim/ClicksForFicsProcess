@@ -14,9 +14,9 @@ const toKebabCase = (str) => {
 };
 
 const HomeTags = ({ tags }) => {
-  // Berechnen der Anzahl der Tags
+  // Erstellen eines Mapping-Objekts für die Tag-Anzahl
   const tagCounts = tags.reduce((acc, tag) => {
-    acc[tag] = (acc[tag] || 0) + 1;
+    acc[tag.fieldValue] = tag.totalCount;
     return acc;
   }, {});
 
@@ -48,8 +48,10 @@ export default HomeTags;
 const TagList = styled.ul`
   list-style: none;
   display: flex;
-  gap: 1rem;  /* Größeres Gap für größere Tags */
+  gap: 3rem;  /* Größeres Gap für größere Tags */
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   max-width: 60rem;
 `;

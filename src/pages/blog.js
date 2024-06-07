@@ -1,54 +1,26 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
-import styled from 'styled-components';
 
-const Blog = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes;
+const BlogPage = ({ data }) => {
+  const posts = data?.allMarkdownRemark?.nodes || [];
+
+    React.useEffect(() => {
+      document.body.className = 'blog-page';
+    }, []);
 
   return (
     <Layout title="Blog">
-      <HeaderWrapper>
-        <h1>Documentation</h1>
-
-        {/* <Link
-          css={`
-            margin-top: var(--size-400);
-            color: inherit;
-            text-transform: uppercase;
-          `}
-          to="/tags"
-        >
-          view all tags
-        </Link> */}
-      </HeaderWrapper>
-
       <PostList posts={posts} />
     </Layout>
   );
 };
 
-export default Blog;
+export default BlogPage;
 
-const HeaderWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--size-900);
-  margin-bottom: var(--size-700);
-
-  h1 {
-    max-width: none;
-  }
-`;
-
-export const homePageQuery = graphql`
+export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
       sort: { order: DESC, fields: frontmatter___date }

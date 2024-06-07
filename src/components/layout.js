@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Seo from "./seo";
 import Header from "./header";
 import Footer from "./footer";
@@ -6,10 +6,21 @@ import Container from "./container";
 import GlobalStyle from "./global-styles";
 import styled from "styled-components";
 
+const Layout = ({ children, title, description, socialImage = "", background }) => {
+  useEffect(() => {
+    if (background) {
+      document.body.style.backgroundImage = `url(${background})`;
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
+      document.body.style.backgroundRepeat = 'no-repeat';
+    } else {
+      document.body.style.backgroundImage = '';
+    }
 
-
-
-const Layout = ({ children, title, description, socialImage= "" }) => {
+    return () => {
+      document.body.style.backgroundImage = '';
+    };
+  }, [background]);
 
   return (
     <Fragment>
@@ -42,4 +53,3 @@ const LayoutWrapper = styled.div`
     margin-top: auto;
   }
 `;
-

@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: "/ClicksForFicsProcess",
   siteMetadata: {
-    title: `Behind the Clicks: The Making of Fandom Insights`,
+    title: `Clicks For Fics: Behind the Clicks`,
     author: {
       name: `Imah Leaf Rahim`,
       summary: `A Deep Dive into Analyzing and Visualizing Fan Fiction`,
@@ -68,7 +68,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 750,
-              backgroundColor: `transparent`, // Ensure this is set to transparent
+              backgroundColor: `transparent`, 
             },
           },
           {

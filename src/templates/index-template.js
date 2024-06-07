@@ -1,36 +1,24 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
 import StyledLink from '../components/styled-link';
 import HomeTags from '../components/HomeTags';
 import styled from 'styled-components';
-import allTags from '../data/tags'; // Importing the central tags
-
-const toKebabCase = (str) => {
-  if (typeof str !== 'string' || !str) {
-    return '';
-  }
-  return str
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-    .map((x) => x.toLowerCase())
-    .join("-");
-};
 
 const HomePage = ({ data }) => {
   const posts = data?.allMarkdownRemark?.nodes || [];
   const intro = data?.markdownRemark?.html || '';
   const title = data?.markdownRemark?.frontmatter?.title || 'Title';
+  const tags = data?.allMarkdownRemark?.group || [];
 
-  const tags = useMemo(() => {
-    return posts.flatMap(node => node.frontmatter.tags || []);
-  }, [posts]);
+  React.useEffect(() => {
+    document.body.className = 'index-page';
+  }, []);
 
   return (
     <Layout title={title}>
       <div css={`
-      display: flex;
-      flex-direction: row;
       justify-content: center;
       `}>
         <Intro>
@@ -64,11 +52,10 @@ const HomePage = ({ data }) => {
             Documentation
           </StyledLink>
         </Intro>
-
-  
         <TagsContainer>
           <HomeTags tags={tags} />
         </TagsContainer>
+        {/* <PostList posts={posts} /> */}
       </div>
     </Layout>
   );
@@ -135,6 +122,10 @@ export const pageQuery = graphql`
           title
           tags
         }
+      }
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

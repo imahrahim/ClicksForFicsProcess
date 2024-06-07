@@ -24,9 +24,8 @@ const PostList = ({ posts }) => {
       const { title, tags, date, description } = frontmatter;
       const { slug } = fields;
 
-      // Map tags to their full objects from allTags
-      const fullTags = tags.map(tagId => allTags.find(tag => tag.id === tagId)).filter(Boolean);
 
+      const fullTags = tags.map(tagId => allTags.find(tag => tag.id === tagId)).filter(Boolean);
       return (
         <PostListItem
           key={slug}
@@ -79,7 +78,7 @@ const PostListItem = ({
         }}
       />
 
-      <Tags tags={tags} />
+      <Tags tags={tags}/>
     </StyledPostListItem>
   );
 };
@@ -110,13 +109,14 @@ const SortButton = styled.button`
 `;
 
 const StyledPostList = styled.ul`
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   list-style: none;
   display: block;
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+
 
   @media screen and (max-width: 800px) {
     & {
@@ -142,26 +142,16 @@ const StyledPostListItem = styled.li`
   position: relative;
   flex-direction: column;
   transition: all 0.3s ease-out;
+  backdrop-filter: blur(10px);
+  border: 0.1rem solid #000000;
+  background-color: #ffffff34;
+  text-align: center;
 
-  body.light-mode & {
-    backdrop-filter: blur(10px);
-    border: 0.1rem solid #000000;
-    background-color: #ffffff5f;
-  }
 
-  body.light-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.331);
-  }
-
-  body.dark-mode & {
-    background-color: rgba(255, 255, 255, 0.232);
-    backdrop-filter: blur(10px);
-    border: 0.1rem solid #000000;
-  }
-
-  body.dark-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.587);
+&:hover {
+    background-color: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(30px);
+    border: 0.3rem solid #000000;
   }
 
   @media screen and (max-width: 500px) {
@@ -176,8 +166,8 @@ const PostListTitle = styled.h2`
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-transform: capitalize;
-  font-size: var(--size-600);
-  font-weight: 700;
+  font-size: var(--size-800);
+  font-weight: 900;
 
   & a {
     text-decoration: none;
@@ -194,12 +184,24 @@ const PostListTitle = styled.h2`
     left: 0;
     right: 0;
   }
+
+  @media screen and (max-width: 800px) {
+    & {
+      font-size: var(--size-700);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    & {
+      font-size: var(--size-600);
+    }
+  }
 `;
 
 const PostListExcerpt = styled.p`
   margin-top: auto;
   margin-bottom: 2rem;
-  font-size: var(--size-400);
+  font-size: var(--size-600);
 `;
 
 const PostListMeta = styled.div`
