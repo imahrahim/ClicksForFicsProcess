@@ -144,12 +144,13 @@ const StyledPostListItem = styled.li`
   transition: all 0.3s ease-out;
   backdrop-filter: blur(10px);
   border: 0.1rem solid #000000;
-  background-color: #ffffff34;
+  background-color: #2d1c4858;
   text-align: center;
+  color: #fff;
 
 
 &:hover {
-    background-color: rgba(255, 255, 255, 0.82);
+    background-color: #2d1c48c1;
     backdrop-filter: blur(30px);
     border: 0.3rem solid #000000;
   }

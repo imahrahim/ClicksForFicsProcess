@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import indexBackground from '../../static/media/wallpapperr10.png'
+import indexBackground from '../../static/media/Overall.png'
 import blogBackground from '../../static/media/Overall.png'
 import tagsBackground from '../../static/media/Overall.png'
 import postBackground from'../../static/media/Overall.png'
@@ -31,7 +31,7 @@ body.tags-page {
   min-height: 100vh;
 }
 body.post-page {
-  background-image: linear-gradient(315deg, #9b9b9b, #ffffffff);
+  background-image: linear-gradient(315deg, #2d1c48ac, #ffffffb9);
   // background-size: cover;
   // background-repeat: no-repeat;
   // min-height: 100vh;
@@ -119,7 +119,7 @@ body {
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(136, 0, 255)
+  background-color: #2d1c48ff;
 }
 
 a:not([class]) {
