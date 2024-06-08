@@ -1,9 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-import indexBackground from '../../static/media/Overall.png'
-import blogBackground from '../../static/media/Overall.png'
-import tagsBackground from '../../static/media/Overall.png'
-import postBackground from'../../static/media/Overall.png'
+import indexBackground from '../../static/media/Overall.png';
+import blogBackground from '../../static/media/Overall.png';
+import tagsBackground from '../../static/media/Overall.png';
+import postBackground from '../../static/media/Overall.png';
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -31,20 +31,9 @@ body.tags-page {
   min-height: 100vh;
 }
 body.post-page {
-  background-color: rgb(252, 203, 248);
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // min-height: 100vh;
+  background-color: rgb(232, 203, 252);
 }
 
-@import url('https://use.typekit.net/xxl4ngd.css');
-
-@font-face {
-  font-family: 'Brr';
-  src: url('/BRRR-Skrrt.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'Whyte Inktrap';
@@ -77,7 +66,6 @@ body.post-page {
   font-weight: 100 900;
   font-style: italic;
 }
-
 
 body,
 h1,
@@ -113,6 +101,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Whyte';
+  background-color: rgb(232, 203, 252);
   transition-property: background-color, color, background;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
@@ -185,13 +174,6 @@ h4 {
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Whyte Inktrap';
-  text-transform: uppercase;
-}
-
 h1 {
   font-size: 6rem;
 }
@@ -226,6 +208,72 @@ p, li {
   width: 60%;
 }
 
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .image-container {
+    margin: 1rem 0;
+  }
+}
 `;
 
 export default GlobalStyle;

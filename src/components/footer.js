@@ -8,8 +8,8 @@ const Footer = () => {
     <StyledFooter>
       <FooterWrapper>
         <FooterAttribution>
-          Imah Leaf Rahim || BA Data Design + Art, Hochschule Luzern – Design
-          Film Kunst © HSLU, 2024
+          Imah Leaf Rahim | 2024-06-10 | Mentor: Max Frischknecht | BA Data Design +
+          Art, Hochschule Luzern – Design Film Kunst © HSLU, 2024
         </FooterAttribution>
         <SocialLinks />
       </FooterWrapper>

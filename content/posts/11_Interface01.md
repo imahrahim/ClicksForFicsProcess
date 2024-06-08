@@ -1,5 +1,5 @@
 ---
-title: "Clicks for Fics"
+title: "Interface 01"
 date: "2024-05-29"
 tags: ["data", "excel", "chatgpt","prototype", "mental-breakdown"]
 social_image: "/media/wallpapperr10.png"
@@ -13,27 +13,6 @@ With all my components from the website interface, network visualization, and ad
 ![Rocket launch](/media/CFC/webseite3.png)
 
 ![Rocket launch](/media/CFC/webseite4.png)
-
-### New Interface
-After a while, it became clear that the interface was not very user-friendly and required some adjustments to make the site more understandable. Therefore, I revisited the conceptual design of the wireframes and reprogrammed the website, with the initial goal of simplifying navigation and page transitions.
-
-Next, I integrated my previously programmed network and additional tags logic into the website.
-
-![Rocket launch](/media/CFC/Website2.png)
-
-![Rocket launch](/media/CFC/Website3.png)
-
-![Rocket launch](/media/CFC/Website2.1.png)
-
-The entire process was one troubleshooting session after another. I could spend an entire day fixing one error, only to have another part of the website break as a result.
-
-I religiously saved everything on GitHub, allowing me to revert to an older version whenever something stopped working.
-
-Without ChatGPT, I could never have achieved this so quickly, and I am grateful that I subscribed to the Premium version for data cleaning at the project's start.
-
-![Rocket launch](/media/CFC/webseite2_13.png)
-
-Once most of the elements were in place, I focused on adjusting visual layers and developing a color scheme to visually differentiate the data dimensions.
 
 
 ### Colors and Data Dimensions

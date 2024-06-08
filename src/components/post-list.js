@@ -97,11 +97,11 @@ const SortButton = styled.button`
   backdrop-filter: blur(10px);
   
     background-color: #ffffff;
-    color: #8056C4;
-    border: 0.1rem solid #8056C4;
+    color: #000000;
+    border: 0.1rem solid #000000;
 
   &:hover {
-    background-color: #8056c4ff;
+    background-color: #000000ff;
     color: #ffffffff;
     border: 0.1rem solid #ffffffff;
   }
@@ -118,7 +118,7 @@ const StyledPostList = styled.ul`
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
 
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     & {
       display: block;
       padding-left: 2rem;
@@ -203,6 +203,12 @@ const PostListExcerpt = styled.p`
   margin-top: auto;
   margin-bottom: 2rem;
   font-size: var(--size-600);
+
+  @media screen and (max-width: 500px) {
+    & {
+      font-size: var(--size-500);
+    }
+  }
 `;
 
 const PostListMeta = styled.div`

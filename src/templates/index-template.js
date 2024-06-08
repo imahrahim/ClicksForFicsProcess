@@ -5,7 +5,6 @@ import styled from "styled-components";
 import StyledLink from "../components/styled-link";
 import WormImage from '../../static/media/Worm11.png';
 
-
 const HomePage = ({ data }) => {
   const tags = data.allMarkdownRemark.group;
 
@@ -19,31 +18,24 @@ const HomePage = ({ data }) => {
         <Intro>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <WormOverlay src={WormImage} alt="Worm Overlay" />
-          <div css={`
-          margin: 2rem auto;
-              background-color: #2d1c48ab;
-              padding: 1rem;
-              border-radius: 0.5rem;
-              border: 0.1rem solid #000000ff;
-              max-width: 45%;
-          `}>
-                   <h4>
-          A Deep Dive into Analyzing and Visualizing Fan Fiction
-          </h4>
-          <p>
-            This is the documentation of Clicks for Fics. Check out my Tags to
-            search for something specific or explore my documentation.
-            Blablablablaba
-          </p>
-          <ButtonContainer>
-            <StyledButtonLink to="/blog">
-              Documentation
-            </StyledButtonLink>
-            <StyledButtonLink to="/tags">
-              Tags
-            </StyledButtonLink>
-          </ButtonContainer>
-          </div>
+          <ContentBox>
+            <h4>
+              A Deep Dive into Analyzing and Visualizing Fan Fiction
+            </h4>
+            <p>
+              This is the documentation of Clicks for Fics. Check out my Tags to
+              search for something specific or explore my documentation.
+              Blablablablaba
+            </p>
+            <ButtonContainer>
+              <StyledButtonLink to="/blog">
+                Documentation
+              </StyledButtonLink>
+              <StyledButtonLink to="/tags">
+                Tags
+              </StyledButtonLink>
+            </ButtonContainer>
+          </ContentBox>
         </Intro>
       </IntroWrapper>
     </Layout>
@@ -58,26 +50,73 @@ const IntroWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 `;
 
 const WormOverlay = styled.img`
-position:fixed;
-  transform: translateY(1rem);
+  position: fixed;
+  top: 1rem;
+  left: 0;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: auto;
   pointer-events: none; 
   display: absolute;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  background-image-size: contain;
+
+
+  @media (max-width: 1150px) {
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    top: 6rem;
+  }
+
+  @media (max-width: 500px) {
+    top: 6rem;
+
+  }
+`;
+
+const ContentBox = styled.div`
+  margin: 2rem auto;
+  background-color: #2d1c48ab;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #000000ff;
+  max-width: 45%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px #2d1c48ff;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 900;
+    text-shadow: none;
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-shadow: none;
+    padding-top: 2rem;
+  }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Abstand zwischen den Buttons */
-  margin-top: 3rem;
-  // z-index: 1;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 `;
 
 const StyledButtonLink = styled(StyledLink)`
@@ -85,7 +124,7 @@ const StyledButtonLink = styled(StyledLink)`
   width: fit-content;
   cursor: pointer;
   color: inherit;
-  padding: 0.2rem 01rem;
+  padding: 0.5rem 1rem;
   border-radius: 5rem;
   backdrop-filter: blur(10px);
   text-shadow: none;
@@ -96,9 +135,14 @@ const StyledButtonLink = styled(StyledLink)`
   border: 0.1rem solid #000000;
 
   &:hover {
-    background-color: #000000ff;
+    background-color: #000000;
     color: #ffffff;
     border: 0.1rem solid #ffffff;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
   }
 `;
 
@@ -109,32 +153,28 @@ const Intro = styled.div`
   justify-content: center;
   text-align: center;
   max-width: 99%;
-  color: #fff;
+  z-index: 2;
+  color: #ffffff;
   text-shadow: 2px 2px 4px #2d1c48ff;
-  z-index: 2; /* Legt den Titel über das Bild */
 
   h2 {
     font-size: 6rem;
     font-weight: 900;
   }
 
-  h4 {
-    font-size: 1.5rem;
-    font-weight: 900;
-
-  }
-
-  p {
-    font-size: 1rem;
-    font-weight: 500;
-    z-index: 1;
-    text-shadow: none;
-    padding-top: 2rem;
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 4rem;
+    }
   }
 
   @media screen and (max-width: 500px) {
     font-size: 1rem;
     padding: 1rem;
+
+    h2 {
+      font-size: 3rem;
+    }
   }
 `;
 

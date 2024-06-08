@@ -90,13 +90,18 @@ const HeaderNavListItem = ({ children }) => {
 };
 
 const StyledHeader = styled.header`
-
+  padding: var(--size-300) 0;
+  background-color: #2d1c48;
 `;
 
 const HeaderWrapper = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const HeaderTitle = styled.div`
@@ -104,7 +109,7 @@ const HeaderTitle = styled.div`
     text-transform: uppercase;
     text-decoration: none;
     font-size: var(--size-400);
-    color: inherit;
+    color: #ffffff;
   }
 `;
 
@@ -122,24 +127,32 @@ const StyledNavList = styled.ul`
   justify-content: space-around;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const StyledNavListItem = styled.li`
   &:not(:last-of-type) {
     margin-right: 2rem;
   }
+  
   @media screen and (max-width: 700px) {
     &:not(:last-of-type) {
       margin-right: 1rem;
     }
   }
+  
   & a {
-    color: inherit;
+    color: #ffffff;
     text-transform: uppercase;
     font-size: var(--size-300);
     text-decoration: none;
     letter-spacing: 0.1rem;
   }
+  
   @media screen and (max-width: 700px) {
     & a {
       font-size: 0.7rem;

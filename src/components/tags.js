@@ -57,4 +57,10 @@ const Tag = styled.span`
     color: rgba(255, 255, 255, 1);
     background-color: ${({ color }) => color};
   }
+
+  @media screen and (max-width: 500px) {
+    & {
+      font-size: 0.8rem;
+    }
+  }
 `;
