@@ -2,7 +2,7 @@
 title: "Concept"
 date: "2024-04-09"
 tags: ["concept", "think"]
-social_image: "/media/wallpapperr10.png"
+social_image: "/media/Overall.png"
 description: "The motivation and goals of the project"
 ---
 

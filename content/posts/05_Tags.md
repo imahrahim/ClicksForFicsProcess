@@ -2,7 +2,7 @@
 title: "Categorizing Tags"
 date: "2024-04-22"
 tags: ["data", "excel", "chatgpt", "nlp", "mental-breakdown", "mistakes", "think"]
-social_image: "/media/wallpapperr10.png"
+social_image: "/media/Tags/chatgptwarning.png"
 description: "A detailed guide on categorizing tags in datasets using various tools and overcoming challenges."
 ---
 

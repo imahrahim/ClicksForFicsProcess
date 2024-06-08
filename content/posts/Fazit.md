@@ -1,8 +1,8 @@
 ---
 title: "Conclusion"
 date: "2024-06-10"
-tags: ["data", "excel", "chatgpt", "mental-breakdown"]
-social_image: "/media/wallpapperr10.png"
+tags: ["think", "play", "share", "mistakes"]
+social_image: "/media/Overall.png"
 description: "A detailed reflection on the challenges and learnings throughout the project."
 ---
 

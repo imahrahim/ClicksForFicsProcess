@@ -1,12 +1,12 @@
 ---
 title: "Data Design and Art Manifest"
 date: "2024-03-17"
-tags: ["data", "concept"]
-social_image: "/media/wallpapperr10.png"
+tags: ["design", "concept"]
+social_image: "/media/Overall.png"
 description: ""
 ---
 
-### * Freiraum für Interpretation und Meinung
-### * Förderung des Diskurses
-### * Daten als Quelle des Verständnisses
-### * Verständliches und zugängliches Design
+### * Space for Interpretation and Opinion
+### * Encouragement of Discourse
+### * Data as a Source of Understanding
+### * Clear and Accessible Design

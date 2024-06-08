@@ -2,7 +2,7 @@
 title: "Additional Tags"
 date: "2024-04-28"
 tags: ["design", "concept", "chatgpt", "procreate", "p5", "pinterest", "illustrator", "photoshop", "moodboard", "play"]
-social_image: "/media/wallpapperr10.png"
+social_image: "/media/AdditionalTags/Harry_Tag.png"
 description: "A comprehensive guide on the visual representation and categorization of tags, exploring various design approaches and tools to visualize categories."
 ---
 

@@ -1,7 +1,7 @@
 const tags = [
-  { id: 'think', name: 'Think', color: '#F0519E', size: '3rem' },
-  { id: 'play', name: 'Play', color: '#F0519E', size: '3rem' },
-  { id: 'share', name: 'Share', color: '#F0519E', size: '3rem' },
+  { id: 'think', name: 'Think', color: '#8056c4ff', size: '3.5rem' },
+  { id: 'play', name: 'Play', color: '#8056c4ff', size: '3.5rem' },
+  { id: 'share', name: 'Share', color: '#8056c4ff', size: '3.5rem' },
   { id: 'data', name: 'Data', color: '#F0519E', size: '3rem' },
   { id: 'design', name: 'Design', color: '#F0519E', size: '3rem' },
   { id: 'code', name: 'Code', color: '#F0519E', size: '3rem' },
@@ -16,6 +16,7 @@ const tags = [
   { id: 'd3', name: 'D3js', color: '#589BCF', size: '1.5rem' },
   { id: 'python', name: 'Python', color: '#589BCF', size: '1.5rem' },
   { id: 'illustrator', name: 'Illustrator', color: '#589BCF', size: '1.5rem' },
+  { id: 'indesign', name: 'InDesgin', color: '#589BCF', size: '1.5rem' },
   { id: 'photoshop', name: 'Photoshop', color: '#589BCF', size: '1.5rem' },
   { id: 'procreate', name: 'Procreate', color: '#589BCF', size: '1.5rem' },
   { id: 'pinterest', name: 'Pinterest', color: '#589BCF', size: '1.5rem' },
