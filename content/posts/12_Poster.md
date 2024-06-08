@@ -6,8 +6,6 @@ social_image: "/media/Overall.png"
 description: "The process of designing the exhibition poster for the WWWerkschau."
 ---
 
-### Exhibition Poster Design
-
 As part of the preparation for the WWWerkschau, designing an exhibition poster was a crucial step. The poster serves as a visual summary of my project and aims to attract and inform visitors at a glance.
 
 First, I brainstormed the key elements that needed to be included on the poster:

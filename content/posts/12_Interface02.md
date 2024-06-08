@@ -6,21 +6,20 @@ social_image: "/media/Overall.png"
 description: "A comprehensive guide on combining various components into a cohesive website, addressing challenges in interface design, visual layers, and data dimensions."
 ---
 
-### New Interface
-
 The first interface was not very user-friendly and required some adjustments to make the site more understandable.
 
 Therefore, I decided to combine my developed components into a new code structure, leveraging insights from the first prototype. For instance, it became clear that restructuring the navigation and separating the relationships and additional tags would be more effective.
 
 In this step, my goal was also to use the fandom buttons solely to switch datasets within the sketch, rather than having multiple separate sketches. This provided a clearer and more organized structure for both the code and the interface.
 
-The first step in this prototype was to implement the navigation and buttons, ensuring that the interface was functional and as planned, and understandable.
 
-Next, I integrated my previously programmed network and additional tags logic into the website.
+The first step in this prototype was to implement the navigation and buttons, ensuring that the interface was functional and as planned, and understandable.
 
 ![Website Interface](/media/CFC/Website2.png)
 
 ![Website Interface](/media/CFC/Website3.png)
+
+Next, I integrated my previously programmed network and additional tags logic into the website.
 
 ![Website Interface](/media/CFC/Website2.1.png)
 
@@ -46,10 +45,25 @@ I struggled for a long time to find a color scheme that was both readable and vi
 
 Through many discussions with different people, it became clearer what was needed and which information was somewhat redundant and hindered readability.
 
+![Website Interface](/media/CFC/Interface02_1.png)
+
+
 Therefore, I decided to assign a specific color to each fandom and visually distinguish gender. Additionally, I used a single color for links between individual characters, as the node distinctions allowed viewers to identify the relationship categories (m/m, f/m, and f/f) on their own.
+
+![Website Interface](/media/CFC/Interface02_2.png)
 
 ### Legends and Text Data
 
+![Website Interface](/media/CFC/Text04.png)
+
+![Website Interface](/media/CFC/Text01.png)
+
 After integrating all these layers, I added textual information to explain what exactly was happening on the website and incorporated a form of legend and scale into my visualization. For the character scale, the x-axis along which characters are distributed by frequency, I decided to use a subtle shaded scale since I was already drawing enough lines in the visualization.
 
+![Website Interface](/media/CFC/Text02.png)
+
 For the legend, I chose not to display it constantly but to make it accessible as a popup window. This way, users could refer back to it as needed without cluttering the interface.
+
+![Website Interface](/media/CFC/Text03.png)
+
+![Website Interface](/media/CFC/medusa.png)
