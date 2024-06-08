@@ -1,7 +1,7 @@
 ---
 title: "Network"
 date: "2024-04-24"
-tags: ["design", "concept", "chatgpt", "p5", "d3", "procreate", "pinterest", "moodboard", "play"]
+tags: ["design", "concept", "chatgpt", "p5-js", "d3-js", "procreate", "pinterest", "moodboard", "play"]
 social_image: "/media/Netzwerk/NetworkMoodboard.png"
 description: "The design and concept of the network visualization."
 ---

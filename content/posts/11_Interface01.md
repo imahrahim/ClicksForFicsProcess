@@ -1,7 +1,7 @@
 ---
 title: "Interface 01"
 date: "2024-05-29"
-tags: ["design", "concept", "chatgpt", "prototype", "p5", "d3", "mistakes", "share"]
+tags: ["design", "concept", "chatgpt", "prototype", "p5-js", "d3-js", "mistakes", "share"]
 social_image: "/media/Overall.png"
 description: "A comprehensive guide on combining various components into a cohesive website, addressing challenges in interface design, visual layers, and data dimensions."
 ---

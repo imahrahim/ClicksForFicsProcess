@@ -12,12 +12,14 @@ const toKebabCase = (str) => {
     .join("-");
 };
 
+
 const Tags = ({ tags }) => {
+  
   return (
     <TagList>
       {tags.map(tag => (
         <Tag key={tag.id} color={tag.color}>
-          <Link to={`/tags/${toKebabCase(tag.name)}`}>{tag.name}</Link>
+          <Link to={`/tags/${tag.id}`}>{tag.name}</Link>
         </Tag>
       ))}
     </TagList>

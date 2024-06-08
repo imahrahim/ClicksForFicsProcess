@@ -10,13 +10,13 @@ const tags = [
   { id: 'excel', name: 'Excel', color: '#589BCF', size: '1.5rem' },
   { id: 'api', name: 'API', color: '#589BCF', size: '1.5rem' },
   { id: 'nlp', name: 'NLP', color: '#589BCF', size: '1.5rem' },
-  { id: 'chatgpt', name: 'ChatGPT', color: '#589BCF', size: '1.5rem' },
+  { id: 'chatgpt', name: 'Chatgpt', color: '#589BCF', size: '1.5rem' }, //*
   { id: 'tableau', name: 'Tableau', color: '#589BCF', size: '1.5rem' },
-  { id: 'p5', name: 'P5js', color: '#589BCF', size: '1.5rem' },
-  { id: 'd3', name: 'D3js', color: '#589BCF', size: '1.5rem' },
+  { id: 'p5-js', name: 'P5.js', color: '#589BCF', size: '1.5rem' }, 
+  { id: 'd3-js', name: 'D3.js', color: '#589BCF', size: '1.5rem' },
   { id: 'python', name: 'Python', color: '#589BCF', size: '1.5rem' },
   { id: 'illustrator', name: 'Illustrator', color: '#589BCF', size: '1.5rem' },
-  { id: 'indesign', name: 'InDesgin', color: '#589BCF', size: '1.5rem' },
+  { id: 'indesign', name: 'Indesign', color: '#589BCF', size: '1.5rem' }, //*
   { id: 'photoshop', name: 'Photoshop', color: '#589BCF', size: '1.5rem' },
   { id: 'procreate', name: 'Procreate', color: '#589BCF', size: '1.5rem' },
   { id: 'pinterest', name: 'Pinterest', color: '#589BCF', size: '1.5rem' },
