@@ -10,9 +10,10 @@ const PostTemplate = ({ data }) => {
   const prev = data.prev;
   const next = data.next;
 
-    React.useEffect(() => {
-      document.body.className = 'post-page';
-    }, []);
+  React.useEffect(() => {
+    document.body.className = 'post-page';
+  }, []);
+
   // Map tags to their full objects from allTags
   const fullTags = frontmatter.tags.map(tagId => allTags.find(tag => tag.id === tagId)).filter(Boolean);
 
@@ -20,10 +21,6 @@ const PostTemplate = ({ data }) => {
     <Layout
       title={frontmatter.title}
       description={frontmatter.description || excerpt}
-      socialImage={
-        frontmatter.social_image ? frontmatter.social_image.absolutePath : ""
-        
-      }
     >
       <PostWrapper>
         <article>
@@ -103,7 +100,6 @@ const PostDate = styled.span`
 
 const PostContent = styled.section`
   padding: 0.2rem;
- 
 
   & > * + * {
     margin-top: var(--size-300);
@@ -126,18 +122,6 @@ const PostContent = styled.section`
     margin-top: 5rem;
     margin-bottom: 1rem;
   }
-
-  // h1 {
-  //   font-size: var(--size-900);
-  // }
-
-  // h2 {
-  //   font-size: var(--size-700);
-  // }
-
-  // h3 {
-  //   font-size: var(--size-600);
-  // }
 
   b,
   strong {
@@ -174,7 +158,6 @@ const PostContent = styled.section`
     flex: 1;
     width: 100%;
   }
-
 `;
 
 const PostPagination = styled.nav`
@@ -209,7 +192,6 @@ const PostPagination = styled.nav`
     font-size: var(--size-400);
     padding-bottom: var(--size-500);
     color: #fff;
-    
   }
 
   & a {
@@ -228,7 +210,6 @@ const PostPagination = styled.nav`
     bottom: 0;
   }
 `;
-
 export const pageQuery = graphql`
   query PostBySlug($slug: String!, $prevSlug: String, $nextSlug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -239,7 +220,6 @@ export const pageQuery = graphql`
         tags
         date(formatString: "MMMM DD, YYYY")
         description
-        social_image
       }
     }
 
@@ -262,3 +242,4 @@ export const pageQuery = graphql`
     }
   }
 `;
+
