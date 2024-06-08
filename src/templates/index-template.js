@@ -72,18 +72,18 @@ const WormOverlay = styled.img`
   }
 
   @media (max-width: 768px) {
-    top: 6rem;
+    top: 10rem;
   }
 
   @media (max-width: 500px) {
-    top: 6rem;
+    top: 15rem;
 
   }
 `;
 
 const ContentBox = styled.div`
   margin: 2rem auto;
-  background-color: #2d1c48ab;
+  background-color: #2d1c4858;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #000000ff;

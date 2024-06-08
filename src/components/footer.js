@@ -20,15 +20,29 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  padding-top: var(--size-300);
-  padding-bottom: var(--size-300);
+  padding: var(--size-300) 0;
+
+  @media (max-width: 900px) {
+    background-color: #2d1c4858;
+    margin: 1rem;
+    padding-top: 1rem;
+    border: 0.1rem solid #000;
+    border-radius: 0.5rem;
+  }
 `;
 
 const FooterAttribution = styled.p`
-  font-size: var(--size-300);
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: var(--size-300);
 
+  @media (max-width: 768px) {
+    margin-bottom: var(--size-400);
+  }
+  
   & a {
-    color: inherit;
+    color: #ffffff;
   }
 `;
 
@@ -37,4 +51,8 @@ const FooterWrapper = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;

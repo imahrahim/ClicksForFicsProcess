@@ -144,7 +144,7 @@ select {
 }
 
 body::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.2rem;
 }
 
 body::-webkit-scrollbar-thumb {

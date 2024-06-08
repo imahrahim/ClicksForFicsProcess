@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: "/ClicksForFicsProcess",
   siteMetadata: {
-    title: `Clicks For Fics: Behind the Clicks`,
+    title: `Behind the Clicks`,
     author: {
       name: `Imah Leaf Rahim`,
       summary: `A Deep Dive into Analyzing and Visualizing Fan Fiction`,
@@ -13,10 +13,6 @@ module.exports = {
     //   twitter: `yinkakun`,
     // },
     socialLinks: [
-      {
-        name: "Clicks for Fics",
-        url: "https://imahrahim.github.io/Clicks-for-Fics/",
-      },
       {
         name: "Github",
         url: "https://github.com/imahrahim/Clicks-for-Fics",

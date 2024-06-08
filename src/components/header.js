@@ -19,7 +19,7 @@ const HEADER_NAV_ITEM = [
   {
     label: "Clicks For Fics",
     url: "https://imahrahim.github.io/Clicks-for-Fics/",
-    isExternal: false,
+    isExternal: true,
   },
   // {
   //   label: "Contact",
@@ -91,7 +91,10 @@ const HeaderNavListItem = ({ children }) => {
 
 const StyledHeader = styled.header`
   padding: var(--size-300) 0;
-  background-color: #2d1c48;
+
+  @media (max-width: 768px) {
+    padding: var(--size-200) 0;
+    }
 `;
 
 const HeaderWrapper = styled(Container)`
@@ -101,6 +104,11 @@ const HeaderWrapper = styled(Container)`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    background-color: #2d1c4858;
+    margin: 1rem;
+    padding-top: 1rem;
+    border: 0.1rem solid #000;
+    border-radius: 0.5rem;
   }
 `;
 
@@ -110,6 +118,7 @@ const HeaderTitle = styled.div`
     text-decoration: none;
     font-size: var(--size-400);
     color: #ffffff;
+    font-weight: 900;
   }
 `;
 
@@ -139,23 +148,23 @@ const StyledNavListItem = styled.li`
     margin-right: 2rem;
   }
   
-  @media screen and (max-width: 700px) {
-    &:not(:last-of-type) {
-      margin-right: 1rem;
-    }
-  }
   
   & a {
     color: #ffffff;
     text-transform: uppercase;
     font-size: var(--size-300);
+    font-weight: 500;
     text-decoration: none;
     letter-spacing: 0.1rem;
   }
   
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
     & a {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
+    }
+    &:not(:last-of-type) {
+      margin-top: 1rem;
+      margin-right: 1rem;
     }
   }
 `;
