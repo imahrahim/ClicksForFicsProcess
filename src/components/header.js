@@ -117,7 +117,7 @@ const HeaderTitle = styled.div`
     text-transform: uppercase;
     text-decoration: none;
     font-size: var(--size-400);
-    color: #ffffff;
+    color: #000000;
     font-weight: 900;
   }
 `;
@@ -150,7 +150,7 @@ const StyledNavListItem = styled.li`
   
   
   & a {
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     font-size: var(--size-300);
     font-weight: 500;

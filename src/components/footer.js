@@ -22,7 +22,7 @@ export default Footer;
 const StyledFooter = styled.footer`
   padding: var(--size-300) 0;
 
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     background-color: #2d1c4858;
     margin: 1rem;
     padding-top: 1rem;
@@ -33,7 +33,7 @@ const StyledFooter = styled.footer`
 
 const FooterAttribution = styled.p`
   font-size: 0.8rem;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   margin-bottom: var(--size-300);
 
@@ -42,7 +42,7 @@ const FooterAttribution = styled.p`
   }
   
   & a {
-    color: #ffffff;
+    color:inherit;
   }
 `;
 
@@ -52,7 +52,7 @@ const FooterWrapper = styled(Container)`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     flex-direction: column;
   }
 `;

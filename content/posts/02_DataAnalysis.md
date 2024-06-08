@@ -1,7 +1,7 @@
 ---
 title: "Data Analysis"
 date: "2024-04-14"
-tags: ["data", "excel"]
+tags: ["data", "excel", "think", "python"]
 social_image: "/media/DataAnalysis/excel_data_overview7.png"
 description: "Getting familiar with the data and deriving initial insights from the scraped AO3 data using Excel."
 ---
@@ -16,15 +16,16 @@ After scraping all my data, I initially explored some tags in Excel to see what 
 
 ![excel data chapters and duration of works](/media/DataAnalysis/excel_data_overview6.png)
 
-I attempted to create an overview of my dataset by calculating, categorizing, and reorganizing the data. 
+I attempted to create an overview of my dataset by calculating, categorizing, and reorganizing the data.
 
-However, since I'm still an Excel novice and didn't know how to best dissect the data dimensions:
+How the distribution of tags is, how the distribution of Kudos and chapter length is, and what the average words per chapter are, how frequently certain categories, fandoms, and characters appear. However, since I'm still an Excel novice and didn't know how to best dissect the data dimensions:
 - **fandom**: Harry Potter - J. K. Rowling
 - **relationship**: Sirius Black/Remus Lupin, Sirius Black & Remus Lupin, James Potter/Lily Evans Potter
 - **character**: Remus Lupin, Sirius Black, James Potter, Lily Evans Potter, Peter Pettigrew, Severus Snape, Minerva McGonagall, Bellatrix Black Lestrange, Narcissa Black Malfoy, Albus Dumbledore, Mulciber Sr. (Harry Potter), Horace Slughorn, Mary Macdonald, Marlene McKinnon, Poppy Pomfrey, Walburga Black, Regulus Black, Fenrir Greyback
 - **additional tags**: Marauders' Era, Marauders, Marauders Friendship, wolfstar, Get Together, Slow Burn, so slow, it's slow, seriously, Complete, Canon Compliant, Angst, Fluff, Fluff and Angst, Requited Love, Canonical Character Death, First War with Voldemort, First Kiss, Period Typical Attitudes
 
 To determine the frequency of these elements, I sought help from ChatGPT to write a Python script that could automatically extract and calculate this information.
+
 
 ```python
 import pandas as pd
@@ -58,7 +59,6 @@ After running this script, I gained a clear picture of what fascinated me the mo
 
 ![Data Dimensions Notes](/media/DataAnalysis/data01.png)
 
-
 ### Focus
 
 - Fandoms
@@ -67,5 +67,7 @@ After running this script, I gained a clear picture of what fascinated me the mo
 - Additional Tags
 
 ![Character and Relationships Overview](/media/DataAnalysis/excel_data_overview3.png)
+
+These overviews provided me with a good insight into the data and gave me a much better understanding of what I was working with. However, I soon realized that the data is not easy to analyze across multiple columns. When separating data into fandoms, characters, relationships, and tags to examine them individually, it becomes challenging to connect these elements back to other dimensions. Additionally, there are numerous individual data layers that are not easy to clean. This eventually led to most of my time being spent on cleaning the datasets.
 
 *These data points provide the most insight into what users on AO3 enjoy writing and reading about.*

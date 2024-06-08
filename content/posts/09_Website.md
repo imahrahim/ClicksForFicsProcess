@@ -9,7 +9,11 @@ description: "A comprehensive guide on designing a visually appealing and functi
 ![images](/media/Wireframes/WebMoodboard.png)
 
 ### Website Inspiration
-Since my work so far has been extremely dry and monotonous, and not very visually stimulating, I was all the more motivated to dive into the inspiration and visual concept. Given that the target audience of my work is the community itself, I wanted to establish a visual connection as well. However, I didn't want to design something unique for each fandom, but rather find a consensus for the entire community. Since many fanfictions are also seen on Tumblr and, in general, almost everything is found online on the web, I decided to draw inspiration from 90s/Y2K websites and blog posts. I aimed to incorporate this in the form of color, text, and layout of the website.
+
+Da meine Zeilgruppe die Community selber ist, war es mir wichtig das projekt als webseite zu veröffentlichen, da auch die Community nur Online ist und ich so eine reichweite gewährleisten kann. 
+
+Im prozess einer Webseite gibt es wichtige Punkte die ich behandeln musste einer der wichtigsten war wie mein Projekt darauf gezeigt wird und wie man sich darin navigiert. Die webseite ist auch das medium welches all meine Visualisierungen zusammen hält und auch die verbindung zur Zielgruppe gewährleistet.
+Given that the target audience of my work is the community itself, I wanted to establish a visual connection as well. However, I didn't want to design something unique for each fandom, but rather find a consensus for the entire community. Since many fanfictions are also seen on Tumblr and, in general, almost everything is found online on the web, I decided to draw inspiration from 90s/Y2K websites and blog posts. I aimed to incorporate this in the form of color, text, and layout of the website. 
 
 Therefore, I first delved deeply into understanding the website aesthetics I wanted to achieve and what already exists on the World Wide Web. Sites like [Pinterest](https://www.pinterest.com/), [Tumblr](https://www.tumblr.com/), [Google](https://www.google.com/), [Neocities](https://neocities.org/browse), and (one of my favorites:) [lingscars](https://www.lingscars.com/) were a significant source of inspiration.
 
@@ -37,3 +41,5 @@ Eventually, I had to decide on the pages that should exist on my website and wha
 ![images](/media/Wireframes/UX01.png)
 
 ![images](/media/Wireframes/UX02.png)
+
+Dieser Schritt war auch nochmals wichtig für mich die 

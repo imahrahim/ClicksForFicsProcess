@@ -21,6 +21,10 @@ module.exports = {
         name: "instagram",
         url: "https://www.instagram.com/imahleaf/",
       },
+      {
+        name: "Email",
+        url: "mailto:imah.rahim@me.com",
+      },
     ],
   },
   plugins: [

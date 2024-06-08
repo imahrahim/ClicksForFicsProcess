@@ -63,10 +63,6 @@ const PostWrapper = styled.div`
   margin-right: auto;
   max-width: 90ch;
   word-wrap: break-word;
-  // background-color: rgba(255, 255, 255, 0.623);
-  // backdrop-filter: blur(10px);
-  // border-radius: 1rem;
-  // border: 0.1rem solid rgb(0, 0, 0);
 
   @media (max-width: 1200px) {
     padding: var(--size-700);
@@ -196,14 +192,15 @@ const PostPagination = styled.nav`
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.214);
+    border: 0.1rem solid rgba(0, 0, 0, 1);
+    background-color: #2d1c4858;
     backdrop-filter: blur(10px);
     margin-bottom: 1rem;
   }
 
   & > *:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #2d1c48c1;
+    backdrop-filter: blur(30px);
   }
 
   & span {
@@ -211,10 +208,12 @@ const PostPagination = styled.nav`
     opacity: 0.6;
     font-size: var(--size-400);
     padding-bottom: var(--size-500);
+    color: #fff;
+    
   }
 
   & a {
-    color: inherit;
+    color: #fff;
     text-decoration: none;
     font-size: var(--size-400);
     text-transform: capitalize;

@@ -1,15 +1,18 @@
 ---
 title: "Categorizing Tags"
 date: "2024-04-22"
-tags: ["data", "excel", "chatgpt", "nlp", "mental-breakdown"]
+tags: ["data", "excel", "chatgpt", "nlp", "mental-breakdown", "mistakes", "think"]
 social_image: "/media/wallpapperr10.png"
 description: "A detailed guide on categorizing tags in datasets using various tools and overcoming challenges."
 ---
+
 ### Additional Pain
 
 ![Rocket launch](/media/Tags/chatgptwarning.png)
 
 Since I wanted to analyze not only the ships but also the tags in my datasets, which provide the most insight into the interests and needs of AO3 users, I set myself the ambitious task of categorizing the additional tags.
+
+Because all tags are unique and not categorized into specific genres, and they can be entirely individual to the work, I couldn't answer my original question if I accepted the tags as they were in my dataset. Therefore, I thought that categorizing the tags would provide better insights and allow for more meaningful analysis.
 
 ![Rocket launch](/media/Tags/excel_tags_fandoms3.png)
 
@@ -44,5 +47,7 @@ Just like with the characters, I started with the overall tags and compared them
 ![Rocket launch](/media/Tags/tags_fandom_specific.png)
 
 With a more manageable dataset, I could again enlist the help of ChatGPT to categorize the remaining tags. One could debate for hours how meaningful these categorized data are, but I believe that even if it can't be 100% accurate, it still provides a good overall picture of the fandom's mood.
+
+Through this process, I discovered a lot about myself, such as the fact that I can stare at an Excel sheet for 20 hours straight and still function. However, this process also brought me closer to understanding NLP, and I now have a basic grasp of how it works. Even though many things did not go smoothly in my case, I am glad I had this time and experience. It has prepared me better for any future encounters with such data.
 
 ![Rocket launch](/media/Tags/chatgpt_categories2.png)
