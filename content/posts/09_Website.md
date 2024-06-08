@@ -1,7 +1,7 @@
 ---
 title: "Website Interface"
 date: "2024-04-23"
-tags: ["design", "concept", "chatgpt", "pinterest", "moodboard"]
+tags: ["design", "concept", "chatgpt", "pinterest", "moodboard", "play"]
 social_image: "/media/Wireframes/WebMoodboard.png"
 description: "A comprehensive guide on designing a visually appealing and functional website interface, inspired by 90s/Y2K aesthetics and popular web platforms."
 ---
@@ -10,10 +10,9 @@ description: "A comprehensive guide on designing a visually appealing and functi
 
 ### Website Inspiration
 
-Da meine Zeilgruppe die Community selber ist, war es mir wichtig das projekt als webseite zu veröffentlichen, da auch die Community nur Online ist und ich so eine reichweite gewährleisten kann. 
+Since my target audience is the community itself, it was important for me to publish the project as a website to ensure broader reach and accessibility. The website is the medium that holds all my visualizations together and ensures connection with the target audience.
 
-Im prozess einer Webseite gibt es wichtige Punkte die ich behandeln musste einer der wichtigsten war wie mein Projekt darauf gezeigt wird und wie man sich darin navigiert. Die webseite ist auch das medium welches all meine Visualisierungen zusammen hält und auch die verbindung zur Zielgruppe gewährleistet.
-Given that the target audience of my work is the community itself, I wanted to establish a visual connection as well. However, I didn't want to design something unique for each fandom, but rather find a consensus for the entire community. Since many fanfictions are also seen on Tumblr and, in general, almost everything is found online on the web, I decided to draw inspiration from 90s/Y2K websites and blog posts. I aimed to incorporate this in the form of color, text, and layout of the website. 
+In the process of creating a website, there are important points I needed to address, one of the most crucial being how my project will be displayed and navigated. Given that the target audience of my work is the community itself, I wanted to establish a visual connection. However, I didn't want to design something unique for each fandom but rather find a consensus for the entire community. Since many fanfictions are also seen on Tumblr and, in general, almost everything is found online, I decided to draw inspiration from 90s/Y2K websites and blog posts. I aimed to incorporate this in the form of color, text, and layout of the website.
 
 Therefore, I first delved deeply into understanding the website aesthetics I wanted to achieve and what already exists on the World Wide Web. Sites like [Pinterest](https://www.pinterest.com/), [Tumblr](https://www.tumblr.com/), [Google](https://www.google.com/), [Neocities](https://neocities.org/browse), and (one of my favorites:) [lingscars](https://www.lingscars.com/) were a significant source of inspiration.
 
@@ -31,10 +30,9 @@ Therefore, I temporarily used AI to generate inspirational images of what my web
 
 ![images](/media/Wireframes/chatgpt_visual_inspo12.webp)
 
-
 ### Wireframes
 
-Eventually, I had to decide on the pages that should exist on my website and what data each page should contain. I then started developing rough wireframes for my website so that my project began to take more shape, and I had a clearer picture of what I truly needed.
+Eventually, I had to decide on the pages that should exist on my website and what data each page should contain. I then started developing rough wireframes for my website.
 
 ![images](/media/Wireframes/UX03.png)
 
@@ -42,4 +40,4 @@ Eventually, I had to decide on the pages that should exist on my website and wha
 
 ![images](/media/Wireframes/UX02.png)
 
-Dieser Schritt war auch nochmals wichtig für mich die 
+This step was also crucial for me as it gave me a better overview of where I needed specific data, how I needed it, and what interactions and subpages were necessary. When the rough interface was finally established, it marked one of the first major milestones, guiding me in the right direction and making me realize that my project was finally taking shape.

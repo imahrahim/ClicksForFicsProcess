@@ -1,51 +1,56 @@
 ---
 title: "Additional Tags"
 date: "2024-04-28"
-tags: ["design", "concept", "chatgpt", "procreate", "p5", "pinterest", "illustrator", "photoshop", "moodboard"]
+tags: ["design", "concept", "chatgpt", "procreate", "p5", "pinterest", "illustrator", "photoshop", "moodboard", "play"]
 social_image: "/media/wallpapperr10.png"
-description: "A comprehensive guide on the visual representation and categorization of tags, exploring various design approaches and tools to visualize categories"
+description: "A comprehensive guide on the visual representation and categorization of tags, exploring various design approaches and tools to visualize categories."
 ---
+
 ### Visualizing Categories
 
-![Rocket launch](/media/AdditionalTags/tags01.png)
+![Tags Visualization](/media/AdditionalTags/tags01.png)
 
-Besides categorizing the tags, I also focused on the visual aspect of the tags. I quickly realized that there would be more than five categories to differentiate, leaving me with only two viable options: text or image.
+To understand the interests and needs of AO3 users, I needed to categorize and visually represent the tags. This required exploring different design approaches and tools. Initially, I had to decide between using text or images, given the variety of categories.
 
-![Rocket launch](/media/AdditionalTags/tags02.png)
+![Tags Visualization](/media/AdditionalTags/tags02.png)
 
-With my initial sketches, I approached the task cautiously and considered using only frequently occurring tags to reduce the scope further. However, I quickly decided against a text-based visualization as it might resemble the network visualization too closely.
+I started with cautious sketches, considering only frequently occurring tags to narrow the scope. However, I quickly decided against a text-based visualization as it might resemble the network visualization too closely.
 
-![Rocket launch](/media/AdditionalTags/Tags03.png)
+![Tags Visualization](/media/AdditionalTags/Tags03.png)
 
-![Rocket launch](/media/AdditionalTags/ipad.png)
+![Tags Visualization](/media/AdditionalTags/ipad.png)
 
-![Rocket launch](/media/AdditionalTags/tags04.png)
+![Tags Visualization](/media/AdditionalTags/tags04.png)
 
-Thus, I explored images and icons that could represent my categorized tags. The initial inspiration came from pixel art and collages found on 90s and Y2K websites. Y2K symbols, in general, were also an early inspiration.
+Thus, I explored using images and icons to represent my categorized tags. My initial inspiration came from pixel art and collages found on 90s and Y2K websites. Y2K symbols, in general, were also an early inspiration.
 
-![Rocket launch](/media/AdditionalTags/tags.png)
+![Tags Visualization](/media/AdditionalTags/tags.png)
 
-I experimented with various symbols and meanings, but it was challenging to do this parallel to categorizing the tags as nothing was finalized. From classic Y2K symbols that didn't necessarily align with the categories to Greek mythology and Tarot card meanings, I tried different approaches.
+I experimented with various symbols and meanings. From classic Y2K symbols to Greek mythology and Tarot card meanings, I tried different approaches. It was challenging to categorize the tags and design the visual elements simultaneously, as nothing was finalized.
 
-![Rocket launch](/media/AdditionalTags/tag.png)
+![Tags Visualization](/media/AdditionalTags/tag.png)
 
 In addition to researching meanings for categories, I tested various methods, from Google images and Illustrator drawings to 3D objects and AI-generated images. Over time, I realized I needed to view the images together and in quantity to determine which ones made the most sense.
 
-### Combining my tags
+### Combining My Tags
 
-Therefore, I wrote a short p5.js script to draw the images based on data.
+To combine my tags effectively, I wrote a short p5.js script to draw the images based on data.
 
-![Rocket launch](/media/AdditionalTags/wallpaper01.png)
+![Tags Visualization](/media/AdditionalTags/wallpaper01.png)
 
 I noticed that some order was needed to get a better sense of the frequency of tags. Even though my goal was never to make it perfectly readable, I still wanted to convey a certain mood, indicating differences.
 
-![Rocket launch](/media/AdditionalTags/wallpaper02.png)
+![Tags Visualization](/media/AdditionalTags/wallpaper02.png)
 
 Within this code, I continually adjusted and changed my images, realizing what worked and what didn’t. Eventually, I found a distribution of various images that conveyed the mood I was aiming for and matched my categories.
 
-![Rocket launch](/media/AdditionalTags/wallpaper03.png)
+![Tags Visualization](/media/AdditionalTags/wallpaper03.png)
 
-#### Development of the Sex Category
+![Tags Visualization](/media/AdditionalTags/Harry_Tag.png)
+
+I initially decided on this somewhat chaotic visualization because I found it visually appealing. However, I realized late in the process that I needed to switch to a more ordered pattern to better compare categories and fandoms.
+
+![Tags Visualization](/media/AdditionalTags/Harry_Ordered.png)
 
 ### Ratings
 
