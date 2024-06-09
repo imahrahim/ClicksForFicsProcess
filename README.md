@@ -1,112 +1,65 @@
-# Gatsby Starter Glass
+# Clicks for Fics Process Documentation
 
-A Minimal & Beautiful Gatsby Personal Blog Starter With Nice Glassmorphism UI.
+### Overview
 
-[View Live Demo](https://gatsbyglass.netlify.app)
+This project documents the process behind the **Clicks for Fics** project, which analyzes and visualizes the most popular fan fiction works and fandoms on the **Archive of Our Own** platform. The documentation provides insights into the development process, tools used, and methodologies applied to create the visualizations and analyses.
 
-![demo site screenshot](./screenshot.png)
+### Template
 
-## Features
+This project was built using the [Gatsby Starter Glass](https://github.com/yinkakun/gatsby-starter-glass) template, which provides a minimal and beautiful design with a glassmorphism UI. The template was customized to fit the specific needs and goals of the **Clicks for Fics** project.
 
-* Fully responsive
-* SEO metadata and Open Graph tags
-* Maximized lighthouse score
-* Contact form with Netlify Form
-* Edit Content with Netlify CMS
-* Easy to deploy
-* Syntax highlighting via PrismJS
+### Project Structure
 
-## Local Install
+The project consists of several main files and directories, each serving a specific purpose:
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/yinkakun/gatsby-starter-glass
+- `gatsby-config.js`: Gatsby configuration file that sets up plugins and site metadata.
+- `gatsby-node.js`: Custom Node.js scripts that extend Gatsby’s build process.
+- `package.json`: Contains information about the project, scripts, and dependencies.
+- `src`: Source directory containing the main codebase.
+  - `pages`: Contains the pages of the project.
+  - `templates`: Templates for dynamically generated pages.
+  - `components`: Reusable components used throughout the site.
+  - `styles` or `css`: CSS files for styling the site.
+- `static`: Contains static assets like images used in the project.
+- `content`: Contains markdown files with content for the site.
 
-# 2. Navigate into repository
-cd gatsby-starter-glass
+### Files and Their Functions
 
-# 3. Install the dependencies
-yarn install
+#### `gatsby-config.js`
 
-# 4. Start the development server
-yarn start
+This file contains the configuration settings for the Gatsby project, including site metadata, plugins, and their options.
 
-# 5. Start the build mode
-yarn  build
-```
+#### `gatsby-node.js`
 
-## Configuration
+This file contains custom Node.js scripts that extend the build process of Gatsby. It is used to create dynamic pages, add custom fields to nodes, and customize the GraphQL schema.
 
-Within gatsby-config.js, you can specify information about your site (metadata) like the site title and description to properly generate meta tags.
+#### `package.json`
 
-```js
-// gatsby-config.js
+This file contains metadata about the project, including its name, version, description, and dependencies. It also defines scripts for common tasks like building, developing, and deploying the site.
 
-module.exports = {
-  siteMetadata: {
-    title: `Gatsby Starter Glass`,
-    author: {
-      name: `Yinka Adedire`,
-      summary: `self-taught front-end dev. jamstack enthusaist.`,
-    },
-    description: `A Minimal & Beautiful Gatsby Personal Blog Starter With Nice Glassmorphism Ui.`,
-    siteUrl: `https://gatsbyglass.netlify.app`,
-    social: {
-      twitter: `yinkakun`,
-    },
-  },
+#### `src/pages`
 
-  // ...
-};
-```
+This directory contains the main pages of the project. Each file in this directory corresponds to a route on the website.
 
-## Deployment
+#### `src/templates`
 
-Netlify is a great way to easily deploy sites plus this starter uses Netlify Form for the Contact form.
+This directory contains templates for dynamically generated pages. These templates are used by `gatsby-node.js` to create pages from markdown files or other data sources.
 
-- Generate a new repo from this repo which will copy all files from this repo to your newly created repo.
+#### `src/components`
 
-- Go to <https://app.netlify.com>. Once you’ve logged in, click the 'New site from Git' button on your dashboard and choose your newly created repo.
+This directory contains reusable components that are used throughout the site, such as headers, footers, and navigation bars.
 
-- Follow the prompts, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete.
+#### `src/styles` or `src/css`
 
-## Manually Editing contents
+This directory contains CSS files used for styling the site. It may include global styles, component-specific styles, and theme settings.
 
-### Blog Posts
+#### `static`
 
-Blog contents can be updated in markdown format at `content/blog`. Delete placeholder posts and start blogging.
+This directory contains static assets like images, which are directly served from the root of the site.
 
-```md
----
-title: Hello World
-date: '2021-05-01'
-description: 'Hello World'
----
+#### `content`
 
-This top portion is the beginning of the post and will show up as the excerpt on the homepage.
-```
+This directory contains markdown files with the content for the site. These files are processed by Gatsby and transformed into pages using the templates.
 
-### Pages
 
-Homepage intro, Contact, and About page content can be updated in Markdown format at `content/pages`.
 
-# Editing Contents with Netlify CMS
-
-This project is preconfigured to work with Netlify CMS.
-When Netlify CMS makes commits to your repo, Netlify will auto-trigger a rebuild / deploy when new commits are made.
-You’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
-
-- Go to <https://app.netlify.com> > select your website from the list.
-- Go to Identity and click Enable Identity.
-- Click on Invite Users and invite yourself. You will receive an email and you need to accept the invitation to set the password.
-- Now headover to Settings > Identity > Services and Enable Git Gateway.
-- You can also manage who can register and log in to your CMS. Go to Settings > Identity > Registration  Registration Preferences. I would prefer to keep it to Invite Only if I am the only one using it.
-- Now, go to to site-name.netlify.app/admin/, and login with your credentials.
-
-Once you are in your Netlify CMS, you can navigate to Posts and Pages. Here you will find a list of existing pages and posts.
-
-## Built with
-
-- Gatsby for Static Site Generation
-- Netlify CMS for content management
-- Styled Component for styling
