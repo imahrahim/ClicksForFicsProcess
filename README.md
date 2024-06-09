@@ -61,5 +61,34 @@ This directory contains static assets like images, which are directly served fro
 
 This directory contains markdown files with the content for the site. These files are processed by Gatsby and transformed into pages using the templates.
 
+### Key Files
+
+#### `index-template.js`
+
+This file contains the template for the homepage. It defines the layout and structure of the homepage and includes components such as the introduction, content boxes, and buttons.
+
+#### `post-template.js`
+
+This file contains the template for individual blog posts. It defines the layout and structure of a blog post, including the title, date, content, tags, and pagination.
+
+#### `tags-template.js`
+
+This file contains the template for displaying posts by tags. It defines the layout and structure for the tag pages, including the title, number of posts, and the list of posts associated with the tag.
+
+#### `blog.js`
+
+This file defines the main blog page that lists all the blog posts. It fetches the posts using a GraphQL query and displays them using the `PostList` component.
+
+#### `tags.js`
+
+This file defines the tags page that lists all the tags. It fetches the tags using a GraphQL query and displays them using the `HomeTags` component.
+
+### Contact
+
+For questions or support, you can contact me via [GitHub](https://github.com/imahrahim), [Instagram](https://www.instagram.com/imahleaf/), or [email](mailto:imah.rahim@me.com).
+
+### Credits
+
+This project was built using the [Gatsby Starter Glass](https://github.com/yinkakun/gatsby-starter-glass) template by [Yinka Adedire](https://github.com/yinkakun).
 
 
