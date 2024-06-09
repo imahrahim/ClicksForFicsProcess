@@ -11,7 +11,7 @@ description: "The design and concept of the network visualization."
 ### How to Visualize Relationships?
 
 I repeatedly asked myself the question:
-*Are there other solutions besides networks to visually represent relationships?*
+*Are there other solutions aside from networks to visually represent relationships?*
 
 ![force-directed Network](/media/Netzwerk/NetzwerkInspo01.png)
 
@@ -29,7 +29,7 @@ In this design process, the focus was more on how the network could function int
 
 ![force-directed Network](/media/Netzwerk/Netzwerk02.png)
 
-With the mood board I created, I realized that I wanted to go in a direction that might be a bit more unconventional than standard network visualizations. After spending hours on Excel tables and considering a visual concept for the additional tags using a form of "stickers" and images, I thought of applying a similar principle and cutting out my network directly from my Excel table.
+With the moodboard I had created, I realized that I wanted to go in a direction that might be a bit less conventional than standard network visualizations. After spending hours on Excel tables and considering a visual concept for the additional tags using a form of "stickers" and images, I thought of applying a similar principle and cutting out my network directly from my Excel table.
 
 ![force-directed Network](/media/Netzwerk/excel_characters2.png)
 
@@ -43,7 +43,7 @@ After some analog and manual drafts, I realized that with the scale of the data,
 
 ![force-directed Network](/media/Netzwerk/force-directed.png)
 
-To advance faster in terms of design, I used existing codes, such as those on D3.js, or from fellow students who had already designed something similar. With the help of ChatGPT, I was able to quickly generate a basic structure that I then further developed until it looked like something that worked for me.
+To advance faster in terms of design, I used existing codes, such as those on D3.js, or from fellow students who had already designed something similar. With the help of ChatGPT, I was able to quickly generate a basic structure that I then further developed until it looked like something that would work for me.
 
 ![interactive network mapped on a scale](/media/Netzwerk/netz.png)
 

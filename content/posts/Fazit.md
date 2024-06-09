@@ -8,9 +8,9 @@ description: "A detailed reflection on the challenges and learnings throughout t
 
 Many aspects of my process were lengthy and seemed never-ending, with most of the time dedicated to data management and coding. These are elements that people viewing my work won't see or feel. In a way, this is somewhat frustrating. However, I am still immensely grateful that I had to find so many solutions and take detours to reach my goal. These detours taught me a lot about handling future problems and discovering new approaches that will hopefully save me from making similar detours next time.
 
-I have learned a great deal in both coding and data analysis. I became more proficient in Excel, p5.js, d3.js, HTML, CSS, and React. I also gained initial experience with NLP. In terms of visualization and UX, my mistakes provided valuable learning experiences.
+I have learned a great deal in both coding and data analysis. I became more proficient in Excel, p5.js, d3.js, HTML, CSS, and React. I also made first acquaintance with NLP. In terms of visualization and UX, my mistakes provided valuable learning experiences.
 
-For the first time, I ventured into network data visualization, which was a new and valuable experience. I learned the importance of identifying relevant data dimensions and how arrangement and color schemes are crucial for supporting a specific message.
+For the first time, I ventured into network data visualization, which was a new and valuable adventure. I learned the importance of identifying relevant data dimensions and how arrangement and color schemes are crucial for supporting a specific message.
 
 With my additional tags, I made a significant detour only to end up with a bar chart. However, this journey was essential for me to experience because I don't think I would have arrived at the current solution without it.
 
@@ -32,7 +32,7 @@ With my additional tags, I made a significant detour only to end up with a bar c
     - The iterative nature of my project, especially with the additional tags, highlighted the importance of trial and error. Each iteration brought new insights and led to more refined solutions.
 
 6. **Realizing the Value of Detours**:
-    - Although the detours were time-consuming, they were also informative. Each misstep and correction provided deeper insights into the data and the most effective ways to visualize it.
+    - Although the mistakes were time-consuming, they were also informative. Each misstep and correction provided deeper insights into the data and the most effective ways to visualize it.
 
 ### Final Thoughts
 

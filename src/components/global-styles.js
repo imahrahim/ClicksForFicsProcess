@@ -186,9 +186,10 @@ h3 {
   font-size: 2rem;
 }
 
-p {
+p,li {
   font-size: 1.5rem;
 }
+
 
 p, li {
     max-width: none;
@@ -221,7 +222,7 @@ p, li {
     font-size: 1.75rem;
   }
 
-  p {
+  p, li {
     font-size: 1.25rem;
   }
 
@@ -248,7 +249,7 @@ p, li {
     font-size: 1.5rem;
   }
 
-  p {
+  p, li {
     font-size: 1rem;
   }
 }
@@ -266,7 +267,7 @@ p, li {
     font-size: 1.25rem;
   }
 
-  p {
+  p,li {
     font-size: 0.9rem;
   }
 
