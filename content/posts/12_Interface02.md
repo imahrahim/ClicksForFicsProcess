@@ -72,3 +72,8 @@ For the legend, I chose not to display it constantly but to make it accessible a
 ![Website Interface](/media/CFC/Text03.png)
 
 ![Website Interface](/media/CFC/medusa.png)
+
+### User tests
+Finally, there was the official user test, where friends of mine went through the process to identify aspects that needed tweaking or texts that needed rewriting.
+
+I found that I had too few people in my circle who were exactly my target audience, and that AO3 was somewhat unfamiliar to them. However, I think this is also a good sign, because in the end they understood my prototype.
