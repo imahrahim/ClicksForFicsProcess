@@ -76,6 +76,6 @@ On my third attempt, I finally managed to get ChatGPT to fill in 20 characters a
 
 In this process, I invested the most time, which is not necessarily visible in the final project. I am glad I made so many mistakes in this step because, without them, I wouldn't have learned so much about the data and how to approach and solve such a problem. The only problem I didn't learn to solve by the end was naming and organizing my files. Because I had to do everything at least three times and had to convert and download hundreds of datasets, I completely lost track of all my files.
 
-To this day, I'm not sure if I missed anything in the 2400 lines.
+To this day, I'm not sure if I missed anything in the 24000 lines.
 
 > If you have found any errors, please contact me via the contact form.

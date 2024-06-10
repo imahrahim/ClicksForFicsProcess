@@ -6,13 +6,17 @@ social_image: "/media/Overall.png"
 description: "A detailed reflection on the challenges and learnings throughout the project."
 ---
 
-Many aspects of my process were lengthy and seemed never-ending, with most of the time dedicated to data management and coding. These are elements that people viewing my work won't see or feel. In a way, this is somewhat frustrating. However, I am still immensely grateful that I had to find so many solutions and take detours to reach my goal. These detours taught me a lot about handling future problems and discovering new approaches that will hopefully save me from making similar detours next time.
+Many aspects of my process were long and seemed never-ending, with most of the time spent on data management and coding. These are elements that people who view my work don't see or feel. In some ways this is frustrating. However, I am immensely grateful that I had to find so many solutions and take so many turns to get where I wanted to go. These sidetracks have taught me a lot about how to deal with future problems and to discover new approaches that will hopefully save me from taking similar detours next time.
 
-I have learned a great deal in both coding and data analysis. I became more proficient in Excel, p5.js, d3.js, HTML, CSS, and React. I also made first acquaintance with NLP. In terms of visualization and UX, my mistakes provided valuable learning experiences.
+For all the trial and error I went through, his project involved 428 sets of data with different kinds of paths that I took to get to where I wanted to be.
 
-For the first time, I ventured into network data visualization, which was a new and valuable adventure. I learned the importance of identifying relevant data dimensions and how arrangement and color schemes are crucial for supporting a specific message.
+![Datasets Overview](/media/Conclusion/Datens.png)
 
-With my additional tags, I made a significant detour only to end up with a bar chart. However, this journey was essential for me to experience because I don't think I would have arrived at the current solution without it.
+I learned a lot about both coding and data analysis. I became more proficient in Excel, p5.js, d3.js, HTML, CSS and React. I also got my first taste of NLP. In terms of visualisation and UX, my mistakes were valuable learning experiences.
+
+I ventured into network data visualisation for the first time, which was a new and valuable adventure. I learned how important it is to identify relevant data dimensions, and how important arrangement and colour schemes are in supporting a particular message.
+
+With my additional tags, I took a significant detour only to end up with a bar chart. However, this journey was essential for me to experience, as I don't think I would have arrived at the current solution without it.
 
 ### Key Takeaways
 
@@ -34,10 +38,15 @@ With my additional tags, I made a significant detour only to end up with a bar c
 6. **Realizing the Value of Detours**:
     - Although the mistakes were time-consuming, they were also informative. Each misstep and correction provided deeper insights into the data and the most effective ways to visualize it.
 
+#### 
+
+![Final Visualization](/media/Conclusion/BA_DDA21_04_Rahim_Imah_BildWeb_02_240610_01.jpg)
+![Final Visualization](/media/Conclusion/BA_DDA21_04_Rahim_Imah_BildWeb_04_240610_01.jpg)
+![Final Visualization](/media/Conclusion/BA_DDA21_04_Rahim_Imah_BildWeb_06_240610_01.jpg)
+![Final Visualization](/media/Conclusion/BA_DDA21_04_Rahim_Imah_BildWeb_08_240610_01.jpg)
+
 ### Final Thoughts
 
 Reflecting on this project, I am proud of the progress I made and the knowledge I gained. Despite the frustrations and setbacks, the journey was incredibly educational. I now feel more prepared to handle complex data visualization projects and more confident in my ability to find creative solutions to challenging problems.
 
 I hope that my work provides a meaningful contribution to the AO3 community and inspires others to explore the fascinating world of data visualization.
-
-<!-- ![Final Visualization](/media/FinalVisualization.png) -->

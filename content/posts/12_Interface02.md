@@ -25,6 +25,11 @@ Next, I integrated my previously programmed network and additional tags logic in
 
 The process was primarily one troubleshooting session after another. I could spend an entire day fixing one error, only to have another part of the website break as a result.
 
+<video controls width="100%">
+  <source src="/media/CFC/Banner.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 I religiously saved everything on GitHub, allowing me to revert to an older version whenever something stopped working.
 
 Without ChatGPT, I could never have achieved this so quickly, and I am grateful that I subscribed to the Premium version for data cleaning at the project's start. My scripts became increasingly complex, and fixing bugs and finding and adjusting elements would have taken twice as long without assistance.
