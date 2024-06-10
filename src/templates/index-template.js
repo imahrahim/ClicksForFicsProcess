@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import StyledLink from "../components/styled-link";
-import WormImage from '../../static/media/Worm11.png';
+import WormImage from "../../static/media/Worm11.png";
 
 const HomePage = ({ data }) => {
   const tags = data.allMarkdownRemark.group;
@@ -19,21 +19,14 @@ const HomePage = ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <WormOverlay src={WormImage} alt="Worm Overlay" />
           <ContentBox>
-            <h4>
-              A Deep Dive into Analyzing and Visualizing Fan Fiction
-            </h4>
+            <h4>A Deep Dive into Analyzing and Visualizing Fan Fiction</h4>
             <p>
-              This is the documentation of Clicks for Fics. Check out my Tags to
-              search for something specific or explore my documentation.
-              Blablablablaba
+            Welcome to the documentation of "Clicks for Fics". This project explores the fascinating world of fan fiction by analysing and visualising data from several popular fandoms. Explore the tags section to find specific information, or browse through the documentation to learn more about the methods, tools and findings of the project.
             </p>
+
             <ButtonContainer>
-              <StyledButtonLink to="/blog">
-                Documentation
-              </StyledButtonLink>
-              <StyledButtonLink to="/tags">
-                Tags
-              </StyledButtonLink>
+              <StyledButtonLink to="/blog">Documentation</StyledButtonLink>
+              <StyledButtonLink to="/tags">Tags</StyledButtonLink>
             </ButtonContainer>
           </ContentBox>
         </Intro>
@@ -59,13 +52,12 @@ const WormOverlay = styled.img`
   left: 0;
   width: 100%;
   height: auto;
-  pointer-events: none; 
+  pointer-events: none;
   display: absolute;
   justify-content: center;
   align-items: center;
   z-index: 999;
   background-image-size: contain;
-
 
   @media (max-width: 1150px) {
     z-index: 1;
@@ -77,7 +69,6 @@ const WormOverlay = styled.img`
 
   @media (max-width: 500px) {
     top: 15rem;
-
   }
 `;
 
@@ -179,7 +170,7 @@ const Intro = styled.div`
 `;
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title
